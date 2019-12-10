@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 370521ae7e2f2b84da8df7771cebe0d2
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: base
+    100002: bed header
+    100004: bed table
+    100006: blanket
+    100008: lamp
+    100010: lamp body
+    100012: lamp head
+    100014: legs
+    100016: mattress
+    100018: picture frame
+    100020: pillow
+    100022: //RootNode
+    100024: Cylinder
+    100026: bedside table
+    100028: Cube
+    100030: Cube.001
+    100032: Cube.002
+    100034: Cube.003
+    100036: Cube.004
+    400000: base
+    400002: bed header
+    400004: bed table
+    400006: blanket
+    400008: lamp
+    400010: lamp body
+    400012: lamp head
+    400014: legs
+    400016: mattress
+    400018: picture frame
+    400020: pillow
+    400022: //RootNode
+    400024: Cylinder
+    400026: bedside table
+    400028: Cube
+    400030: Cube.001
+    400032: Cube.002
+    400034: Cube.003
+    400036: Cube.004
+    2100000: No Name
+    2300000: base
+    2300002: bed header
+    2300004: bed table
+    2300006: blanket
+    2300008: lamp
+    2300010: lamp body
+    2300012: lamp head
+    2300014: legs
+    2300016: mattress
+    2300018: picture frame
+    2300020: pillow
+    2300022: Cylinder
+    2300024: Cube
+    2300026: Cube.001
+    2300028: Cube.002
+    2300030: Cube.003
+    2300032: Cube.004
+    3300000: base
+    3300002: bed header
+    3300004: bed table
+    3300006: blanket
+    3300008: lamp
+    3300010: lamp body
+    3300012: lamp head
+    3300014: legs
+    3300016: mattress
+    3300018: picture frame
+    3300020: pillow
+    3300022: Cylinder
+    3300024: Cube
+    3300026: Cube.001
+    3300028: Cube.002
+    3300030: Cube.003
+    3300032: Cube.004
+    4300000: base
+    4300002: legs
+    4300004: bed header
+    4300006: mattress
+    4300008: pillow
+    4300010: blanket
+    4300012: bed table
+    4300014: picture frame
+    4300016: lamp body
+    4300018: lamp head
+    4300020: lamp
+    4300022: Cylinder
+    4300024: Cube.004
+    4300026: Cube
+    4300028: Cube.001
+    4300030: Cube.002
+    4300032: Cube.003
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
