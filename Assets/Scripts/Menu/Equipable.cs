@@ -5,7 +5,10 @@ using System.Collections.Generic;
 public class Equipable : MonoBehaviour {
     public bool IsGrabbed {
         get => _isGrabbed;
-        set { if (value) HandleGrab(); else HandleDrop(); }
+        set {
+            _isGrabbed = value;
+            if (value) HandleGrab(); else HandleDrop();
+        }
     }
     public GameObject equiped;
     public GameObject unfocused;
@@ -13,7 +16,7 @@ public class Equipable : MonoBehaviour {
     public Grabbable grabbed;
     public bool allowInteractions = true;
 
-    bool _isGrabbed = false;
+    public bool _isGrabbed = false;
 
     public SimulatedHand ValidHand (Collider c) {
         SimulatedHand hand = c.GetComponentInParent<SimulatedHand>();
