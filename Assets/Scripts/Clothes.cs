@@ -19,7 +19,7 @@ public class Clothes : MonoBehaviour {
             unfolded.SetActive(false);
             folded.SetActive(false);
 
-            hand.Grab(Instantiate(grabbable).GetComponent<Grabbable>());
+            // hand.Grab(Instantiate(grabbable).GetComponent<Grabbable>());
         }
     }
 
