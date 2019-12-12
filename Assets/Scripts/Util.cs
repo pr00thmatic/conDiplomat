@@ -11,4 +11,12 @@ public class Util {
             RecursiveSetLayer(layer, child);
         }
     }
+
+    public static void SetColliders (Transform owner, bool value) {
+        Collider[] colliders = owner.GetComponentsInChildren<Collider>();
+
+        foreach (Collider c in colliders) {
+            c.enabled = value;
+        }
+    }
 }

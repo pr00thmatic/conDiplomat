@@ -5,6 +5,18 @@ using System.Collections.Generic;
 public class Equipable : MonoBehaviour {
     public EquipableType type;
     public Luggage owner = null;
+    public bool throwedUp = false;
+    public Rigidbody body;
+
+    void Reset () {
+        body = GetComponent<Rigidbody>();
+    }
+
+    void OnCollisionStay (Collision c) {
+        if (throwedUp && body.velocity.magnitude < 0.5f) {
+            throwedUp = false;
+        }
+    }
 
     void OnEnable () {
         GetComponent<Grabbable>().onGrab += GrabHandler;
@@ -15,15 +27,19 @@ public class Equipable : MonoBehaviour {
     }
 
     void OnTriggerEnter (Collider c) {
+        if (throwedUp) return;
+
         Luggage luggage = c.GetComponentInParent<Luggage>();
         if (!luggage) return;
         if (luggage.items.Contains(this)) return;
 
         owner = luggage;
-        owner.items.Add(this);
+        owner.Equip(this);
     }
 
     void OnTriggerExit (Collider c) {
+        if (throwedUp) return;
+
         Luggage luggage = c.GetComponentInParent<Luggage>();
         if (!luggage) return;
         if (luggage != owner) return;

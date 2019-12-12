@@ -15,6 +15,19 @@ public class Grabbable : MonoBehaviour {
     Transform _oldParent;
     Vector3 _originalPosition;
 
+    void Reset () {
+        body = GetComponent<Rigidbody>();
+        highlighter = GetComponent<Outline>();
+        highlighter.enabled = false;
+
+        if (!gripTransform) {
+            gripTransform = new GameObject("grip transform").transform;
+            gripTransform.SetParent(transform);
+            gripTransform.localPosition = Vector3.zero;
+            gripTransform.rotation = Quaternion.identity;
+        }
+    }
+
     void Awake () {
         _originalPosition = transform.position;
     }

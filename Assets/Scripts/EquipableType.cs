@@ -1,3 +1,5 @@
 public enum EquipableType {
-    Cloth
+    Cloth,
+    Gift,
+    Ticket
 }

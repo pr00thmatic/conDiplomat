@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7179402188479846856}
   - component: {fileID: 7179402188479846859}
   - component: {fileID: 8705788393994793276}
+  - component: {fileID: 1099461138592509428}
   m_Layer: 0
   m_Name: cloth
   m_TagString: Untagged
@@ -1514,6 +1515,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   owner: {fileID: 0}
+  throwedUp: 0
+  body: {fileID: 7179402188479846854}
+--- !u!114 &1099461138592509428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7179402188479846855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a42db38835eb2a43ae73058dea19ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!65 &7179402189894155817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1587,7 +1602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 8f810dacf0bab194790f52dd1cdfef4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.048632026
+      value: 0.032944
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 8f810dacf0bab194790f52dd1cdfef4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1631,7 +1646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 8f810dacf0bab194790f52dd1cdfef4a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.22104032
+      value: 0.08336536
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 8f810dacf0bab194790f52dd1cdfef4a, type: 3}
       propertyPath: m_LocalScale.z
@@ -1684,7 +1699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 881e62281c98b874e8dfb8846edf6e75, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.016111016
+      value: 0.020679
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 881e62281c98b874e8dfb8846edf6e75, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1732,7 +1747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 881e62281c98b874e8dfb8846edf6e75, type: 3}
       propertyPath: m_LocalScale.z
-      value: 22.104025
+      value: 8.336533
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 881e62281c98b874e8dfb8846edf6e75, type: 3}
       propertyPath: m_Materials.Array.data[0]
