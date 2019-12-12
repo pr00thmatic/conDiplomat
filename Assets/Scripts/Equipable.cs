@@ -6,10 +6,18 @@ public class Equipable : MonoBehaviour {
     public EquipableType type;
     public Luggage owner = null;
 
+    void OnEnable () {
+        GetComponent<Grabbable>().onGrab += GrabHandler;
+    }
+
+    void OnDisable () {
+        GetComponent<Grabbable>().onGrab -= GrabHandler;
+    }
+
     void OnTriggerEnter (Collider c) {
         Luggage luggage = c.GetComponentInParent<Luggage>();
         if (!luggage) return;
-        if (owner.items.Contains(this)) return;
+        if (luggage.items.Contains(this)) return;
 
         owner = luggage;
         owner.items.Add(this);
@@ -20,6 +28,13 @@ public class Equipable : MonoBehaviour {
         if (!luggage) return;
         if (luggage != owner) return;
 
-        owner.items.Remove(this);
+        GrabHandler();
+    }
+
+    public void GrabHandler () {
+        if (owner) {
+            owner.items.Remove(this);
+            owner = null;
+        }
     }
 }

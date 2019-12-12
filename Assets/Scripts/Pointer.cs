@@ -10,7 +10,8 @@ public class Pointer : MonoBehaviour {
 
     void Update () {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance) &&
+        if (Physics.Raycast(transform.position, transform.forward, out hit,
+                            maxDistance, ~0, QueryTriggerInteraction.Ignore) &&
             hit.collider.GetComponentInParent<Grabbable>()) {
 
             active.gameObject.SetActive(true);

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(Outline))]
 public class Grabbable : MonoBehaviour {
+    public event System.Action onGrab;
     public static int releasedLayer = 9;
 
     public Rigidbody body;
@@ -34,6 +35,10 @@ public class Grabbable : MonoBehaviour {
         transform.SetParent(hand.transform, true);
         transform.localPosition = gripTransform.localPosition;
         transform.localRotation = gripTransform.localRotation;
+
+        if (onGrab != null) {
+            onGrab();
+        }
     }
 
     public void GetReleased () {
