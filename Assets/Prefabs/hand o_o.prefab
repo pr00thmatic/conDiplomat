@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8889301892752020490}
   - component: {fileID: 115040953376275983}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hand o_o
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,7 +48,8 @@ MonoBehaviour:
   simulated: 0
   isGrabbing: 0
   grabStrengthTreshold: 0.1
-  pointer: {fileID: 0}
+  pointer: {fileID: 4385013089990797077}
+  grabbed: {fileID: 0}
 --- !u!1 &5084723727150688586
 GameObject:
   m_ObjectHideFlags: 0
