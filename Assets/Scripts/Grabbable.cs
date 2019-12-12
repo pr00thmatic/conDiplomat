@@ -12,6 +12,11 @@ public class Grabbable : MonoBehaviour {
     public Transform gripTransform;
 
     Transform _oldParent;
+    Vector3 _originalPosition;
+
+    void Awake () {
+        _originalPosition = transform.position;
+    }
 
     public void SetHighlight (bool value) {
         highlighter.enabled = value;
