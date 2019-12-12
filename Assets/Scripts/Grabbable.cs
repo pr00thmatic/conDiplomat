@@ -4,7 +4,10 @@ using System.Collections.Generic;
 
 [RequireComponent(typeof(Outline))]
 public class Grabbable : MonoBehaviour {
+    public Outline highlighter;
+    public bool Highlighted { get => highlighter.enabled; }
+
     public void SetHighlight (bool value) {
-        GetComponent<Outline>().enabled = value;
+        highlighter.enabled = value;
     }
 }

@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Pointer : MonoBehaviour {
-    public LayerMask allowed;
-
     public Grabbable target;
     public LineRenderer active;
     public LineRenderer inactive;
@@ -12,8 +10,9 @@ public class Pointer : MonoBehaviour {
 
     void Update () {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit,
-                            maxDistance, allowed)) {
+        if (Physics.Raycast(transform.position, transform.forward, out hit, maxDistance) &&
+            hit.collider.GetComponentInParent<Grabbable>()) {
+
             active.gameObject.SetActive(true);
             inactive.gameObject.SetActive(false);
             active.positionCount = 2;
@@ -21,13 +20,23 @@ public class Pointer : MonoBehaviour {
                     Vector3.zero, new Vector3(0,0, hit.distance)
                 });
 
-            if (target) {
+            Grabbable grabbable = hit.collider.GetComponentInParent<Grabbable>();
+            if (target && target != grabbable) {
                 target.SetHighlight(false);
             }
 
-            target = hit.collider.GetComponentInParent<Grabbable>();
-            target.SetHighlight(true);
+            target = grabbable;
+
+            if (!target.Highlighted) {
+                target.SetHighlight(true);
+            }
         } else {
+
+            if (target) {
+                target.SetHighlight(false);
+                target = null;
+            }
+
             inactive.positionCount = 2;
             inactive.SetPositions(new Vector3[] {
                     Vector3.zero, new Vector3(0,0, maxDistance)
