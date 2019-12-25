@@ -9119,7 +9119,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e60cde6bfa5f960458225424244926d8, type: 3}
   poing: {fileID: 8300000, guid: f91bea0b137135941adb0554901f137d, type: 3}
   click: {fileID: 8300000, guid: 8cc602f00d530cd42a375a9fde7c3e06, type: 3}
-  yeekTolerance: 5
+  yeekTolerance: 100
+  speed: 0
+  speedChange: 0
 --- !u!82 &1755401079
 AudioSource:
   m_ObjectHideFlags: 0

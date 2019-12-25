@@ -26,6 +26,25 @@ public class Closable : MonoBehaviour {
     void Update () {
 	if (!hand) return;
 
+	UpdateHinge();
+	UpdateSounds();
+	UpdateHand();
+	UpdateBuffers();
+    }
+
+    void UpdateHand () {
+	if (!hand.isGrabbing) {
+	    hand = null;
+	    Release();
+	}
+    }
+
+    void UpdateBuffers () {
+	_bufferSpeed = speed;
+	_bufferTarget = hinge.spring.targetPosition;
+    }
+
+    void UpdateHinge () {
 	Vector3 distance = hand.transform.position - bone.transform.position;
 	distance -= Vector3.Project(distance, bone.right);
 
@@ -34,16 +53,6 @@ public class Closable : MonoBehaviour {
 	    Mathf.Lerp(100, 0, Vector3.SignedAngle(distance, bone.parent.forward,
 						   bone.parent.right)/100f);
 	hinge.spring = spring;
-
-	UpdateSounds();
-
-	_bufferSpeed = speed;
-	_bufferTarget = spring.targetPosition;
-
-	if (!hand.isGrabbing) {
-	    hand = null;
-	    Release();
-	}
     }
 
     void UpdateSounds () {
