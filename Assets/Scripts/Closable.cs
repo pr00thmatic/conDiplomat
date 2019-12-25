@@ -7,44 +7,76 @@ public class Closable : MonoBehaviour {
     public Transform bone;
     public HingeJoint hinge;
 
+    bool _markedOpen;
+
+    public AudioSource speaker;
+
+    public AudioClip[] yeeks;
+    public AudioClip poing;
+    public AudioClip click;
+    public float yeekTolerance = 5;
+
+    float _bufferTarget;
+    float _bufferSpeed;
+    bool _closeTriggered = false;
+
+    public float speed;
+    public float speedChange;
+
     void Update () {
-        if (!hand) return;
+	if (!hand) return;
 
-        Vector3 distance = hand.transform.position - bone.transform.position;
-        distance -= Vector3.Project(distance, bone.right);
-        JointSpring spring = hinge.spring;
-        spring.targetPosition =
-            Mathf.Lerp(100, 0, Vector3.SignedAngle(distance, bone.parent.forward,
-                                                   bone.parent.right)/100f);
-        hinge.spring = spring;
-        // Vector3 distance = hand.transform.position - bone.transform.position;
-        // Quaternion newRotation =
-        //     Quaternion.LookRotation(distance - Vector3.Project(distance, bone.right),
-        //                             -Vector3.up);
-        // if (Mathf.Abs(newRotation.eulerAngles.y) > 90) {
-        //     newRotation =
-        //         Quaternion.LookRotation(distance - Vector3.Project(distance, bone.right),
-        //                                 Vector3.up);
-        // }
+	Vector3 distance = hand.transform.position - bone.transform.position;
+	distance -= Vector3.Project(distance, bone.right);
 
-        // bone.rotation = newRotation;
+	JointSpring spring = hinge.spring;
+	spring.targetPosition =
+	    Mathf.Lerp(100, 0, Vector3.SignedAngle(distance, bone.parent.forward,
+						   bone.parent.right)/100f);
+	hinge.spring = spring;
 
-        if (!hand.isGrabbing) {
-            hand = null;
-            Release();
-        }
+	UpdateSounds();
+
+	_bufferSpeed = speed;
+	_bufferTarget = spring.targetPosition;
+
+	if (!hand.isGrabbing) {
+	    hand = null;
+	    Release();
+	}
+    }
+
+    void UpdateSounds () {
+	speed = (hinge.spring.targetPosition - _bufferTarget) / Time.deltaTime;
+	speedChange = speed - _bufferSpeed;
+
+	if (Mathf.Abs(speedChange) > yeekTolerance) {
+	    speaker.PlayOneShot(yeeks[Random.Range(0, yeeks.Length)]);
+	}
+
+	if (hinge.spring.targetPosition == 100 && ! _closeTriggered) {
+	    _closeTriggered = true;
+	    speaker.PlayOneShot(click);
+	} else if (hinge.spring.targetPosition != 100) {
+	    _closeTriggered = false;
+	}
     }
 
     void OnTriggerStay (Collider c) {
-        if (hand) return;
+	if (hand) return;
 
-        SimulatedHand possibleHand = c.GetComponentInParent<SimulatedHand>();
-        if (possibleHand && possibleHand.isGrabbing) {
-            hand = possibleHand;
-        }
+	SimulatedHand possibleHand = c.GetComponentInParent<SimulatedHand>();
+	if (possibleHand && possibleHand.isGrabbing) {
+	    hand = possibleHand;
+	}
     }
 
     public void Release () {
-        bone.transform.forward = transform.parent.up;
+	JointSpring spring = hinge.spring;
+	if (spring.targetPosition != 100) {
+	    spring.targetPosition = 0;
+	    speaker.PlayOneShot(poing);
+	}
+	hinge.spring = spring;
     }
 }
