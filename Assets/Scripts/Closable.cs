@@ -32,6 +32,22 @@ public class Closable : MonoBehaviour {
 	UpdateBuffers();
     }
 
+    void UpdateSounds () {
+	speed = (hinge.spring.targetPosition - _bufferTarget) / Time.deltaTime;
+	speedChange = speed - _bufferSpeed;
+
+	if (speedChange > yeekTolerance) {
+	    speaker.PlayOneShot(yeeks[Random.Range(0, yeeks.Length)]);
+	}
+
+	if (hinge.spring.targetPosition == 100 && ! _closeTriggered) {
+	    _closeTriggered = true;
+	    speaker.PlayOneShot(click);
+	} else if (hinge.spring.targetPosition != 100) {
+	    _closeTriggered = false;
+	}
+    }
+
     void UpdateHand () {
 	if (!hand.isGrabbing) {
 	    hand = null;
@@ -53,22 +69,6 @@ public class Closable : MonoBehaviour {
 	    Mathf.Lerp(100, 0, Vector3.SignedAngle(distance, bone.parent.forward,
 						   bone.parent.right)/100f);
 	hinge.spring = spring;
-    }
-
-    void UpdateSounds () {
-	speed = (hinge.spring.targetPosition - _bufferTarget) / Time.deltaTime;
-	speedChange = speed - _bufferSpeed;
-
-	if (speedChange > yeekTolerance) {
-	    speaker.PlayOneShot(yeeks[Random.Range(0, yeeks.Length)]);
-	}
-
-	if (hinge.spring.targetPosition == 100 && ! _closeTriggered) {
-	    _closeTriggered = true;
-	    speaker.PlayOneShot(click);
-	} else if (hinge.spring.targetPosition != 100) {
-	    _closeTriggered = false;
-	}
     }
 
     void OnTriggerStay (Collider c) {

@@ -1505,7 +1505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.58681864
+      value: 0.9716561
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1513,7 +1513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.80971843
+      value: -0.23639914
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_RootOrder
@@ -1525,7 +1525,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 288.137
+      value: 207.34799
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -9119,7 +9119,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e60cde6bfa5f960458225424244926d8, type: 3}
   poing: {fileID: 8300000, guid: f91bea0b137135941adb0554901f137d, type: 3}
   click: {fileID: 8300000, guid: 8cc602f00d530cd42a375a9fde7c3e06, type: 3}
-  yeekTolerance: 100
+  yeekTolerance: 150
   speed: 0
   speedChange: 0
 --- !u!82 &1755401079
@@ -9132,8 +9132,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: 19fb3ff0230a2924ebeb4e3f124aa97f, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -9142,10 +9142,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.4261356
+  MaxDistance: 2.4388907
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -9153,23 +9153,41 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.17472517
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -5.7255626
+      outSlope: -5.7255626
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.31373715
+      value: 0.4171219
+      inSlope: -1.4313906
+      outSlope: -1.4313906
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.63768244
+      value: 0
+      inSlope: -0.35784766
+      outSlope: -0.35784766
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.17479509
+      outSlope: -0.17479509
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
