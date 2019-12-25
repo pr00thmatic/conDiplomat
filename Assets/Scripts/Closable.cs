@@ -50,7 +50,7 @@ public class Closable : MonoBehaviour {
 	speed = (hinge.spring.targetPosition - _bufferTarget) / Time.deltaTime;
 	speedChange = speed - _bufferSpeed;
 
-	if (Mathf.Abs(speedChange) > yeekTolerance) {
+	if (speedChange > yeekTolerance) {
 	    speaker.PlayOneShot(yeeks[Random.Range(0, yeeks.Length)]);
 	}
 
