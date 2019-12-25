@@ -48,11 +48,13 @@ public class SimulatedHand : MonoBehaviour {
         if (_released && isGrabbing) {
             _released = false;
             Grab();
+            GetComponentInChildren<Animator>().SetFloat("Flex", 1);
         }
 
         if (!isGrabbing && !_released) {
             _released = true;
             Release();
+            GetComponentInChildren<Animator>().SetFloat("Flex", 0);
         }
     }
 

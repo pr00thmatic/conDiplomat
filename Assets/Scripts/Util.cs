@@ -19,4 +19,31 @@ public class Util {
             c.enabled = value;
         }
     }
+
+    public static void ResetBody (Rigidbody body) {
+        body.velocity = Vector3.zero;
+        body.angularVelocity = Vector3.zero;
+    }
+
+    public static void ResetTransform (Transform t) {
+        t.localPosition = Vector3.zero;
+        t.localRotation = Quaternion.identity;
+        t.localScale = Vector3.one;
+    }
+
+    public static Vector3 GetScale (Transform t) {
+        Transform oldParent = t.parent;
+        t.parent = null;
+        Vector3 scale = t.localScale;
+        t.parent = oldParent;
+
+        return scale;
+    }
+
+    public static void SetScale (Transform t, Vector3 scale) {
+        Transform oldParent = t.parent;
+        t.parent = null;
+        t.localScale = scale;
+        t.parent = oldParent;
+    }
 }

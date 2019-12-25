@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(Outline))]
+[RequireComponent(typeof(Rigidbody))]
 public class Grabbable : MonoBehaviour {
     public event System.Action onGrab;
     public static int releasedLayer = 9;

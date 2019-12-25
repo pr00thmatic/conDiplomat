@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(Grabbable))]
+[RequireComponent(typeof(Rigidbody))]
 public class Equipable : MonoBehaviour {
     public EquipableType type;
     public Luggage owner = null;
