@@ -3,54 +3,72 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SimulatedHand : MonoBehaviour {
-    public Equipable focused;
+    public OVRInput.Controller controller;
+    public bool simulated;
+    public bool isGrabbing;
+    public float grabStrengthTreshold = 0.1f;
+
+    public Pointer pointer;
     public Grabbable grabbed;
 
-    public bool simulate = false;
+    public Vector3 velocity;
+    public TextMesh text;
 
-    public GameObject grabIndicator;
-    public bool isGrabbing;
-    public OVRInput.Controller controller = OVRInput.Controller.RTouch;
+    int _cacheSize = 10;
+    List<Vector3> _posCache = new List<Vector3>();
 
-    public float treshold = 0.1f;
+    bool _released = true;
 
-    public bool _released = true;
+    public void UpdateVelocity () {
+        if (_posCache.Count >= _cacheSize) {
+            _posCache.RemoveAt(0);
+        }
+        _posCache.Add(transform.position);
+
+        velocity = Vector3.zero;
+        for (int i=1; i<_posCache.Count; i++) {
+            velocity = _posCache[i] - _posCache[i-1];
+        }
+
+        velocity = ((velocity / _posCache.Count) / Time.deltaTime) * 10;
+        text.text = velocity + "";
+    }
 
     void Update () {
-        if (!simulate) {
-            isGrabbing =
-                Mathf.Abs(OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller)) > treshold ||
-                Mathf.Abs(OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, controller)) > treshold;
+        UpdateVelocity();
+
+        pointer.gameObject.SetActive(!grabbed);
+
+        if (!simulated) {
+            float index = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, controller);
+            float hand = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, controller);
+            isGrabbing = index > grabStrengthTreshold || hand > grabStrengthTreshold;
         }
 
         if (_released && isGrabbing) {
             _released = false;
             Grab();
+            GetComponentInChildren<Animator>().SetFloat("Flex", 1);
         }
 
-        if (!isGrabbing) {
+        if (!isGrabbing && !_released) {
             _released = true;
-            if (grabbed) {
-                Release();
-            }
+            Release();
+            GetComponentInChildren<Animator>().SetFloat("Flex", 0);
         }
-
-        grabIndicator.SetActive(isGrabbing);
     }
 
     public void Grab () {
-        if (!focused) return;
-
-        focused.IsGrabbed = true;
-        grabbed = focused.GetGrabbedCopy();
-        grabbed.transform.SetParent(transform, false);
-        focused = null;
+        if (pointer.target) {
+            grabbed = pointer.target;
+            grabbed.GetGrabbed(this);
+        }
     }
 
     public void Release () {
         if (grabbed) {
-            grabbed.Drop();
-            grabbed.transform.parent = null;
+            grabbed.GetReleased();
+            grabbed.body.velocity = velocity;
             grabbed = null;
         }
     }

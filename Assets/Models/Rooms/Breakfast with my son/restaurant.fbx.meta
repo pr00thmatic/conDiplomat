@@ -1,0 +1,290 @@
+fileFormatVersion: 2
+guid: 4143ddac12f5cda41b9c5e735e1a7f0e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: chair
+    100002: chair back
+    100004: chair seats
+    100006: chair2
+    100008: chair2 back
+    100010: chair2 seat
+    100012: curtain
+    100014: curtain.001
+    100016: divider
+    100018: divider pannels
+    100020: divider sticks
+    100022: divider wood
+    100024: //RootNode
+    100026: restaurant
+    100028: table
+    100030: window
+    100032: room
+    100034: Cube
+    100036: Cube.001
+    100038: Cube.002
+    100040: Cube.003
+    100042: Plane
+    100044: Plane.001
+    100046: walls
+    100048: window carve
+    100050: bar table
+    100052: lower handle
+    100054: refrigerator
+    100056: refrigerator closet
+    100058: upper handle
+    100060: walls.001
+    100062: door handle
+    100064: door handle.001
+    100066: door handle.002
+    100068: door handle.003
+    100070: reception glass window
+    100072: reception window border
+    100074: upper handle.001
+    100076: upper handle.002
+    100078: upper handle.003
+    100080: upper handle.004
+    400000: chair
+    400002: chair back
+    400004: chair seats
+    400006: chair2
+    400008: chair2 back
+    400010: chair2 seat
+    400012: curtain
+    400014: curtain.001
+    400016: divider
+    400018: divider pannels
+    400020: divider sticks
+    400022: divider wood
+    400024: //RootNode
+    400026: restaurant
+    400028: table
+    400030: window
+    400032: room
+    400034: Cube
+    400036: Cube.001
+    400038: Cube.002
+    400040: Cube.003
+    400042: Plane
+    400044: Plane.001
+    400046: walls
+    400048: window carve
+    400050: bar table
+    400052: lower handle
+    400054: refrigerator
+    400056: refrigerator closet
+    400058: upper handle
+    400060: walls.001
+    400062: door handle
+    400064: door handle.001
+    400066: door handle.002
+    400068: door handle.003
+    400070: reception glass window
+    400072: reception window border
+    400074: upper handle.001
+    400076: upper handle.002
+    400078: upper handle.003
+    400080: upper handle.004
+    2100000: No Name
+    2100002: walls
+    2100004: floor
+    2300000: chair
+    2300002: chair back
+    2300004: chair seats
+    2300006: chair2
+    2300008: chair2 back
+    2300010: chair2 seat
+    2300012: curtain
+    2300014: curtain.001
+    2300016: divider pannels
+    2300018: divider sticks
+    2300020: divider wood
+    2300022: restaurant
+    2300024: table
+    2300026: window
+    2300028: room
+    2300030: Cube
+    2300032: Cube.001
+    2300034: Cube.002
+    2300036: Cube.003
+    2300038: Plane
+    2300040: Plane.001
+    2300042: walls
+    2300044: window carve
+    2300046: bar table
+    2300048: lower handle
+    2300050: refrigerator closet
+    2300052: upper handle
+    2300054: walls.001
+    2300056: door handle
+    2300058: door handle.001
+    2300060: door handle.002
+    2300062: door handle.003
+    2300064: reception glass window
+    2300066: reception window border
+    2300068: upper handle.001
+    2300070: upper handle.002
+    2300072: upper handle.003
+    2300074: upper handle.004
+    3300000: chair
+    3300002: chair back
+    3300004: chair seats
+    3300006: chair2
+    3300008: chair2 back
+    3300010: chair2 seat
+    3300012: curtain
+    3300014: curtain.001
+    3300016: divider pannels
+    3300018: divider sticks
+    3300020: divider wood
+    3300022: restaurant
+    3300024: table
+    3300026: window
+    3300028: room
+    3300030: Cube
+    3300032: Cube.001
+    3300034: Cube.002
+    3300036: Cube.003
+    3300038: Plane
+    3300040: Plane.001
+    3300042: walls
+    3300044: window carve
+    3300046: bar table
+    3300048: lower handle
+    3300050: refrigerator closet
+    3300052: upper handle
+    3300054: walls.001
+    3300056: door handle
+    3300058: door handle.001
+    3300060: door handle.002
+    3300062: door handle.003
+    3300064: reception glass window
+    3300066: reception window border
+    3300068: upper handle.001
+    3300070: upper handle.002
+    3300072: upper handle.003
+    3300074: upper handle.004
+    4300000: table
+    4300002: chair2
+    4300004: chair2 back
+    4300006: chair2 seat
+    4300008: chair
+    4300010: chair back
+    4300012: chair seats
+    4300014: divider wood
+    4300016: divider sticks
+    4300018: divider pannels
+    4300020: restaurant
+    4300022: window
+    4300024: curtain.001
+    4300026: curtain
+    4300028: room
+    4300030: Plane
+    4300032: Plane.001
+    4300034: Cube
+    4300036: Cube.001
+    4300038: Cube.002
+    4300040: Cube.003
+    4300042: window carve
+    4300044: walls
+    4300046: bar table
+    4300048: refrigerator closet
+    4300050: lower handle
+    4300052: upper handle
+    4300054: walls.001
+    4300056: door handle
+    4300058: upper handle.001
+    4300060: door handle.001
+    4300062: upper handle.002
+    4300064: door handle.002
+    4300066: upper handle.003
+    4300068: door handle.003
+    4300070: upper handle.004
+    4300072: reception window border
+    4300074: reception glass window
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

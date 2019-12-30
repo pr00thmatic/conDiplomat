@@ -1,0 +1,34 @@
+Les presento al menú del juego.
+
+Menú, usuario desconocido... usuario desconocido, menú.
+
+Aquí eliges qué ropa vestir en la reunión,
+la agarras y la pones en la maleta...
+
+yay! qué emoción... divertido? no, en realidad no, no ve?
+sí, nosotros también pensamos eso, así que cambiamos algunas cosas...
+
+Ésta es tu mano. A tu mano le pusimos colliders... yay!
+
+pero... por qué no usar los que trae oculus por defecto?
+por que son retrasados :v
+
+éstos se acomodan a tu mano de una mejor forma.
+
+*éste sí* es el menú del juego.
+
+Aquí eliges qué ropa llevar, qué regalos llevar,
+a qué reunión ir...
+
+Éste es el juego... es para oculus, y eres el 1ro en verlo
+tengo 3 manos? yay! auto saludo!
+nah, en realidad solo tienes 2...
+me olvidé apagar la mano que uso para debuguear, pero compilar toma demasiado.
+
+puedo llevar dos ropas?
+Claro! por qué no?
+después de todo, tienes dos torsos y dos pares de piernas.
+eso quiere decir no! (tengo que mejorar mi tono sarcástico)
+
+puedo llevar dos tickets?
+Claro! por qué no? todos podemos estar en dos lugares al mismo tiempo.º
