@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/breakfast with my son.unity
-    guid: 2090e648eba4d1c42a216344ae1ebcd9
+    path: Assets/Scenes/menu.unity
+    guid: 29febad50dcfdd14eac7e72335a488b4
   m_configObjects: {}

@@ -44,7 +44,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -88,8 +88,9 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_LightingDataAsset: {fileID: 112000000, guid: 1f1734511b9c41645a7e06753112603b,
+    type: 2}
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -687,50 +688,6 @@ Transform:
   m_Father: {fileID: 1436712765}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &215561448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 215561449}
-  - component: {fileID: 215561450}
-  m_Layer: 10
-  m_Name: handle sensor
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &215561449
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215561448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0317, y: 0.0321, z: 0.0027}
-  m_LocalScale: {x: 0.06994, y: 0.06994, z: 0.06994}
-  m_Children: []
-  m_Father: {fileID: 284059313}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &215561450
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 215561448}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &238499764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4204,6 +4161,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2870878197074573462, guid: 5f4892a60042eaf4db78089bcb2a79aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2170442588640413821, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
       propertyPath: m_Name
@@ -4212,7 +4174,7 @@ PrefabInstance:
     - target: {fileID: 2170442588640413821, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8889301892752020490, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
@@ -4248,11 +4210,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 5680322304576595540, guid: 5f4892a60042eaf4db78089bcb2a79aa,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 115040953376275983, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
@@ -4583,6 +4540,7 @@ MonoBehaviour:
   poing: {fileID: 8300000, guid: f91bea0b137135941adb0554901f137d, type: 3}
   click: {fileID: 8300000, guid: 8cc602f00d530cd42a375a9fde7c3e06, type: 3}
   yeekTolerance: 150
+  yeekCooldown: 1
   speed: 0
   speedChange: 0
 --- !u!82 &1755401079
