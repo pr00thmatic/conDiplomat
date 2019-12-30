@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: f8d5ccb4175ade84a8a2f36d5729664b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: chair
+    100002: chair back
+    100004: chair seats
+    100006: chair2
+    100008: chair2 back
+    100010: chair2 seat
+    100012: Cube.003
+    100014: divider
+    100016: divider pannels
+    100018: divider sticks
+    100020: divider wood
+    100022: //RootNode
+    100024: table
+    100026: Cube
+    100028: Cube.001
+    100030: Cube.002
+    100032: curtain
+    100034: curtain.001
+    100036: Plane
+    100038: Plane.001
+    100040: window
+    100042: table leg src
+    400000: chair
+    400002: chair back
+    400004: chair seats
+    400006: chair2
+    400008: chair2 back
+    400010: chair2 seat
+    400012: Cube.003
+    400014: divider
+    400016: divider pannels
+    400018: divider sticks
+    400020: divider wood
+    400022: //RootNode
+    400024: table
+    400026: Cube
+    400028: Cube.001
+    400030: Cube.002
+    400032: curtain
+    400034: curtain.001
+    400036: Plane
+    400038: Plane.001
+    400040: window
+    400042: table leg src
+    2100000: No Name
+    2100002: iron
+    2300000: chair
+    2300002: chair back
+    2300004: chair seats
+    2300006: chair2
+    2300008: chair2 back
+    2300010: chair2 seat
+    2300012: Cube.003
+    2300014: divider pannels
+    2300016: divider sticks
+    2300018: divider wood
+    2300020: table
+    2300022: Cube
+    2300024: Cube.001
+    2300026: Cube.002
+    2300028: curtain
+    2300030: curtain.001
+    2300032: Plane
+    2300034: Plane.001
+    2300036: window
+    2300038: table leg src
+    3300000: chair
+    3300002: chair back
+    3300004: chair seats
+    3300006: chair2
+    3300008: chair2 back
+    3300010: chair2 seat
+    3300012: Cube.003
+    3300014: divider pannels
+    3300016: divider sticks
+    3300018: divider wood
+    3300020: table
+    3300022: Cube
+    3300024: Cube.001
+    3300026: Cube.002
+    3300028: curtain
+    3300030: curtain.001
+    3300032: Plane
+    3300034: Plane.001
+    3300036: window
+    3300038: table leg src
+    4300000: table
+    4300002: Cube.003
+    4300004: chair2
+    4300006: chair2 back
+    4300008: chair2 seat
+    4300010: chair
+    4300012: chair back
+    4300014: chair seats
+    4300016: divider wood
+    4300018: divider sticks
+    4300020: divider pannels
+    4300022: window
+    4300024: curtain.001
+    4300026: curtain
+    4300028: Plane
+    4300030: Plane.001
+    4300032: Cube
+    4300034: Cube.001
+    4300036: Cube.002
+    4300038: table leg src
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

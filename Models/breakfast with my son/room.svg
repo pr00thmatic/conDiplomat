@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="361.2444458007812mm"
+   height="361.2444458007812mm"
+   viewBox="0 0 361.2444458007812 361.2444458007813"
+   version="1.1"
+   id="svg8250"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="room.svg"
+   inkscape:export-filename="../..\Assets\Models\Rooms\Breakfast with my son\Materials/room albedo.png"
+   inkscape:export-xdpi="49.9921875"
+   inkscape:export-ydpi="49.9921875">
+  <defs
+     id="defs8244" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.41618482163909"
+     inkscape:cx="266.6666846791494"
+     inkscape:cy="501.2179717883702"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false" />
+  <metadata
+     id="metadata8247">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2">
+    <rect
+       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:12.1360626221;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.4170403574;paint-order:stroke markers fill"
+       id="rect8806"
+       width="1365.333374023438"
+       height="1365.333374023438"
+       x="0"
+       y="2.273736754432321e-013"
+       transform="scale(0.2645833333333333)" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#12a4a8;fill-opacity:1;stroke:none;stroke-width:12.1360626221;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.4170403574;paint-order:stroke markers fill"
+       id="rect8824"
+       width="189.4408569335938"
+       height="166.5040588378906"
+       x="349.1488342285156"
+       y="685.7249755859375"
+       transform="scale(0.2645833333333333)" />
+    <rect
+       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,-471.9671271685694,-47.16104482968132)"
+       style="display:inline;opacity:1;vector-effect:none;fill:#12a4a8;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       id="rect4519"
+       width="637.1328735351562"
+       height="769.6565551757812"
+       x="720.3849487304688"
+       y="582.0846557617188" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#12a4a8;fill-opacity:1;stroke:none;stroke-width:12.1360626221;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.4170403574;paint-order:stroke markers fill"
+       id="rect8841"
+       width="170.5972900390625"
+       height="164.59033203125"
+       x="1.201389312744141"
+       y="684.1456298828125"
+       transform="scale(0.2645833333333333)" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#12a4a8;fill-opacity:1;stroke:none;stroke-width:12.1360626221;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.4170403574;paint-order:stroke markers fill"
+       id="rect8843"
+       width="147.8148345947266"
+       height="156.3099365234375"
+       x="178.397216796875"
+       y="860.72412109375"
+       transform="matrix(0.2828304595945323,0,0,0.3019701091748991,-3.255236539539071,-35.32642967102567)" />
+    <rect
+       style="opacity:1;vector-effect:none;fill:#12a4a8;fill-opacity:1;stroke:none;stroke-width:12.1360626221;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.4170403574;paint-order:stroke markers fill"
+       id="rect8845"
+       width="491.01708984375"
+       height="171.6011352539062"
+       x="851.2095336914062"
+       y="853.9280395507812"
+       transform="matrix(0.2719074394412939,0,0,0.2737520623372165,-6.234348944863492,-9.402799415434913)" />
+  </g>
+  <g
+     inkscape:label="uv"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-57.40531511922299,19.8306231585272)"
+     sodipodi:insensitive="true"
+     style="display:none">
+    <image
+       sodipodi:absref="D:\deving-games\conDiplomat\Models\breakfast with my son uvs.png"
+       id="image8803"
+       xlink:href="file:///D:/deving-games/conDiplomat/Models/breakfast%20with%20my%20son%20uvs.png"
+       preserveAspectRatio="none"
+       height="1365.333374023438"
+       width="1365.333374023438"
+       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,57.40531511922299,-19.83062315852714)" />
+  </g>
+</svg>
