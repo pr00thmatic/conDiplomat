@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Closable : MonoBehaviour {
+  public event System.Action onClose;
+
   public SimulatedHand hand;
   public Transform bone;
   public HingeJoint hinge;
@@ -93,6 +95,10 @@ public class Closable : MonoBehaviour {
     if (spring.targetPosition != 100) {
       spring.targetPosition = 0;
       speaker.PlayOneShot(poing);
+    } else {
+      if (onClose != null) {
+        onClose();
+      }
     }
     hinge.spring = spring;
   }
