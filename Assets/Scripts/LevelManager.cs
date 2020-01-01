@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class LevelManager : Singleton<LevelManager> {
   public string loadingSceneName;
+  public float artificialLoadingTime = 10;
 
   public void LoadLevel (string levelName) {
     levelName = levelName;
@@ -15,7 +16,7 @@ public class LevelManager : Singleton<LevelManager> {
     AsyncOperation loadingOperation = SceneManager.LoadSceneAsync(loadingSceneName);
     float elapsed = 0;
 
-    while (loadingOperation.isDone == false || elapsed < 3) {
+    while (loadingOperation.isDone == false || elapsed < artificialLoadingTime) {
       elapsed += Time.deltaTime;
       yield return null;
     }

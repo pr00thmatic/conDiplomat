@@ -1,0 +1,356 @@
+fileFormatVersion: 2
+guid: 4824275630a453149a19bca3125ab63f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: building
+    100002: building.001
+    100004: building.002
+    100006: building.003
+    100008: building.004
+    100010: building.005
+    100012: building.006
+    100014: building.007
+    100016: cockpit
+    100018: Cube
+    100020: Cylinder
+    100022: house
+    100024: house.001
+    100026: house.002
+    100028: house.003
+    100030: house.004
+    100032: house.005
+    100034: house.006
+    100036: house.007
+    100038: main seat
+    100040: Plane
+    100042: Plane.001
+    100044: Plane.002
+    100046: Plane.003
+    100048: railing
+    100050: railing Ts
+    100052: seat1.L
+    100054: seat1.R
+    100056: seat2.L
+    100058: seat2.R
+    100060: seat3.L
+    100062: seat3.R
+    100064: separator
+    100066: //RootNode
+    100068: train
+    100070: windows border
+    100072: lowpoly building
+    100074: lowpoly building.001
+    100076: lowpoly building.002
+    100078: lowpoly building.003
+    100080: lowpoly building.004
+    100082: lowpoly building.005
+    100084: lowpoly building.006
+    100086: lowpoly building.007
+    100088: lowpoly building.008
+    100090: lowpoly building.009
+    100092: lowpoly building.010
+    100094: lowpoly building.011
+    100096: lowpoly building.012
+    100098: lowpoly building.013
+    100100: lowpoly building.014
+    100102: lowpoly building.015
+    100104: lowpoly building.019
+    100106: lowpoly building.020
+    100108: lowpoly building.021
+    100110: lowpoly building.022
+    100112: lowpoly building.023
+    100114: lowpoly building.024
+    100116: lowpoly building.025
+    400000: building
+    400002: building.001
+    400004: building.002
+    400006: building.003
+    400008: building.004
+    400010: building.005
+    400012: building.006
+    400014: building.007
+    400016: cockpit
+    400018: Cube
+    400020: Cylinder
+    400022: house
+    400024: house.001
+    400026: house.002
+    400028: house.003
+    400030: house.004
+    400032: house.005
+    400034: house.006
+    400036: house.007
+    400038: main seat
+    400040: Plane
+    400042: Plane.001
+    400044: Plane.002
+    400046: Plane.003
+    400048: railing
+    400050: railing Ts
+    400052: seat1.L
+    400054: seat1.R
+    400056: seat2.L
+    400058: seat2.R
+    400060: seat3.L
+    400062: seat3.R
+    400064: separator
+    400066: //RootNode
+    400068: train
+    400070: windows border
+    400072: lowpoly building
+    400074: lowpoly building.001
+    400076: lowpoly building.002
+    400078: lowpoly building.003
+    400080: lowpoly building.004
+    400082: lowpoly building.005
+    400084: lowpoly building.006
+    400086: lowpoly building.007
+    400088: lowpoly building.008
+    400090: lowpoly building.009
+    400092: lowpoly building.010
+    400094: lowpoly building.011
+    400096: lowpoly building.012
+    400098: lowpoly building.013
+    400100: lowpoly building.014
+    400102: lowpoly building.015
+    400104: lowpoly building.019
+    400106: lowpoly building.020
+    400108: lowpoly building.021
+    400110: lowpoly building.022
+    400112: lowpoly building.023
+    400114: lowpoly building.024
+    400116: lowpoly building.025
+    2100000: No Name
+    2100002: concrete
+    2100004: windows
+    2100006: house
+    2100008: accent
+    2300000: building
+    2300002: building.001
+    2300004: building.002
+    2300006: building.003
+    2300008: building.004
+    2300010: building.005
+    2300012: building.006
+    2300014: building.007
+    2300016: cockpit
+    2300018: Cube
+    2300020: Cylinder
+    2300022: house
+    2300024: house.001
+    2300026: house.002
+    2300028: house.003
+    2300030: house.004
+    2300032: house.005
+    2300034: house.006
+    2300036: house.007
+    2300038: main seat
+    2300040: Plane
+    2300042: Plane.001
+    2300044: Plane.002
+    2300046: Plane.003
+    2300048: railing
+    2300050: railing Ts
+    2300052: seat1.L
+    2300054: seat1.R
+    2300056: seat2.L
+    2300058: seat2.R
+    2300060: seat3.L
+    2300062: seat3.R
+    2300064: separator
+    2300066: train
+    2300068: windows border
+    2300070: lowpoly building
+    2300072: lowpoly building.001
+    2300074: lowpoly building.002
+    2300076: lowpoly building.003
+    2300078: lowpoly building.004
+    2300080: lowpoly building.005
+    2300082: lowpoly building.006
+    2300084: lowpoly building.007
+    2300086: lowpoly building.008
+    2300088: lowpoly building.009
+    2300090: lowpoly building.010
+    2300092: lowpoly building.011
+    2300094: lowpoly building.012
+    2300096: lowpoly building.013
+    2300098: lowpoly building.014
+    2300100: lowpoly building.015
+    2300102: lowpoly building.019
+    2300104: lowpoly building.020
+    2300106: lowpoly building.021
+    2300108: lowpoly building.022
+    2300110: lowpoly building.023
+    2300112: lowpoly building.024
+    2300114: lowpoly building.025
+    3300000: building
+    3300002: building.001
+    3300004: building.002
+    3300006: building.003
+    3300008: building.004
+    3300010: building.005
+    3300012: building.006
+    3300014: building.007
+    3300016: cockpit
+    3300018: Cube
+    3300020: Cylinder
+    3300022: house
+    3300024: house.001
+    3300026: house.002
+    3300028: house.003
+    3300030: house.004
+    3300032: house.005
+    3300034: house.006
+    3300036: house.007
+    3300038: main seat
+    3300040: Plane
+    3300042: Plane.001
+    3300044: Plane.002
+    3300046: Plane.003
+    3300048: railing
+    3300050: railing Ts
+    3300052: seat1.L
+    3300054: seat1.R
+    3300056: seat2.L
+    3300058: seat2.R
+    3300060: seat3.L
+    3300062: seat3.R
+    3300064: separator
+    3300066: train
+    3300068: windows border
+    3300070: lowpoly building
+    3300072: lowpoly building.001
+    3300074: lowpoly building.002
+    3300076: lowpoly building.003
+    3300078: lowpoly building.004
+    3300080: lowpoly building.005
+    3300082: lowpoly building.006
+    3300084: lowpoly building.007
+    3300086: lowpoly building.008
+    3300088: lowpoly building.009
+    3300090: lowpoly building.010
+    3300092: lowpoly building.011
+    3300094: lowpoly building.012
+    3300096: lowpoly building.013
+    3300098: lowpoly building.014
+    3300100: lowpoly building.015
+    3300102: lowpoly building.019
+    3300104: lowpoly building.020
+    3300106: lowpoly building.021
+    3300108: lowpoly building.022
+    3300110: lowpoly building.023
+    3300112: lowpoly building.024
+    3300114: lowpoly building.025
+    4300000: windows border
+    4300002: seat3.R
+    4300004: seat3.L
+    4300006: Cube
+    4300008: seat2.R
+    4300010: seat2.L
+    4300012: seat1.R
+    4300014: seat1.L
+    4300016: separator
+    4300018: main seat
+    4300020: cockpit
+    4300022: railing
+    4300024: railing Ts
+    4300026: train
+    4300028: Cylinder
+    4300030: Plane
+    4300032: Plane.001
+    4300034: Plane.002
+    4300036: building
+    4300038: house
+    4300040: Plane.003
+    4300042: lowpoly building
+    4300044: lowpoly building.008
+    4300046: lowpoly building.012
+    4300048: lowpoly building.013
+    4300050: lowpoly building.014
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
