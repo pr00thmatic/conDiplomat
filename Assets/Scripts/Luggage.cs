@@ -66,6 +66,8 @@ public class Luggage : MonoBehaviour {
       spring.targetPosition = 0;
       bubble.Appear(1);
       closable.ForceOpen();
+    } else {
+      LevelManager.Instance.LoadLevel(ticket.GetComponent<Ticket>().sceneName);
     }
   }
 }

@@ -226,6 +226,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   respawn: {fileID: 842904498}
+--- !u!114 &38275424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38275422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a931cda42af6dcc49b3be45a57c8b7e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: breakfast with my son
 --- !u!1 &49305038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,6 +1526,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1827739481}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &493902054
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 493902056}
+  - component: {fileID: 493902055}
+  m_Layer: 0
+  m_Name: _GAME MANAGER
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &493902055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493902054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8502a8f2f54037c4bb805e50e6f9adaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingSceneName: train
+--- !u!4 &493902056
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493902054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512294794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100010, guid: 3af8e357d67b4524c9b64e43d4d95b83,

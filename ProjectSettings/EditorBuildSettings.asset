@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/loading 1.unity
-    guid: fa219b5eb5f66504ea9313d8c3f49277
-  - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: 29febad50dcfdd14eac7e72335a488b4
+  - enabled: 1
+    path: Assets/Scenes/loading/train.unity
+    guid: fa219b5eb5f66504ea9313d8c3f49277
+  - enabled: 1
+    path: Assets/Scenes/breakfast with my son.unity
+    guid: 2090e648eba4d1c42a216344ae1ebcd9
   m_configObjects: {}
