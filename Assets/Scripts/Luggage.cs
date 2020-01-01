@@ -8,6 +8,7 @@ public class Luggage : MonoBehaviour {
   public Transform forceDirection;
   public float rejectionForceMultiplier = 5;
   public Closable closable;
+  public ThoughtBubble bubble;
 
   void OnEnable () {
     closable.onClose += HandleClose;
@@ -52,6 +53,19 @@ public class Luggage : MonoBehaviour {
   }
 
   public void HandleClose () {
+    Equipable ticket = null;
 
+    foreach (Equipable item in items) {
+      if (item.type == EquipableType.Ticket) {
+        ticket = item;
+      }
+    }
+
+    if (ticket == null) {
+      JointSpring spring = closable.hinge.spring;
+      spring.targetPosition = 0;
+      bubble.Appear(1);
+      closable.ForceOpen();
+    }
   }
 }

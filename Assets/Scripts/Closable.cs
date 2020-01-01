@@ -74,11 +74,9 @@ public class Closable : MonoBehaviour {
     Vector3 distance = hand.transform.position - bone.transform.position;
     distance -= Vector3.Project(distance, bone.right);
 
-    JointSpring spring = hinge.spring;
-    spring.targetPosition =
-      Mathf.Lerp(100, 0, Vector3.SignedAngle(distance, bone.parent.forward,
-                                             bone.parent.right)/100f);
-    hinge.spring = spring;
+    float angle = Vector3.SignedAngle(distance, bone.parent.forward,
+                                      bone.parent.right);
+    SetSpringTarget(Mathf.Lerp(100, 0, angle/100f));
   }
 
   void OnTriggerStay (Collider c) {
@@ -90,16 +88,24 @@ public class Closable : MonoBehaviour {
     }
   }
 
+  public void ForceOpen () {
+    SetSpringTarget(0);
+    speaker.PlayOneShot(poing);
+  }
+
   public void Release () {
-    JointSpring spring = hinge.spring;
-    if (spring.targetPosition != 100) {
-      spring.targetPosition = 0;
-      speaker.PlayOneShot(poing);
+    if (hinge.spring.targetPosition != 100) {
+      ForceOpen();
     } else {
       if (onClose != null) {
         onClose();
       }
     }
+  }
+
+  public void SetSpringTarget (float target) {
+    JointSpring spring = hinge.spring;
+    spring.targetPosition = target;
     hinge.spring = spring;
   }
 }
