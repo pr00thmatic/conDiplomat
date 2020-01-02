@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b6d82bc2219094147b4a790a7183baa5, type: 3}
-  m_Name: toy car
+  m_Name: cologne
   m_EditorClassIdentifier: 
-  name: toy car
-  dialogue: {fileID: 8300000, guid: 61b6617896b0bda46a3822e739d730a0, type: 3}
-  emotion: 1
+  name: cologne
+  dialogue: {fileID: 8300000, guid: d82c9e6211454b640924cab3fd967f99, type: 3}
+  emotion: 3
