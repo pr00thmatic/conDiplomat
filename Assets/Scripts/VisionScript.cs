@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class VisionScript : MonoBehaviour {
+  public AudioClip debugClip;
+  public AudioSource speaker;
   public VisionManager target;
   public List<VisionScriptEntry> script;
   public int nextOne = 0;
@@ -16,6 +18,7 @@ public class VisionScript : MonoBehaviour {
   }
 
   public void Activate () {
+    speaker.PlayOneShot(debugClip);
     StopAllCoroutines();
     StartCoroutine(_ExecuteScript());
   }
@@ -28,7 +31,7 @@ public class VisionScript : MonoBehaviour {
     do {
       if (elapsed >= nextMilestone) {
         target.SetVision(script[nextOne].target);
-        nextMilestone += script[nextOne].duration;
+        nextMilestone += script[nextOne].milestone;
         nextOne++;
       }
 

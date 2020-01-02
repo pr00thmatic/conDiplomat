@@ -5,5 +5,5 @@ using System.Collections.Generic;
 [System.Serializable]
 public class VisionScriptEntry {
   public Transform target;
-  public float duration;
+  public float milestone;
 }
