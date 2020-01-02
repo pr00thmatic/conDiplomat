@@ -1865,7 +1865,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100086, guid: 631a148b1fa26d3429989df900fae0e7, type: 3}
       propertyPath: m_Name
-      value: standard human
+      value: your son o_o
       objectReference: {fileID: 0}
     - target: {fileID: 400046, guid: 631a148b1fa26d3429989df900fae0e7, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2078,6 +2078,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionDuration: 0.25
   skin: {fileID: 285691960}
+--- !u!4 &285691963 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400086, guid: 631a148b1fa26d3429989df900fae0e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 285691956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &285691964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285691957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbc7bb326a8a1b4fa2737131ab06043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mover: {fileID: 1172802880}
+  locked: 0
 --- !u!1 &289938625
 GameObject:
   m_ObjectHideFlags: 0
@@ -11565,6 +11585,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08926acd2bf37494aa9a30756c3b7daf, type: 3}
+--- !u!4 &1855806301 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5922679479717708217, guid: 08926acd2bf37494aa9a30756c3b7daf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1855806300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870729540
 GameObject:
   m_ObjectHideFlags: 0
@@ -13113,6 +13139,57 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043206085}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2043396766
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2043396767}
+  - component: {fileID: 2043396768}
+  m_Layer: 0
+  m_Name: gift vision script
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2043396767
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043396766}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 285691963}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043396768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043396766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873fc12a53e2a254697d087bb80fe83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 285691964}
+  script:
+  - target: {fileID: 758410869}
+    duration: 2
+  - target: {fileID: 1855806301}
+    duration: 3
+  - target: {fileID: 758410869}
+    duration: 2
 --- !u!1 &2088342827
 GameObject:
   m_ObjectHideFlags: 0
