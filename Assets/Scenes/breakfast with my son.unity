@@ -2098,6 +2098,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mover: {fileID: 1172802880}
   locked: 0
+--- !u!114 &285691965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285691957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a70dd5d05a72444fab30c45398332eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin: {fileID: 285691960}
+  voice: {fileID: 630149603}
+  blendShapeIndex: 5
+  bufferLengthFactor: 10
+  amplitudeFactor: 2000
 --- !u!114 &285691967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5152,6 +5169,75 @@ MonoBehaviour:
   Iterations: 10
   Delta: 0.001
   SnapBackStrength: 1
+--- !u!1 &791073212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791073213}
+  - component: {fileID: 791073214}
+  m_Layer: 0
+  m_Name: cologne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &791073213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791073212}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797359944}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791073214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791073212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873fc12a53e2a254697d087bb80fe83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emotions: {fileID: 285691962}
+  target: {fileID: 285691964}
+  script:
+  - target: {fileID: 758410869}
+    milestone: 1
+    emotion: 7
+  - target: {fileID: 1855806301}
+    milestone: 3
+    emotion: 7
+  - target: {fileID: 1855806301}
+    milestone: 5.5
+    emotion: 3
+  - target: {fileID: 1855806301}
+    milestone: 7
+    emotion: 7
+  - target: {fileID: 1264085171}
+    milestone: 9.5
+    emotion: 3
+  - target: {fileID: 758410869}
+    milestone: 10
+    emotion: 3
+  - target: {fileID: 1855806301}
+    milestone: 13
+    emotion: 3
+  nextOne: 0
+  elapsed: 0
 --- !u!1 &797359943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5180,6 +5266,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2043396767}
+  - {fileID: 791073213}
   m_Father: {fileID: 746421701}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7224,7 +7311,7 @@ SphereCollider:
   m_GameObject: {fileID: 1172802875}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -7245,7 +7332,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 94a8d37d83cfc2047906f4f4ec048039, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7861,6 +7948,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258025968}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1264085170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264085171}
+  m_Layer: 0
+  m_Name: watch to the side
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1264085171
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264085170}
+  m_LocalRotation: {x: 0.63756746, y: 0.0039053627, z: 0.0042050485, w: 0.77037317}
+  m_LocalPosition: {x: 0.0061, y: 0.00113, z: 0.00994}
+  m_LocalScale: {x: 1, y: 1.0000223, z: 1.0000108}
+  m_Children: []
+  m_Father: {fileID: 1459667}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1268362336
 GameObject:
   m_ObjectHideFlags: 0

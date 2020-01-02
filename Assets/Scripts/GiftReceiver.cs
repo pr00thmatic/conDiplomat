@@ -16,6 +16,7 @@ public class GiftReceiver : MonoBehaviour {
     yield return new WaitForSeconds(waitingTime);
     Gift gift = LevelManager.Instance.gift.GetComponent<Gift>();
     scriptsParent.Find(gift.definition.name).GetComponent<DialogueScript>().Execute();
-    voice.PlayOneShot(gift.definition.dialogue);
+    voice.clip = gift.definition.dialogue;
+    voice.Play();
   }
 }
