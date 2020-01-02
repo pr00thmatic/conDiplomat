@@ -47,6 +47,10 @@ ModelImporter:
     100082: shoulder.L
     100084: shoulder.R
     100086: //RootNode
+    100088: hair
+    100090: pants
+    100092: shirt
+    100094: shoes
     400000: arm pole.L
     400002: arm pole.L_end
     400004: arm pole.R
@@ -91,18 +95,31 @@ ModelImporter:
     400082: shoulder.L
     400084: shoulder.R
     400086: //RootNode
+    400088: hair
+    400090: pants
+    400092: shirt
+    400094: shoes
     2100000: No Name
     4300000: eyes
     4300002: retopology
     4300004: ears
     4300006: body
+    4300008: shirt
+    4300010: pants
+    4300012: shoes
+    4300014: hair
     7400000: Armature|Idle
     7400002: Armature|Walk
+    7400004: Armature|CubeAction
     9500000: //RootNode
     13700000: body
     13700002: ears
     13700004: eyes
     13700006: retopology
+    13700008: hair
+    13700010: pants
+    13700012: shirt
+    13700014: shoes
   externalObjects: {}
   materials:
     importMaterials: 1
