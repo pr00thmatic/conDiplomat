@@ -6,5 +6,4 @@ using System.Collections.Generic;
 public class GiftDefinition : ScriptableObject {
   public string name;
   public AudioClip dialogue;
-  public Emotion emotion;
 }
