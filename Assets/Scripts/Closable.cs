@@ -3,89 +3,109 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Closable : MonoBehaviour {
-    public SimulatedHand hand;
-    public Transform bone;
-    public HingeJoint hinge;
+  public event System.Action onClose;
 
-    bool _markedOpen;
+  public SimulatedHand hand;
+  public Transform bone;
+  public HingeJoint hinge;
 
-    public AudioSource speaker;
+  bool _markedOpen;
 
-    public AudioClip[] yeeks;
-    public AudioClip poing;
-    public AudioClip click;
-    public float yeekTolerance = 5;
+  public AudioSource speaker;
 
-    float _bufferTarget;
-    float _bufferSpeed;
-    bool _closeTriggered = false;
+  public AudioClip[] yeeks;
+  public AudioClip poing;
+  public AudioClip click;
+  public float yeekTolerance = 5;
+  public float yeekCooldown = 1;
 
-    public float speed;
-    public float speedChange;
+  float _bufferTarget;
+  float _bufferSpeed;
+  bool _closeTriggered = false;
+  float _yeeked = 0;
 
-    void Update () {
-	if (!hand) return;
+  public float speed;
+  public float speedChange;
 
-	UpdateHinge();
-	UpdateSounds();
-	UpdateHand();
-	UpdateBuffers();
+  void Update () {
+    if (!hand) return;
+
+    UpdateHinge();
+    UpdateSounds();
+    UpdateHand();
+    UpdateBuffers();
+  }
+
+  void UpdateSounds () {
+    speed = (hinge.spring.targetPosition - _bufferTarget) / Time.deltaTime;
+    speedChange = speed - _bufferSpeed;
+
+    if ((Time.time - _yeeked) > yeekCooldown && speedChange > yeekTolerance) {
+      _yeeked = Time.time;
+      speaker.PlayOneShot(yeeks[Random.Range(0, yeeks.Length)]);
     }
 
-    void UpdateSounds () {
-	speed = (hinge.spring.targetPosition - _bufferTarget) / Time.deltaTime;
-	speedChange = speed - _bufferSpeed;
+    if (hinge.spring.targetPosition == 100 && ! _closeTriggered) {
+      _closeTriggered = true;
+      speaker.PlayOneShot(click);
+    } else if (hinge.spring.targetPosition != 100) {
+      _closeTriggered = false;
+    }
+  }
 
-	if (speedChange > yeekTolerance) {
-	    speaker.PlayOneShot(yeeks[Random.Range(0, yeeks.Length)]);
-	}
+  void UpdateHand () {
+    if (!hand.isGrabbing) {
+      hand = null;
+      Release();
+    }
+  }
 
-	if (hinge.spring.targetPosition == 100 && ! _closeTriggered) {
-	    _closeTriggered = true;
-	    speaker.PlayOneShot(click);
-	} else if (hinge.spring.targetPosition != 100) {
-	    _closeTriggered = false;
-	}
+  void UpdateBuffers () {
+    if (speedChange < yeekTolerance ||
+        Mathf.Sign(_bufferSpeed) != Mathf.Sign(speedChange)) {
+      _yeeked = Time.time - yeekCooldown * 1.1f;
     }
 
-    void UpdateHand () {
-	if (!hand.isGrabbing) {
-	    hand = null;
-	    Release();
-	}
+    _bufferSpeed = speed;
+    _bufferTarget = hinge.spring.targetPosition;
+  }
+
+  void UpdateHinge () {
+    Vector3 distance = hand.transform.position - bone.transform.position;
+    distance -= Vector3.Project(distance, bone.right);
+
+    float angle = Vector3.SignedAngle(distance, bone.parent.forward,
+                                      bone.parent.right);
+    SetSpringTarget(Mathf.Lerp(100, 0, angle/100f));
+  }
+
+  void OnTriggerStay (Collider c) {
+    if (hand) return;
+
+    SimulatedHand possibleHand = c.GetComponentInParent<SimulatedHand>();
+    if (possibleHand && possibleHand.isGrabbing) {
+      hand = possibleHand;
     }
+  }
 
-    void UpdateBuffers () {
-	_bufferSpeed = speed;
-	_bufferTarget = hinge.spring.targetPosition;
+  public void ForceOpen () {
+    SetSpringTarget(0);
+    speaker.PlayOneShot(poing);
+  }
+
+  public void Release () {
+    if (hinge.spring.targetPosition != 100) {
+      ForceOpen();
+    } else {
+      if (onClose != null) {
+        onClose();
+      }
     }
+  }
 
-    void UpdateHinge () {
-	Vector3 distance = hand.transform.position - bone.transform.position;
-	distance -= Vector3.Project(distance, bone.right);
-
-	JointSpring spring = hinge.spring;
-	spring.targetPosition =
-	    Mathf.Lerp(100, 0, Vector3.SignedAngle(distance, bone.parent.forward,
-						   bone.parent.right)/100f);
-	hinge.spring = spring;
-    }
-
-    void OnTriggerStay (Collider c) {
-	if (hand) return;
-
-	SimulatedHand possibleHand = c.GetComponentInParent<SimulatedHand>();
-	if (possibleHand && possibleHand.isGrabbing) {
-	    hand = possibleHand;
-	}
-    }
-
-    public void Release () {
-	JointSpring spring = hinge.spring;
-	if (spring.targetPosition != 100) {
-	    spring.targetPosition = 0;
-	    speaker.PlayOneShot(poing);
-	}
-	hinge.spring = spring;
-    }
+  public void SetSpringTarget (float target) {
+    JointSpring spring = hinge.spring;
+    spring.targetPosition = target;
+    hinge.spring = spring;
+  }
 }

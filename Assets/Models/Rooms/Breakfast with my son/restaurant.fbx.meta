@@ -44,6 +44,8 @@ ModelImporter:
     100076: upper handle.002
     100078: upper handle.003
     100080: upper handle.004
+    100082: big windows bin
+    100084: blinds
     400000: chair
     400002: chair back
     400004: chair seats
@@ -85,6 +87,8 @@ ModelImporter:
     400076: upper handle.002
     400078: upper handle.003
     400080: upper handle.004
+    400082: big windows bin
+    400084: blinds
     2100000: No Name
     2100002: walls
     2100004: floor
@@ -126,6 +130,8 @@ ModelImporter:
     2300070: upper handle.002
     2300072: upper handle.003
     2300074: upper handle.004
+    2300076: big windows bin
+    2300078: blinds
     3300000: chair
     3300002: chair back
     3300004: chair seats
@@ -164,6 +170,8 @@ ModelImporter:
     3300070: upper handle.002
     3300072: upper handle.003
     3300074: upper handle.004
+    3300076: big windows bin
+    3300078: blinds
     4300000: table
     4300002: chair2
     4300004: chair2 back
@@ -202,6 +210,9 @@ ModelImporter:
     4300070: upper handle.004
     4300072: reception window border
     4300074: reception glass window
+    4300076: blinds
+    4300078: big windows bin
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1

@@ -3,42 +3,77 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Luggage : MonoBehaviour {
-    public List<Equipable> items = new List<Equipable>();
-    public TextMesh text;
-    public Transform forceDirection;
-    public float rejectionForceMultiplier = 5;
+  public List<Equipable> items = new List<Equipable>();
+  public TextMesh text;
+  public Transform forceDirection;
+  public float rejectionForceMultiplier = 5;
+  public Closable closable;
+  public ThoughtBubble bubble;
 
-    void Update () {
-        text.text = "";
+  void OnEnable () {
+    closable.onClose += HandleClose;
+  }
 
-        foreach (Equipable equiped in items) {
-            text.text += equiped.name + "\n";
+  void OnDisable () {
+    closable.onClose -= HandleClose;
+  }
+
+  void Update () {
+    text.text = "";
+
+    foreach (Equipable equiped in items) {
+      text.text += equiped.name + "\n";
+    }
+  }
+
+  public void Equip (Equipable thing) {
+    if (thing.GetComponent<Unique>()) {
+      foreach (Equipable equiped in items) {
+        if (equiped.type == thing.type) {
+          ThrowAway(equiped);
+          break;
         }
+      }
     }
 
-    public void Equip (Equipable thing) {
-        if (thing.GetComponent<Unique>()) {
-            foreach (Equipable equiped in items) {
-                if (equiped.type == thing.type) {
-                    ThrowAway(equiped);
-                    break;
-                }
-            }
-        }
+    items.Add(thing);
+  }
 
-        items.Add(thing);
+  public void ThrowAway (Equipable thing) {
+    thing.throwedUp = true;
+    items.Remove(thing);
+    // so the stuff on top of it won't get exploded!!
+    thing.GetComponent<Unique>().TurnOffCollidersForABit();
+
+    Vector3 direction = (forceDirection.transform.position -
+                         thing.transform.position);
+
+    thing.GetComponent<Rigidbody>()
+      .AddForce(direction * rejectionForceMultiplier, ForceMode.Impulse);
+  }
+
+  public void HandleClose () {
+    Equipable ticket = null;
+    Equipable gift = null;
+
+    foreach (Equipable item in items) {
+      if (item.type == EquipableType.Ticket) {
+        ticket = item;
+      } else if (item.type == EquipableType.Gift) {
+        gift = item;
+      }
     }
 
-    public void ThrowAway (Equipable thing) {
-        thing.throwedUp = true;
-        items.Remove(thing);
-        // so the stuff on top of it won't get exploded!!
-        thing.GetComponent<Unique>().TurnOffCollidersForABit();
-
-        Vector3 direction = (forceDirection.transform.position -
-                             thing.transform.position);
-
-        thing.GetComponent<Rigidbody>()
-            .AddForce(direction * rejectionForceMultiplier, ForceMode.Impulse);
+    if (ticket == null) {
+      JointSpring spring = closable.hinge.spring;
+      spring.targetPosition = 0;
+      bubble.Appear(1);
+      closable.ForceOpen();
+    } else {
+      if (gift) {
+        LevelManager.Instance.SetGift(gift);
+      }
+      LevelManager.Instance.LoadLevel(ticket.GetComponent<Ticket>().sceneName);
     }
+  }
 }
