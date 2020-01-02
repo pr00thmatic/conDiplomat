@@ -54,10 +54,13 @@ public class Luggage : MonoBehaviour {
 
   public void HandleClose () {
     Equipable ticket = null;
+    Equipable gift = null;
 
     foreach (Equipable item in items) {
       if (item.type == EquipableType.Ticket) {
         ticket = item;
+      } else if (item.type == EquipableType.Gift) {
+        gift = item;
       }
     }
 
@@ -67,6 +70,9 @@ public class Luggage : MonoBehaviour {
       bubble.Appear(1);
       closable.ForceOpen();
     } else {
+      if (gift) {
+        LevelManager.Instance.SetGift(gift);
+      }
       LevelManager.Instance.LoadLevel(ticket.GetComponent<Ticket>().sceneName);
     }
   }

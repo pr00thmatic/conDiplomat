@@ -191,7 +191,8 @@ namespace DitzelGames.FastIK
             for (int i = 0; i < Positions.Length; i++)
             {
                 if (i == Positions.Length - 1)
-                    SetRotationRootSpace(Bones[i], Quaternion.Inverse(targetRotation) * StartRotationTarget * Quaternion.Inverse(StartRotationBone[i]));
+                  // Bones[i].rotation = Target.transform.rotation;
+                  SetRotationRootSpace(Bones[i], Quaternion.Inverse(targetRotation) * StartRotationTarget * Quaternion.Inverse(StartRotationBone[i]));
                 else
                     SetRotationRootSpace(Bones[i], Quaternion.FromToRotation(StartDirectionSucc[i], Positions[i + 1] - Positions[i]) * Quaternion.Inverse(StartRotationBone[i]));
                 SetPositionRootSpace(Bones[i], Positions[i]);
