@@ -25,6 +25,9 @@ ModelImporter:
     100038: Plane.001
     100040: window
     100042: table leg src
+    100044: chair back.001
+    100046: chair back.002
+    100048: chair back.003
     400000: chair
     400002: chair back
     400004: chair seats
@@ -47,6 +50,9 @@ ModelImporter:
     400038: Plane.001
     400040: window
     400042: table leg src
+    400044: chair back.001
+    400046: chair back.002
+    400048: chair back.003
     2100000: No Name
     2100002: iron
     2300000: chair
@@ -69,6 +75,9 @@ ModelImporter:
     2300034: Plane.001
     2300036: window
     2300038: table leg src
+    2300040: chair back.001
+    2300042: chair back.002
+    2300044: chair back.003
     3300000: chair
     3300002: chair back
     3300004: chair seats
@@ -89,6 +98,9 @@ ModelImporter:
     3300034: Plane.001
     3300036: window
     3300038: table leg src
+    3300040: chair back.001
+    3300042: chair back.002
+    3300044: chair back.003
     4300000: table
     4300002: Cube.003
     4300004: chair2
@@ -109,6 +121,9 @@ ModelImporter:
     4300034: Cube.001
     4300036: Cube.002
     4300038: table leg src
+    4300040: chair back.001
+    4300042: chair back.002
+    4300044: chair back.003
   externalObjects: {}
   materials:
     importMaterials: 1

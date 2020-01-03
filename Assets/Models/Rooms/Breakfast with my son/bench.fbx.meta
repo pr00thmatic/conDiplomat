@@ -7,10 +7,14 @@ ModelImporter:
     100002: bench
     100004: bench leg1 src
     100006: bench leg2 bin
+    100008: bench.001
+    100010: bench.002
     400000: //RootNode
     400002: bench
     400004: bench leg1 src
     400006: bench leg2 bin
+    400008: bench.001
+    400010: bench.002
     2100000: iron
     2100002: No Name
     2100004: iron.001
@@ -18,13 +22,19 @@ ModelImporter:
     2300002: bench leg1 src
     2300004: bench leg2 bin
     2300006: //RootNode
+    2300008: bench.001
+    2300010: bench.002
     3300000: bench
     3300002: bench leg1 src
     3300004: bench leg2 bin
     3300006: //RootNode
+    3300008: bench.001
+    3300010: bench.002
     4300000: bench
     4300002: bench leg2 bin
     4300004: bench leg1 src
+    4300006: bench.001
+    4300008: bench.002
   externalObjects: {}
   materials:
     importMaterials: 1
