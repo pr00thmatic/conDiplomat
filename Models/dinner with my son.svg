@@ -29,9 +29,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.416109494751992"
-     inkscape:cx="343.2701154332319"
-     inkscape:cy="432.5850471466727"
+     inkscape:zoom="0.4161094947519919"
+     inkscape:cx="850.348186616778"
+     inkscape:cy="550.3425139144156"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -333,14 +333,14 @@
      id="layer1"
      transform="translate(-132.5671698885025,-19.86310673833969)"
      sodipodi:insensitive="true"
-     style="display:none">
+     style="display:inline">
     <image
        sodipodi:absref="D:\deving-games\conDiplomat\Models\dinner with my son uv.png"
        xlink:href="dinner with my son uv.png"
-       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,132.5671698885025,19.86310673833975)"
-       width="1365.333374023438"
-       height="1365.333374023438"
+       id="image4504"
        preserveAspectRatio="none"
-       id="image4504" />
+       height="1365.333374023438"
+       width="1365.333374023438"
+       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,132.5671698885025,19.86310673833975)" />
   </g>
 </svg>
