@@ -2,16 +2,27 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class DialogueScript : MonoBehaviour {
+public class DialogueScript : MonoBehaviour, IScriptPiece {
+  public event System.Action onFinished;
+
   public EmotionManager emotions;
   public VisionManager target;
+  public AudioSource voice;
+  public AudioClip clip;
   public List<DialogueScriptEntry> script;
   public int nextOne = 0;
   public float elapsed = 0;
 
+  void Reset () {
+    voice = transform.parent.GetComponentInChildren<AudioSource>();
+    emotions.transform.parent.GetComponentInChildren<EmotionManager>();
+  }
+
   public void Execute () {
     StopAllCoroutines();
     StartCoroutine(_ExecuteScript());
+    voice.clip = clip;
+    voice.Play();
   }
 
   IEnumerator _ExecuteScript () {
@@ -31,5 +42,9 @@ public class DialogueScript : MonoBehaviour {
       elapsed += Time.deltaTime;
       yield return null;
     } while (nextOne < script.Count || elapsed < milestone);
+
+    if (onFinished != null) {
+      onFinished();
+    }
   }
 }
