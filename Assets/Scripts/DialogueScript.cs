@@ -14,8 +14,9 @@ public class DialogueScript : MonoBehaviour, IScriptPiece {
   public float elapsed = 0;
 
   void Reset () {
-    voice = transform.parent.GetComponentInChildren<AudioSource>();
-    emotions.transform.parent.GetComponentInChildren<EmotionManager>();
+    emotions = transform.GetComponentInParent<EmotionManager>();
+    voice = emotions.transform.GetComponentInChildren<AudioSource>();
+    target = emotions.GetComponent<VisionManager>();
   }
 
   public void Execute () {
