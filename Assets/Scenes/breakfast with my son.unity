@@ -3260,6 +3260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 495520400}
+  - component: {fileID: 495520401}
   m_Layer: 0
   m_Name: hi
   m_TagString: Untagged
@@ -3281,6 +3282,25 @@ Transform:
   m_Father: {fileID: 495208548}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &495520401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 495520399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 873fc12a53e2a254697d087bb80fe83e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emotions: {fileID: 831034118}
+  target: {fileID: 831034117}
+  voice: {fileID: 831034116}
+  clip: {fileID: 0}
+  script: []
+  nextOne: 0
+  elapsed: 0
 --- !u!1 &499720198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5636,6 +5656,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 831034112}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &831034116 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 630149603, guid: eb048fbc19a322749ba6fb113b229994,
+    type: 3}
+  m_PrefabInstance: {fileID: 831034112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &831034117 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 285691964, guid: eb048fbc19a322749ba6fb113b229994,
+    type: 3}
+  m_PrefabInstance: {fileID: 831034112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831034113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbc7bb326a8a1b4fa2737131ab06043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &831034118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 285691962, guid: eb048fbc19a322749ba6fb113b229994,
+    type: 3}
+  m_PrefabInstance: {fileID: 831034112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831034113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7075be7336e3f74f94d072417000b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &831050725
 GameObject:
   m_ObjectHideFlags: 0
