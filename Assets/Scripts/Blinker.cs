@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Emotions {
 public class Blinker : MonoBehaviour {
   public RandomRange time;
   public SkinnedMeshRenderer skin;
@@ -43,5 +42,4 @@ public class Blinker : MonoBehaviour {
       yield return null;
     }
   }
-}
 }
