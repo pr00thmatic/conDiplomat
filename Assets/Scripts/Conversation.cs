@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
+  public event System.Action onArtificialTrigger;
   public event System.Action onFinished;
   public float Delay { get => delay; } public float delay;
   public ConversationEntry[] script;
   public Transform[] actors;
   public string directory = "_SCRIPTS/";
 
-  int _nextOne = 0;
+  public int _nextOne = 0;
 
   public void Execute () {
     Iterator iterator = new Iterator(this);
@@ -29,10 +30,22 @@ public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
     ConversationEntry entry = script[_nextOne];
 
     foreach (Transform actor in actors) {
-      Util.Execute(actor.Find(directory + "/" + entry.name));
+      IScriptPiece[] pieces = Util.Execute(actor.Find(directory + "/" + entry.name));
+      foreach (IScriptPiece piece in pieces) {
+        WalkingScript walk = piece as WalkingScript;
+        if (walk && walk.waitsForFinish) {
+          walk.onFinished += HandleFinish;
+        }
+      }
     }
 
     _nextOne++;
     return entry;
+  }
+
+  public void HandleFinish () {
+    if (onArtificialTrigger != null) {
+      onArtificialTrigger();
+    }
   }
 }

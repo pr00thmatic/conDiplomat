@@ -15,6 +15,7 @@ public class EmotionManager : MonoBehaviour {
           SetEmotion(type, false);
         }
       }
+      return;
     }
 
     if (timers.ContainsKey(emotion) && timers[emotion] != null) {

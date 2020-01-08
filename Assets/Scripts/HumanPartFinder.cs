@@ -11,6 +11,8 @@ public class HumanPartFinder {
         return target.GetComponentInChildren<RightHandHumanPart>();
       case HumanPartTarget.LeftHand:
         return target.GetComponentInChildren<LeftHandHumanPart>();
+      case HumanPartTarget.LookFront:
+        return target.GetComponentInChildren<LookFront>();
     }
 
     return target;

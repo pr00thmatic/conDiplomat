@@ -47,18 +47,20 @@ public class Util {
     t.parent = oldParent;
   }
 
-  public static void Execute (Transform scriptOwner) {
-    if (!scriptOwner) return;
-    Execute(scriptOwner.gameObject);
+  public static IScriptPiece[] Execute (Transform scriptOwner) {
+    if (!scriptOwner) return Execute((GameObject) null);
+    return Execute(scriptOwner.gameObject);
   }
 
-  public static void Execute (GameObject scriptOwner) {
-    if (!scriptOwner) return;
+  public static IScriptPiece[] Execute (GameObject scriptOwner) {
+    if (!scriptOwner) return new IScriptPiece[0];
 
     IScriptPiece[] pieces = scriptOwner.GetComponents<IScriptPiece>();
 
     foreach (IScriptPiece piece in pieces) {
       piece.Execute();
     }
+
+    return pieces;
   }
 }

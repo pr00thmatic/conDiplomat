@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class EmotionScript : MonoBehaviour, IScriptPiece, IIterable {
   public float Delay { get => delay; } public float delay;
+  public event System.Action onArtificialTrigger;
   public event System.Action onFinished;
   public EmotionManager manager;
   public List<EmotionScriptEntry> script;
@@ -21,6 +22,8 @@ public class EmotionScript : MonoBehaviour, IScriptPiece, IIterable {
 
   public void ResetToStart () {
     _nextOne = 0;
+    onArtificialTrigger = null;
+    onFinished = null;
   }
 
   public void TriggerFinish () {
