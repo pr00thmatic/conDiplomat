@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class VisionScript : MonoBehaviour, IScriptPiece, IIterable {
+  public float Delay { get => delay; } public float delay;
   public event System.Action onFinished;
   public VisionManager manager;
   public List<VisionScriptEntry> script;

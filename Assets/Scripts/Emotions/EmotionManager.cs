@@ -9,6 +9,14 @@ public class EmotionManager : MonoBehaviour {
     new Dictionary<Emotion, Coroutine>();
 
   public void SetEmotion (Emotion emotion, bool value) {
+    if (emotion == Emotion.Reset && value) {
+      foreach (Emotion type in System.Enum.GetValues(typeof(Emotion))) {
+        if (type != Emotion.Reset) {
+          SetEmotion(type, false);
+        }
+      }
+    }
+
     if (timers.ContainsKey(emotion) && timers[emotion] != null) {
       StopCoroutine(timers[emotion]);
     }

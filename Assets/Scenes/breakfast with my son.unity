@@ -141,6 +141,7 @@ Transform:
   m_Children:
   - {fileID: 1839528785}
   - {fileID: 1296311030}
+  - {fileID: 560907413}
   m_Father: {fileID: 5771670582304449989}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1622,6 +1623,70 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171175794}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &176276491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176276492}
+  - component: {fileID: 176276494}
+  - component: {fileID: 176276493}
+  m_Layer: 0
+  m_Name: and for you
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &176276492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176276491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 495208548}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &176276493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176276491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5aa91d0a08b5e489484a88b8cf6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  manager: {fileID: 831034117}
+  script:
+  - milestone: 0
+    target: {fileID: 68315623}
+    optionalPart: 1
+--- !u!114 &176276494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176276491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  voice: {fileID: 831034116}
+  clip: {fileID: 8300000, guid: 6c66900a180aea14e95fcc4f08742c40, type: 3}
 --- !u!1 &202255568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3292,6 +3357,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 495520400}
+  - {fileID: 176276492}
   m_Father: {fileID: 831034115}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3304,7 +3370,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 495520400}
-  - component: {fileID: 495520402}
   - component: {fileID: 495520404}
   - component: {fileID: 495520403}
   - component: {fileID: 495520401}
@@ -3341,23 +3406,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa5891282b1edd4c9e7d5a42216f02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   manager: {fileID: 831034118}
   script:
   - milestone: 0
     emotion: 3
     keep: 1
---- !u!114 &495520402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 495520399}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &495520403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3384,6 +3438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad5aa91d0a08b5e489484a88b8cf6c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   manager: {fileID: 831034117}
   script:
   - milestone: 0.5
@@ -3737,6 +3792,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558243564}
   m_Mesh: {fileID: 4300010, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
+--- !u!1 &560907412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 560907413}
+  - component: {fileID: 560907414}
+  m_Layer: 0
+  m_Name: and for you
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &560907413
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560907412}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9834599}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &560907414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560907412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5aa91d0a08b5e489484a88b8cf6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.5
+  manager: {fileID: 285691964}
+  script:
+  - milestone: 0
+    target: {fileID: 68315623}
+    optionalPart: 1
 --- !u!1 &568649718
 GameObject:
   m_ObjectHideFlags: 0
@@ -4898,7 +5002,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 791073213}
-  - component: {fileID: 791073214}
+  - component: {fileID: 791073216}
+  - component: {fileID: 791073215}
+  - component: {fileID: 791073217}
   m_Layer: 0
   m_Name: cologne
   m_TagString: Untagged
@@ -4920,7 +5026,7 @@ Transform:
   m_Father: {fileID: 797359944}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &791073214
+--- !u!114 &791073215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4929,37 +5035,68 @@ MonoBehaviour:
   m_GameObject: {fileID: 791073212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 873fc12a53e2a254697d087bb80fe83e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0fa5891282b1edd4c9e7d5a42216f02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotions: {fileID: 285691962}
-  target: {fileID: 285691964}
+  delay: 0
+  manager: {fileID: 285691962}
+  script:
+  - milestone: 3
+    emotion: 7
+    keep: 0
+  - milestone: 5.5
+    emotion: 3
+    keep: 0
+  - milestone: 7
+    emotion: 7
+    keep: 0
+  - milestone: 13
+    emotion: 3
+    keep: 0
+--- !u!114 &791073216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791073212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5aa91d0a08b5e489484a88b8cf6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  manager: {fileID: 285691964}
+  script:
+  - milestone: 1
+    target: {fileID: 758410869}
+    optionalPart: 0
+  - milestone: 7
+    target: {fileID: 68315623}
+    optionalPart: 1
+  - milestone: 9.5
+    target: {fileID: 1264085171}
+    optionalPart: 0
+  - milestone: 10
+    target: {fileID: 758410869}
+    optionalPart: 0
+  - milestone: 13
+    target: {fileID: 68315623}
+    optionalPart: 1
+--- !u!114 &791073217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791073212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   voice: {fileID: 630149603}
   clip: {fileID: 8300000, guid: d82c9e6211454b640924cab3fd967f99, type: 3}
-  script:
-  - target: {fileID: 758410869}
-    milestone: 1
-    emotion: 7
-  - target: {fileID: 1855806301}
-    milestone: 3
-    emotion: 7
-  - target: {fileID: 1855806301}
-    milestone: 5.5
-    emotion: 3
-  - target: {fileID: 1855806301}
-    milestone: 7
-    emotion: 7
-  - target: {fileID: 1264085171}
-    milestone: 9.5
-    emotion: 3
-  - target: {fileID: 758410869}
-    milestone: 10
-    emotion: 3
-  - target: {fileID: 1855806301}
-    milestone: 13
-    emotion: 3
-  nextOne: 0
-  elapsed: 0
 --- !u!1 &797359943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5093,6 +5230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802465614}
   - component: {fileID: 802465615}
+  - component: {fileID: 802465616}
   m_Layer: 0
   m_Name: ask for drinks
   m_TagString: Untagged
@@ -5123,13 +5261,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 802465613}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d99ccc9feebf5d41b552e62ba031376, type: 3}
+  m_Script: {fileID: 11500000, guid: 224842a2d5fe48b47911c4cba77acd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogues:
-  - waitingTime: 0
-    script: {fileID: 0}
-  current: 0
+  delay: 0
+  script:
+  - milestone: 2.5
+    name: hi
+  - milestone: 4.5
+    name: coffee
+  - milestone: 8
+    name: and for you
+  actors:
+  - {fileID: 831034119}
+  - {fileID: 285691959}
+  directory: _SCRIPTS/ask for drinks
+--- !u!114 &802465616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802465613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &806246940
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,11 +5966,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9efa8e9ea06f95f42ab9597d7ebff409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  askForDrinks: {fileID: 0}
   animator: {fileID: 831034122}
-  wait: {fileID: 0}
-  client: {fileID: 0}
-  agent: {fileID: 831034114}
 --- !u!1 &831050725
 GameObject:
   m_ObjectHideFlags: 0
@@ -8247,19 +8401,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1296311029}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 873fc12a53e2a254697d087bb80fe83e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotions: {fileID: 285691962}
-  target: {fileID: 285691964}
   voice: {fileID: 630149603}
   clip: {fileID: 8300000, guid: 98d583d7fca274e49aa54b6747d93ad4, type: 3}
-  script:
-  - target: {fileID: 285691959}
-    milestone: 1
-    emotion: 3
-  nextOne: 0
-  elapsed: 0
 --- !u!1 &1307662226
 GameObject:
   m_ObjectHideFlags: 0
@@ -10892,6 +11038,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1839528785}
+  - component: {fileID: 1839528786}
+  - component: {fileID: 1839528787}
   m_Layer: 0
   m_Name: hi
   m_TagString: Untagged
@@ -10913,6 +11061,42 @@ Transform:
   m_Father: {fileID: 9834599}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1839528786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839528784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5aa91d0a08b5e489484a88b8cf6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.5
+  manager: {fileID: 285691964}
+  script:
+  - milestone: 0
+    target: {fileID: 831034119}
+    optionalPart: 1
+--- !u!114 &1839528787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839528784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5891282b1edd4c9e7d5a42216f02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0.2
+  manager: {fileID: 285691962}
+  script:
+  - milestone: 0
+    emotion: 1000
+    keep: 1
 --- !u!1001 &1849850967
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11931,12 +12115,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08926acd2bf37494aa9a30756c3b7daf, type: 3}
---- !u!4 &1855806301 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5922679479717708217, guid: 08926acd2bf37494aa9a30756c3b7daf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1855806300}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1870729540
 GameObject:
   m_ObjectHideFlags: 0
@@ -13560,9 +13738,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2043396767}
-  - component: {fileID: 2043396768}
   - component: {fileID: 2043396770}
   - component: {fileID: 2043396769}
+  - component: {fileID: 2043396771}
   m_Layer: 0
   m_Name: toy car
   m_TagString: Untagged
@@ -13584,43 +13762,6 @@ Transform:
   m_Father: {fileID: 797359944}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2043396768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043396766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 873fc12a53e2a254697d087bb80fe83e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emotions: {fileID: 285691962}
-  target: {fileID: 285691964}
-  voice: {fileID: 630149603}
-  clip: {fileID: 8300000, guid: 61b6617896b0bda46a3822e739d730a0, type: 3}
-  script:
-  - target: {fileID: 758410869}
-    milestone: 2
-    emotion: 2
-  - target: {fileID: 1855806301}
-    milestone: 3.5
-    emotion: 2
-  - target: {fileID: 1855806301}
-    milestone: 6
-    emotion: 1
-  - target: {fileID: 758410869}
-    milestone: 8
-    emotion: 1
-  - target: {fileID: 1855806301}
-    milestone: 11
-    emotion: 1
-  - target: {fileID: 1855806301}
-    milestone: 13.5
-    emotion: 4
-  nextOne: 0
-  elapsed: 0
 --- !u!114 &2043396769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13633,6 +13774,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa5891282b1edd4c9e7d5a42216f02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   manager: {fileID: 285691962}
   script:
   - milestone: 3.5
@@ -13658,6 +13800,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voice: {fileID: 630149603}
   clip: {fileID: 8300000, guid: 61b6617896b0bda46a3822e739d730a0, type: 3}
+--- !u!114 &2043396771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043396766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5aa91d0a08b5e489484a88b8cf6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  manager: {fileID: 285691964}
+  script:
+  - milestone: 1.9
+    target: {fileID: 758410869}
+    optionalPart: 0
+  - milestone: 5.5
+    target: {fileID: 68315623}
+    optionalPart: 1
+  - milestone: 7.8
+    target: {fileID: 758410869}
+    optionalPart: 0
+  - milestone: 13.5
+    target: {fileID: 68315623}
+    optionalPart: 1
 --- !u!1 &2088342827
 GameObject:
   m_ObjectHideFlags: 0

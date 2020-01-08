@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EmotionScript : MonoBehaviour, IScriptPiece, IIterable {
+  public float Delay { get => delay; } public float delay;
   public event System.Action onFinished;
   public EmotionManager manager;
   public List<EmotionScriptEntry> script;

@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public interface IIterable {
+  float Delay { get; }
   void ResetToStart ();
-  ScriptEntry Step ();
   void TriggerFinish ();
+  ScriptEntry Step ();
 }

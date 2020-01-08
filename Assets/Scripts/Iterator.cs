@@ -21,6 +21,8 @@ public class Iterator {
     ScriptEntry entry;
     float elapsed = 0;
 
+    yield return new WaitForSeconds(iterable.Delay);
+
     while (true) {
       entry = iterable.Step();
       if (entry == null) {

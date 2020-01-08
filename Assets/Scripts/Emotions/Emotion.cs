@@ -4,5 +4,6 @@ public enum Emotion {
   Happy = 3,
   Sad = 4,
   Surprised = 7,
-  Neutral = 8
+  Neutral = 8,
+  Reset = 1000
 }

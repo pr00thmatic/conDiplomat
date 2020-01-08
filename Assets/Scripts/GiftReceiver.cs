@@ -14,6 +14,6 @@ public class GiftReceiver : MonoBehaviour {
   IEnumerator _EventuallyActivate () {
     yield return new WaitForSeconds(waitingTime);
     Gift gift = LevelManager.Instance.gift.GetComponent<Gift>();
-    scriptsParent.Find(gift.definition.name).GetComponent<DialogueScript>().Execute();
+    Util.Execute(scriptsParent.Find(gift.definition.name).gameObject);
   }
 }
