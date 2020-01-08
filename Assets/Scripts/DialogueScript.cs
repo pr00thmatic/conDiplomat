@@ -33,8 +33,8 @@ public class DialogueScript : MonoBehaviour, IScriptPiece {
 
     do {
       if (elapsed >= milestone) {
-        emotions.SetEmotion(script[nextOne].emotion,
-                            script[nextOne].milestone - milestone);
+        // emotions.SetEmotion(script[nextOne].emotion,
+        //                     script[nextOne].milestone - milestone);
         milestone = script[nextOne].milestone;
         target.SetVision(script[nextOne].target);
         nextOne++;

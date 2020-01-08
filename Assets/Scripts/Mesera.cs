@@ -8,9 +8,14 @@ public class Mesera : MonoBehaviour, IScriptPiece {
 
   public ConversationScript askForDrinks;
 
+  public Animator animator;
   public Transform wait;
   public Transform client;
   public NavMeshAgent agent;
+
+  void Start () {
+    animator.SetBool("seated", false);
+  }
 
   public void Execute () {
     StartCoroutine(_AskForBeberages());
