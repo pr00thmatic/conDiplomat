@@ -8,4 +8,5 @@ public class PolarityChangeInfo {
   public float timestamp = 0;
   public float angleDistance = 0;
   public Vector3 forward;
+  public Vector3 up;
 }

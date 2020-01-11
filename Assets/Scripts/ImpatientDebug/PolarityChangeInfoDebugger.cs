@@ -3,8 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PolarityChangeInfoDebugger : MonoBehaviour {
+  public YesNoDetector targetParent;
+  public bool debugsYes = false;
   public TextMesh display;
-  public YesDetector target;
+  public GenericShakeDetector target;
+  public int counter = 0;
+
+  void Start () {
+    target = debugsYes? targetParent.yes: targetParent.no;
+    target.onShake += ShakeHandler;
+  }
+
+  void OnDisable () {
+    target.onShake -= ShakeHandler;
+  }
 
   void Update () {
     display.text = "polarity: " + target.last.polarity +
@@ -12,11 +24,14 @@ public class PolarityChangeInfoDebugger : MonoBehaviour {
       "\nangle distance: " + target.last.angleDistance +
       "\nforward: " + target.last.forward +
       "\n\nraw times: " + target._rawTimes +
-      "\nyes cointer: " + target.yesCounter +
+      "\nshake counter: " + counter +
       "\ntracker: (" +
-      Mathf.Round(target.tracker.velocity.x) + ", " +
-      Mathf.Round(target.tracker.velocity.y) + ", " +
-      Mathf.Round(target.tracker.velocity.z) + ")" +
-      "\nDEBUG: " + target.debug;
+      Mathf.Round(targetParent.tracker.velocity.x) + " - " +
+      Mathf.Round(targetParent.tracker.velocity.y) + " - " +
+      Mathf.Round(targetParent.tracker.velocity.z) + ")";
+  }
+
+  public void ShakeHandler (GenericShakeDetector caller) {
+    counter++;
   }
 }
