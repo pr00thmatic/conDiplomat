@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
+  public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
   public event System.Action onArtificialTrigger;
   public event System.Action onFinished;
   public float Delay { get => delay; } public float delay;
@@ -15,6 +16,8 @@ public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
   public float finishDelay;
   public GameObject executeOnFinish;
 
+  IScriptPiece[] _triggerers;
+
   public void Execute () {
     Iterator iterator = new Iterator(this);
     iterator.Execute();
@@ -25,7 +28,11 @@ public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
   }
 
   public void TriggerFinish () {
-    if (onFinished != null) onFinished();
+    Triggerer.TriggerFinish(this);
+
+    if (executeOnFinish) {
+      StartCoroutine(_EventuallyExecute());
+    }
   }
 
   public ScriptEntry Step () {
@@ -33,12 +40,9 @@ public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
     ConversationEntry entry = script[_nextOne];
 
     foreach (Transform actor in actors) {
-      IScriptPiece[] pieces = Util.Execute(actor.Find(directory + "/" + entry.name));
-      foreach (IScriptPiece piece in pieces) {
-        WalkingScript walk = piece as WalkingScript;
-        if (walk && walk.waitsForFinish) {
-          walk.onFinished += HandleFinish;
-        }
+      _triggerers = Util.Execute(actor.Find(directory + "/" + entry.name));
+      foreach (IScriptPiece triggerer in _triggerers) {
+        triggerer.Triggerer.onFinish += HandleTrigger;
       }
     }
 
@@ -46,14 +50,12 @@ public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
     return entry;
   }
 
-  public void HandleFinish () {
-    if (onArtificialTrigger != null) {
-      onArtificialTrigger();
+  public void HandleTrigger () {
+    foreach (IScriptPiece trigger in _triggerers) {
+      trigger.Triggerer.onFinish -= HandleTrigger;
     }
-
-    if (executeOnFinish) {
-      StartCoroutine(_EventuallyExecute());
-    }
+    _triggerers = null;
+    script[_nextOne-1].triggerer.TriggerFinish(this);
   }
 
   IEnumerator _EventuallyExecute () {

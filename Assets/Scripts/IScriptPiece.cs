@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public interface IScriptPiece {
-  public NextTriggerer Triggerer { get; }
-  event System.Action onFinished;
+  // event System.Action onFinished;
+  NextTriggerer Triggerer { get; }
   void Execute ();
 }

@@ -56,11 +56,15 @@ public class Util {
     if (!scriptOwner) return new IScriptPiece[0];
 
     IScriptPiece[] pieces = scriptOwner.GetComponents<IScriptPiece>();
+    List<IScriptPiece> triggerers = new List<IScriptPiece>();
 
     foreach (IScriptPiece piece in pieces) {
       piece.Execute();
+      if (piece.Triggerer.triggersNext) {
+        triggerers.Add(piece);
+      }
     }
 
-    return pieces;
+    return triggerers.ToArray();
   }
 }

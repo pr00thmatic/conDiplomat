@@ -33,17 +33,19 @@ public class Iterator {
       }
 
       // wait until
-      float tmpElapsed = elapsed;
-      iterable.onArtificialTrigger += ArtificialTriggerHandler;
-      while (tmpElapsed < entry.milestone && !_artificiallyTriggered) {
-        tmpElapsed += Time.deltaTime;
-        yield return null;
-      }
-
-      if (_artificiallyTriggered) {
+      if (entry.triggerer.waitsOnFinish) {
+        entry.triggerer.onFinish += ArtificialTriggerHandler;
+        while (!_artificiallyTriggered) {
+          yield return null;
+        }
         _artificiallyTriggered = false;
+        yield return new WaitForSeconds(entry.triggerer.delay);
+        elapsed += entry.triggerer.delay;
       } else {
-        elapsed = tmpElapsed;
+        while (elapsed < entry.milestone) {
+          elapsed += Time.deltaTime;
+          yield return null;
+        }
       }
     }
   }

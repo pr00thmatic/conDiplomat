@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class TriggerSomethingElse : MonoBehaviour, IScriptPiece {
-  public event System.Action onFinished;
+  public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
 
   public GameObject target;
   public float delay;
@@ -16,13 +16,12 @@ public class TriggerSomethingElse : MonoBehaviour, IScriptPiece {
   }
 
   public void Execute () {
-    print("eggsecutemua");
     StartCoroutine(_EventuallyTrigger());
   }
 
   IEnumerator _EventuallyTrigger () {
     yield return new WaitForSeconds(delay);
     Util.Execute(target);
-    if (onFinished != null) onFinished();
+    Triggerer.TriggerFinish(this);
   }
 }

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class WalkingScript : MonoBehaviour, IScriptPiece {
-  public event System.Action onFinished;
+  public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
   public bool waitsForFinish;
   public Transform[] destination;
   public NavMeshAgent agent;
@@ -30,8 +30,6 @@ public class WalkingScript : MonoBehaviour, IScriptPiece {
       agent.transform.forward = d.transform.forward;
     }
 
-    if (onFinished != null) {
-      onFinished();
-    }
+    Triggerer.TriggerFinish(this);
   }
 }

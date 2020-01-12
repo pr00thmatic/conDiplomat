@@ -4,5 +4,6 @@ using System.Collections.Generic;
 
 [System.Serializable]
 public class ScriptEntry {
+  public NextTriggerer triggerer;
   public float milestone;
 }

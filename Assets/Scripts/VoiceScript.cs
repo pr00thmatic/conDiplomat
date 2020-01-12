@@ -3,7 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class VoiceScript : MonoBehaviour, IScriptPiece {
-  public event System.Action onFinished;
+  // public event System.Action onFinished;
+  public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
   public float delay = 0;
   public AudioSource voice;
   public AudioClip clip;
@@ -26,8 +27,6 @@ public class VoiceScript : MonoBehaviour, IScriptPiece {
       yield return null;
     }
     voice.Stop();
-    if (onFinished != null) {
-      onFinished();
-    }
+    _triggerer.TriggerFinish(this);
   }
 }

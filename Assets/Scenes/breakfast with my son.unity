@@ -1672,9 +1672,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 831034117}
   script:
-  - milestone: 0
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
     target: {fileID: 68315623}
     optionalPart: 1
 --- !u!114 &176276494
@@ -1689,6 +1697,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 831034116}
   clip: {fileID: 8300000, guid: 6c66900a180aea14e95fcc4f08742c40, type: 3}
@@ -1704,6 +1716,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7558931515d56474f8f652e8df034b94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   scriptName: answer and for you
   waitForAnswer: 3.8
   counter: 0
@@ -2834,6 +2850,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd21486a516b234f99f9d16ca01f80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   waitsForFinish: 1
   destination:
   - {fileID: 962364646}
@@ -2851,9 +2871,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 831034117}
   script:
-  - milestone: 0
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
     target: {fileID: 831034119}
     optionalPart: 4
 --- !u!114 &338579382
@@ -2868,6 +2896,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   delay: 0.5
   voice: {fileID: 831034116}
   clip: {fileID: 8300000, guid: 366d37c37a8bf014fbd5b8189e737d54, type: 3}
@@ -3547,9 +3579,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 831034118}
   script:
-  - milestone: 0
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
     emotion: 3
     keep: 1
 --- !u!114 &495520403
@@ -3564,6 +3604,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 831034116}
   clip: {fileID: 8300000, guid: f4c486eb15801c8449c29e1382e4f654, type: 3}
@@ -3580,15 +3624,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.5
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 831034117}
   script:
-  - milestone: 0.5
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0.5
     target: {fileID: 285691959}
     optionalPart: 1
-  - milestone: 1.1
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 1.1
     target: {fileID: 68315623}
     optionalPart: 1
-  - milestone: 6
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 6
     target: {fileID: 285691959}
     optionalPart: 1
 --- !u!1 &499720198
@@ -3977,9 +4037,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.5
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 285691964}
   script:
-  - milestone: 0
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
     target: {fileID: 68315623}
     optionalPart: 1
 --- !u!1 &568649718
@@ -4103,6 +4171,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 1
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 831034116}
   clip: {fileID: 8300000, guid: f279e1f0ca0da104cb86e8dd004e14ed, type: 3}
@@ -4119,15 +4191,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 831034118}
   script:
-  - milestone: 0
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
     emotion: 1000
     keep: 0
-  - milestone: 1.219
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 1.219
     emotion: 2
     keep: 0
-  - milestone: 11
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 11
     emotion: 3
     keep: 1
 --- !u!1 &571582698
@@ -5251,6 +5339,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb4290af9b789c43a591dd2ea9c0262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   target: {fileID: 802465613}
   delay: 15
 --- !u!114 &791073215
@@ -5266,24 +5358,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 285691962}
   script:
-  - milestone: 0.827
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0.827
     emotion: 8
     keep: 0
-  - milestone: 2.114
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 2.114
     emotion: 2
     keep: 0
-  - milestone: 7
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 7
     emotion: 7
     keep: 0
-  - milestone: 9.522
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 9.522
     emotion: 3
     keep: 0
-  - milestone: 14.06
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 14.06
     emotion: 7
     keep: 0
-  - milestone: 22
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 22
     emotion: 3
     keep: 0
 --- !u!114 &791073216
@@ -5299,33 +5419,73 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 285691964}
   script:
-  - milestone: 0.697
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0.697
     target: {fileID: 758410869}
     optionalPart: 0
-  - milestone: 1.75
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 1.75
     target: {fileID: 68315623}
     optionalPart: 1
-  - milestone: 4.418
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 4.418
     target: {fileID: 758410869}
     optionalPart: 0
-  - milestone: 8.238
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 8.238
     target: {fileID: 68315623}
     optionalPart: 1
-  - milestone: 9.675
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 9.675
     target: {fileID: 758410869}
     optionalPart: 0
-  - milestone: 14.4666
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 14.4666
     target: {fileID: 68315623}
     optionalPart: 1
-  - milestone: 17.283
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 17.283
     target: {fileID: 1264085171}
     optionalPart: 0
-  - milestone: 18
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 18
     target: {fileID: 758410869}
     optionalPart: 1
-  - milestone: 21
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 21
     target: {fileID: 68315623}
     optionalPart: 1
 --- !u!114 &791073217
@@ -5340,6 +5500,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 630149603}
   clip: {fileID: 8300000, guid: d82c9e6211454b640924cab3fd967f99, type: 3}
@@ -5476,6 +5640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802465614}
   - component: {fileID: 802465615}
+  - component: {fileID: 802465616}
   m_Layer: 0
   m_Name: ask for drinks
   m_TagString: Untagged
@@ -5509,19 +5674,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 224842a2d5fe48b47911c4cba77acd69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   script:
-  - milestone: 10
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 1
+      delay: 0
+    milestone: 10
     name: walk to the table
-  - milestone: 3
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 3
     name: hi
-  - milestone: 4.7
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 4.7
     name: coffee
-  - milestone: 8.8
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 8.8
     name: and for you
-  - milestone: 11
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 1
+      delay: 0.5
+    milestone: 0
     name: answer and for you
-  - milestone: 16.1
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 16.1
     name: return
   actors:
   - {fileID: 831034119}
@@ -5530,6 +5723,18 @@ MonoBehaviour:
   _nextOne: 0
   finishDelay: 0
   executeOnFinish: {fileID: 0}
+--- !u!114 &802465616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802465613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &806246940
 GameObject:
   m_ObjectHideFlags: 0
@@ -7357,6 +7562,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 1
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 831034116}
   clip: {fileID: 8300000, guid: 2389f7ce21d0c2e48b31d10c69645cf6, type: 3}
@@ -8788,6 +8997,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 630149603}
   clip: {fileID: 8300000, guid: 98d583d7fca274e49aa54b6747d93ad4, type: 3}
@@ -11459,9 +11672,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.5
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 285691964}
   script:
-  - milestone: 0
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
     target: {fileID: 831034119}
     optionalPart: 1
 --- !u!114 &1839528787
@@ -11477,9 +11698,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.2
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 285691962}
   script:
-  - milestone: 0
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
     emotion: 1000
     keep: 1
 --- !u!1001 &1849850967
@@ -11609,16 +11838,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2134469385}
     m_Modifications:
-    - target: {fileID: 8453845024086757193, guid: 08926acd2bf37494aa9a30756c3b7daf,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8267075312919472268, guid: 08926acd2bf37494aa9a30756c3b7daf,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5922679479718010271, guid: 08926acd2bf37494aa9a30756c3b7daf,
         type: 3}
       propertyPath: m_Name
@@ -12503,6 +12722,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.15739898
       objectReference: {fileID: 0}
+    - target: {fileID: 8267075312919472268, guid: 08926acd2bf37494aa9a30756c3b7daf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8453845024086757193, guid: 08926acd2bf37494aa9a30756c3b7daf,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5922679479717121635, guid: 08926acd2bf37494aa9a30756c3b7daf,
         type: 3}
       propertyPath: far clip plane
@@ -12568,6 +12797,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 1
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 831034116}
   clip: {fileID: 8300000, guid: 51b8dd6e8888c4f4daa97b936368ba4d, type: 3}
@@ -14198,7 +14431,6 @@ GameObject:
   - component: {fileID: 2043396769}
   - component: {fileID: 2043396771}
   - component: {fileID: 2043396768}
-  - component: {fileID: 2043396772}
   m_Layer: 0
   m_Name: toy car
   m_TagString: Untagged
@@ -14232,6 +14464,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eb4290af9b789c43a591dd2ea9c0262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   target: {fileID: 802465613}
   delay: 9
 --- !u!114 &2043396769
@@ -14247,24 +14483,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 285691962}
   script:
-  - milestone: 4.7
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 4.7
     emotion: 2
     keep: 0
-  - milestone: 7.9
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 7.9
     emotion: 1
     keep: 0
-  - milestone: 8.35
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 8.35
     emotion: 4
     keep: 0
-  - milestone: 9.79
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 9.79
     emotion: 2
     keep: 0
-  - milestone: 11.021
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 11.021
     emotion: 1
     keep: 0
-  - milestone: 16
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 16
     emotion: 4
     keep: 0
 --- !u!114 &2043396770
@@ -14279,6 +14543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c72b898d6251304fbca31e043f9c698, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   delay: 0
   voice: {fileID: 630149603}
   clip: {fileID: 8300000, guid: 61b6617896b0bda46a3822e739d730a0, type: 3}
@@ -14295,32 +14563,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   manager: {fileID: 285691964}
   script:
-  - milestone: 2
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 2
     target: {fileID: 758410869}
     optionalPart: 0
-  - milestone: 9.5
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 9.5
     target: {fileID: 68315623}
     optionalPart: 1
-  - milestone: 12.7
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 12.7
     target: {fileID: 758410869}
     optionalPart: 1
-  - milestone: 16
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 16
     target: {fileID: 68315623}
     optionalPart: 1
---- !u!114 &2043396772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043396766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2082309744
 GameObject:
   m_ObjectHideFlags: 0
@@ -14364,7 +14640,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fd21486a516b234f99f9d16ca01f80d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitsForFinish: 1
+  _triggerer:
+    triggersNext: 1
+    waitsOnFinish: 1
+    delay: 0
+  waitsForFinish: 0
   destination:
   - {fileID: 926330269}
   agent: {fileID: 831034114}
