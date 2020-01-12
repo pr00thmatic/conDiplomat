@@ -12,4 +12,7 @@ public class RandomRange {
   public float Uniform {
     get => Random.Range(Min, Max);
   }
+  public bool Contains (float value) {
+    return Min <= value && value <= Max;
+  }
 }

@@ -22,6 +22,12 @@ ModelImporter:
     100032: Cube.002
     100034: Cube.003
     100036: Cube.004
+    100038: calendar
+    100040: door bool
+    100042: door border
+    100044: room
+    100046: Sphere
+    100048: carpet
     400000: base
     400002: bed header
     400004: bed table
@@ -41,6 +47,12 @@ ModelImporter:
     400032: Cube.002
     400034: Cube.003
     400036: Cube.004
+    400038: calendar
+    400040: door bool
+    400042: door border
+    400044: room
+    400046: Sphere
+    400048: carpet
     2100000: No Name
     2300000: base
     2300002: bed header
@@ -59,6 +71,12 @@ ModelImporter:
     2300028: Cube.002
     2300030: Cube.003
     2300032: Cube.004
+    2300034: calendar
+    2300036: door bool
+    2300038: door border
+    2300040: room
+    2300042: Sphere
+    2300044: carpet
     3300000: base
     3300002: bed header
     3300004: bed table
@@ -76,6 +94,12 @@ ModelImporter:
     3300028: Cube.002
     3300030: Cube.003
     3300032: Cube.004
+    3300034: calendar
+    3300036: door bool
+    3300038: door border
+    3300040: room
+    3300042: Sphere
+    3300044: carpet
     4300000: base
     4300002: legs
     4300004: bed header
@@ -93,6 +117,12 @@ ModelImporter:
     4300028: Cube.001
     4300030: Cube.002
     4300032: Cube.003
+    4300034: calendar
+    4300036: room
+    4300038: door bool
+    4300040: door border
+    4300042: Sphere
+    4300044: carpet
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
