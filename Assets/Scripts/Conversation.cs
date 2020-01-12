@@ -12,6 +12,9 @@ public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
 
   public int _nextOne = 0;
 
+  public float finishDelay;
+  public GameObject executeOnFinish;
+
   public void Execute () {
     Iterator iterator = new Iterator(this);
     iterator.Execute();
@@ -47,5 +50,14 @@ public class Conversation : MonoBehaviour, IScriptPiece, IIterable {
     if (onArtificialTrigger != null) {
       onArtificialTrigger();
     }
+
+    if (executeOnFinish) {
+      StartCoroutine(_EventuallyExecute());
+    }
+  }
+
+  IEnumerator _EventuallyExecute () {
+    yield return new WaitForSeconds(finishDelay);
+    Util.Execute(executeOnFinish);
   }
 }

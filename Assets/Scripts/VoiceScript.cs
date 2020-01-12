@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class VoiceScript : MonoBehaviour, IScriptPiece {
   public event System.Action onFinished;
+  public float delay = 0;
   public AudioSource voice;
   public AudioClip clip;
 
@@ -18,6 +19,7 @@ public class VoiceScript : MonoBehaviour, IScriptPiece {
   }
 
   IEnumerator _Execute () {
+    yield return new WaitForSeconds(delay);
     voice.clip = clip;
     voice.Play();
     while (voice.isPlaying) {

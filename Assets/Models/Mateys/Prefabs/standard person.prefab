@@ -741,7 +741,7 @@ MonoBehaviour:
   voice: {fileID: 630149603}
   blendShapeIndex: 5
   bufferLengthFactor: 10
-  amplitudeFactor: 2000
+  amplitudeFactor: 1000
 --- !u!114 &2911819306273232090
 MonoBehaviour:
   m_ObjectHideFlags: 0

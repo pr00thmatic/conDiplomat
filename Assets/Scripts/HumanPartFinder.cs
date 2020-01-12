@@ -4,17 +4,23 @@ using System.Collections.Generic;
 
 public class HumanPartFinder {
   public static Component Find (Transform target, HumanPartTarget part) {
+    MonoBehaviour found = null;
+
     switch (part) {
       case HumanPartTarget.Head:
-        return target.GetComponentInChildren<HeadHumanPart>();
+        found = target.GetComponentInChildren<HeadHumanPart>();
+        break;
       case HumanPartTarget.RightHand:
-        return target.GetComponentInChildren<RightHandHumanPart>();
+        found = target.GetComponentInChildren<RightHandHumanPart>();
+        break;
       case HumanPartTarget.LeftHand:
-        return target.GetComponentInChildren<LeftHandHumanPart>();
+        found = target.GetComponentInChildren<LeftHandHumanPart>();
+        break;
       case HumanPartTarget.LookFront:
-        return target.GetComponentInChildren<LookFront>();
+        found = target.GetComponentInChildren<LookFront>();
+        break;
     }
 
-    return target;
+    return found? found.transform: target;
   }
 }

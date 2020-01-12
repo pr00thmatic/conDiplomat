@@ -50,6 +50,8 @@ public class YesNoQuestion : MonoBehaviour, IScriptPiece {
   }
 
   public void AnswerHandler (YesNoDetector caller, bool value) {
-    counter += value? 1: -1;
+    counter = value? 1: -1; // i think this is better
+    // it keeps the last answer
+    // counter += value? 1: -1;
   }
 }
