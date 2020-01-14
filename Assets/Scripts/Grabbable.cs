@@ -19,7 +19,6 @@ public class Grabbable : MonoBehaviour {
     body = GetComponent<Rigidbody>();
     highlighter = GetComponent<Outline>();
     highlighter.enabled = false;
-    }
   }
 
   void Awake () {
