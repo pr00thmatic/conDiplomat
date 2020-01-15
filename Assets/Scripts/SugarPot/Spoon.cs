@@ -19,6 +19,19 @@ public class Spoon : MonoBehaviour {
     grabbable.onRelease -= HandleRelease;
   }
 
+  public void HandlePotEntrance () {
+    if (grabbable.IsGrabbed == false) {
+      body.isKinematic = true;
+      detector.pot.SetSpoon(this);
+    }
+  }
+
+  public void HandlePotExit () {
+    if (grabbable.IsGrabbed == false) {
+      body.isKinematic = false;
+    }
+  }
+
   public void HandleRelease () {
     if (detector.pot) {
       body.isKinematic = true;

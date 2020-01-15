@@ -5,7 +5,10 @@ using System.Collections.Generic;
 namespace SugarPot {
 public class SpoonDetector : MonoBehaviour {
   public event System.Action onSugarContact;
+  public Spoon target;
   public Pot pot;
+  public string containedLayer;
+  public string uncontainedLayer;
 
   void OnTriggerEnter (Collider c) {
     Sugar sugar = c.GetComponentInParent<Sugar>();
@@ -16,16 +19,27 @@ public class SpoonDetector : MonoBehaviour {
   }
 
   void OnTriggerStay (Collider c) {
-    Pot found = c.GetComponentInParent<Pot>();
-    if (found) {
-      pot = found;
+    PotInterior interior = c.GetComponentInParent<PotInterior>();
+    Pot foundPot = c.GetComponentInParent<Pot>();
+
+    if (interior) {
+      Util.RecursiveSetLayer(LayerMask.NameToLayer(containedLayer),
+                             target.transform);
+      pot = foundPot;
+      target.HandlePotEntrance();
     }
   }
 
   void OnTriggerExit (Collider c) {
-    Pot found = c.GetComponentInParent<Pot>();
-    if (this.pot == found) {
-      pot = null;
+    PotInterior interior = c.GetComponentInParent<PotInterior>();
+    Pot foundPot = c.GetComponentInParent<Pot>();
+    if (interior) {
+      Util.RecursiveSetLayer(LayerMask.NameToLayer(uncontainedLayer),
+                             target.transform);
+      if (foundPot == pot) {
+        pot = null;
+      }
+      target.HandlePotExit();
     }
   }
 }
