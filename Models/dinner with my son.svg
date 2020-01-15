@@ -30,7 +30,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.4161094947519919"
-     inkscape:cx="850.348186616778"
+     inkscape:cx="850.3481866167776"
      inkscape:cy="550.3425139144156"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
@@ -60,7 +60,7 @@
      inkscape:label="albedo"
      style="display:inline">
     <rect
-       style="opacity:1;vector-effect:none;fill:#eaedef;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;vector-effect:none;fill:#748895;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4525"
        width="161.4069976806641"
        height="667.7152709960938"
@@ -68,7 +68,7 @@
        y="656.8416137695312"
        transform="matrix(0.2645833333333333,0,0,0.2578509328943843,0,4.42212100829164)" />
     <rect
-       style="opacity:1;vector-effect:none;fill:#12a4a8;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;vector-effect:none;fill:#079ea2;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4519"
        width="637.1328735351562"
        height="769.6565551757812"
@@ -109,13 +109,13 @@
        transform="scale(0.2645833333333333)" />
     <path
        transform="matrix(0.2724813432927647,0,0,0.2645833333333333,-10.85587783861008,0)"
-       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;vector-effect:none;fill:#a5b9b7;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        d="m 1033.004760742187,-2.378588199615478 h 341.503234863282 V 634.7542853355405 h -265.047236277138 l -76.455998586144,-84.9510253666191 z"
        id="rect4516"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />
     <rect
-       style="opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;vector-effect:none;fill:#a5b9b7;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4521"
        width="417.9591979980469"
        height="508.0072937011719"
@@ -123,7 +123,7 @@
        y="602.472900390625"
        transform="scale(0.2645833333333333)" />
     <rect
-       style="opacity:1;vector-effect:none;fill:#12a4a8;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;vector-effect:none;fill:#079ea2;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        id="rect4523"
        width="283.7365112304688"
        height="215.7756805419922"
@@ -131,7 +131,7 @@
        y="1130.868408203125"
        transform="matrix(0.2645833333333333,0,0,0.2645833333333333,0,-0.4495326583546558)" />
     <path
-       style="opacity:1;vector-effect:none;fill:#eaedef;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
+       style="opacity:1;vector-effect:none;fill:#748895;fill-opacity:1;stroke:none;stroke-width:30.2362213135;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke"
        d="M 23.787109375,592.279296875 V 1343.24609375 H 67.9609375 v 1.69921875 h 95.14453125 v -30.58203125 H 79.853515625 V 592.279296875 Z"
        transform="scale(0.2645833333333333)"
        id="rect4527"
@@ -333,14 +333,14 @@
      id="layer1"
      transform="translate(-132.5671698885025,-19.86310673833969)"
      sodipodi:insensitive="true"
-     style="display:inline">
+     style="display:none">
     <image
        sodipodi:absref="D:\deving-games\conDiplomat\Models\dinner with my son uv.png"
        xlink:href="dinner with my son uv.png"
-       id="image4504"
-       preserveAspectRatio="none"
-       height="1365.333374023438"
+       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,132.5671698885025,19.86310673833975)"
        width="1365.333374023438"
-       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,132.5671698885025,19.86310673833975)" />
+       height="1365.333374023438"
+       preserveAspectRatio="none"
+       id="image4504" />
   </g>
 </svg>

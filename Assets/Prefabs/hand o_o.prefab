@@ -56,6 +56,7 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   text: {fileID: 7695002150518952156}
   pivot: {fileID: 3864338377627457402}
+  velocityMultiplier: 5
 --- !u!1 &2864626319033276014
 GameObject:
   m_ObjectHideFlags: 0
@@ -81,8 +82,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2864626319033276014}
   m_LocalRotation: {x: -0, y: -0.10125889, z: -0.0000000074505797, w: 0.9948601}
-  m_LocalPosition: {x: -0.034, y: 0.024, z: 0.031}
-  m_LocalScale: {x: 0.12468624, y: 0.097729854, z: 0.23350896}
+  m_LocalPosition: {x: -0.0293, y: 0.0134, z: 0.0082}
+  m_LocalScale: {x: 0.10722144, y: 0.074907005, z: 0.14879659}
   m_Children: []
   m_Father: {fileID: 5680322304576595540}
   m_RootOrder: 2
@@ -420,7 +421,7 @@ MonoBehaviour:
   target: {fileID: 0}
   active: {fileID: 134649637326667049}
   inactive: {fileID: 2980393519064676177}
-  maxDistance: 0.5
+  maxDistance: 0.1
   _distance: Infinity
 --- !u!54 &3790888328090638610
 Rigidbody:

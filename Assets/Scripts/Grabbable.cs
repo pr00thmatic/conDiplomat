@@ -6,6 +6,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody))]
 public class Grabbable : MonoBehaviour {
   public event System.Action onGrab;
+  public event System.Action onRelease;
   public bool IsGrabbed { get => hand != null; }
 
   public SimulatedHand hand = null;
@@ -19,11 +20,17 @@ public class Grabbable : MonoBehaviour {
   void Reset () {
     body = GetComponent<Rigidbody>();
     highlighter = GetComponent<Outline>();
-    highlighter.enabled = false;
+    highlighter.OutlineWidth = 0.6f;
+    // don't do this
+    // highlighter.enabled = false;
   }
 
   void Awake () {
     _originalPosition = transform.position;
+  }
+
+  void Start () {
+    StartCoroutine(_EventuallyUnhighlight());
   }
 
   void Update () {
@@ -55,5 +62,14 @@ public class Grabbable : MonoBehaviour {
     body.isKinematic = false;
     transform.SetParent(_oldParent, true);
     this.hand = null;
+
+    if (onRelease != null) {
+      onRelease();
+    }
+  }
+
+  IEnumerator _EventuallyUnhighlight () {
+    yield return new WaitForSeconds(0.5f);
+    highlighter.enabled = false;
   }
 }

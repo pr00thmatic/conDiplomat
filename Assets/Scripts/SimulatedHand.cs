@@ -15,25 +15,28 @@ public class SimulatedHand : MonoBehaviour {
   public TextMesh text;
 
   public Transform pivot;
+  public float velocityMultiplier = 5;
 
-  int _cacheSize = 30;
-  List<Vector3> _posCache = new List<Vector3>();
+  int _cacheSize = 5;
+  Vector3[] _velocityCache;
+  int _current = 0;
 
   bool _released = true;
+  Vector3 _lastPos;
+
+  void Awake () {
+    _velocityCache = new Vector3[_cacheSize];
+    _lastPos = transform.position;
+  }
 
   public void UpdateVelocity () {
-    if (_posCache.Count >= _cacheSize) {
-      _posCache.RemoveAt(0);
-    }
-    _posCache.Add(transform.position);
+    _velocityCache[_current] = (_lastPos - transform.position) / Time.deltaTime;
+    velocity += _velocityCache[_current] / (float) _cacheSize;
+    velocity -= _velocityCache[(_current+1) % _cacheSize] / (float) _cacheSize;
+    _current = (_current + 1) % _cacheSize;
 
-    velocity = Vector3.zero;
-    for (int i=1; i<_posCache.Count; i++) {
-      velocity = _posCache[i] - _posCache[i-1];
-    }
-
-    velocity = ((velocity / _posCache.Count) / Time.deltaTime) * 10;
     text.text = velocity + "";
+    _lastPos = transform.position;
   }
 
   void Update () {
@@ -72,7 +75,7 @@ public class SimulatedHand : MonoBehaviour {
   public void Release () {
     if (grabbed) {
       grabbed.GetReleased();
-      grabbed.body.velocity = velocity;
+      grabbed.body.velocity = -velocity * velocityMultiplier;
       grabbed = null;
     }
   }
