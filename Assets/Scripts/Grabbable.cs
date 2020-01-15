@@ -6,6 +6,7 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Rigidbody))]
 public class Grabbable : MonoBehaviour {
   public event System.Action onGrab;
+  public bool IsGrabbed { get => hand != null; }
 
   public SimulatedHand hand = null;
   public Rigidbody body;
@@ -14,8 +15,6 @@ public class Grabbable : MonoBehaviour {
 
   Transform _oldParent;
   Vector3 _originalPosition;
-  Vector3 _offset;
-  Quaternion _rotationOffset;
 
   void Reset () {
     body = GetComponent<Rigidbody>();
@@ -29,8 +28,8 @@ public class Grabbable : MonoBehaviour {
 
   void Update () {
     if (hand) {
-      body.MovePosition(hand.transform.position + _offset);
-      body.MoveRotation(hand.transform.rotation * _rotationOffset);
+      body.MovePosition(hand.pivot.position);
+      body.MoveRotation(hand.pivot.rotation);
     }
   }
 
@@ -46,9 +45,6 @@ public class Grabbable : MonoBehaviour {
     body.isKinematic = true;
     _oldParent = transform.parent;
     // transform.SetParent(hand.transform, true);
-    _offset = transform.position - hand.transform.position;
-    _rotationOffset = Quaternion.FromToRotation(hand.transform.forward,
-                                                transform.forward);
 
     if (onGrab != null) {
       onGrab();
