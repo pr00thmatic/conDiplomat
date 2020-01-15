@@ -72,7 +72,6 @@ public class Pointer : MonoBehaviour {
     } else if (triggerTarget || raycastTarget) {
       SetTarget(triggerTarget? triggerTarget: raycastTarget);
     } else {
-      Debug.Log("unsetting", target);
       UnsetTarget();
     }
 

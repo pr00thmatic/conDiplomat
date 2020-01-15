@@ -21,11 +21,8 @@ public class Spoon : MonoBehaviour {
 
   public void HandleRelease () {
     if (detector.pot) {
-      colliders.SetActive(false);
       body.isKinematic = true;
       detector.pot.SetSpoon(this);
-    } else {
-      colliders.SetActive(true);
     }
   }
 
