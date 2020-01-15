@@ -14,6 +14,8 @@ public class Grabbable : MonoBehaviour {
 
   Transform _oldParent;
   Vector3 _originalPosition;
+  Vector3 _offset;
+  Quaternion _rotationOffset;
 
   void Reset () {
     body = GetComponent<Rigidbody>();
@@ -23,6 +25,13 @@ public class Grabbable : MonoBehaviour {
 
   void Awake () {
     _originalPosition = transform.position;
+  }
+
+  void Update () {
+    if (hand) {
+      body.MovePosition(hand.transform.position + _offset);
+      body.MoveRotation(hand.transform.rotation * _rotationOffset);
+    }
   }
 
   public void SetHighlight (bool value) {
@@ -36,7 +45,10 @@ public class Grabbable : MonoBehaviour {
     this.hand = hand;
     body.isKinematic = true;
     _oldParent = transform.parent;
-    transform.SetParent(hand.transform, true);
+    // transform.SetParent(hand.transform, true);
+    _offset = transform.position - hand.transform.position;
+    _rotationOffset = Quaternion.FromToRotation(hand.transform.forward,
+                                                transform.forward);
 
     if (onGrab != null) {
       onGrab();

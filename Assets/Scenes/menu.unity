@@ -672,7 +672,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 126748034}
   highlighter: {fileID: 126748036}
-  gripTransform: {fileID: 679742644}
 --- !u!114 &126748036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1599,8 +1598,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404721366}
-  m_LocalRotation: {x: -0, y: -0.24968888, z: -0, w: 0.9683261}
-  m_LocalPosition: {x: 0.275, y: 1.194, z: 0.258}
+  m_LocalRotation: {x: -0, y: -0.2202887, z: -0, w: 0.9754348}
+  m_LocalPosition: {x: 0.084, y: 0.829, z: 0.214}
   m_LocalScale: {x: 0.17915215, y: 0.17915215, z: 0.17915215}
   m_Children:
   - {fileID: 1489560854}
@@ -1609,7 +1608,7 @@ Transform:
   - {fileID: 848042453}
   m_Father: {fileID: 0}
   m_RootOrder: 16
-  m_LocalEulerAnglesHint: {x: 0, y: -28.918001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -25.452002, z: 0}
 --- !u!114 &404721368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1936,7 +1935,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 549224790}
   highlighter: {fileID: 549224792}
-  gripTransform: {fileID: 958289731}
 --- !u!114 &549224792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4176,7 +4174,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 1247672122}
   highlighter: {fileID: 1247672121}
-  gripTransform: {fileID: 1234134241}
 --- !u!114 &1247672121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4626,7 +4623,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 1436712770}
   highlighter: {fileID: 1436712769}
-  gripTransform: {fileID: 765421871}
 --- !u!114 &1436712769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6118,7 +6114,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 1687828943}
   highlighter: {fileID: 1687828940}
-  gripTransform: {fileID: 239614355}
 --- !u!114 &1687828942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6783,7 +6778,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 1764732295}
   highlighter: {fileID: 1764732294}
-  gripTransform: {fileID: 1659233889}
 --- !u!114 &1764732294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7257,7 +7251,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 1788880841}
   highlighter: {fileID: 1788880838}
-  gripTransform: {fileID: 1719460489}
 --- !u!114 &1788880840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8885,7 +8878,6 @@ MonoBehaviour:
   hand: {fileID: 0}
   body: {fileID: 2125227079}
   highlighter: {fileID: 2125227078}
-  gripTransform: {fileID: 1618034335}
 --- !u!114 &2125227078
 MonoBehaviour:
   m_ObjectHideFlags: 0
