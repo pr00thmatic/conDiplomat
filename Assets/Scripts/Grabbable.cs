@@ -5,74 +5,71 @@ using System.Collections.Generic;
 [RequireComponent(typeof(Outline))]
 [RequireComponent(typeof(Rigidbody))]
 public class Grabbable : MonoBehaviour {
-    public event System.Action onGrab;
-    public static int releasedLayer = 9;
+  public event System.Action onGrab;
+  public event System.Action onRelease;
+  public bool IsGrabbed { get => hand != null; }
 
-    public Rigidbody body;
-    public Outline highlighter;
-    public bool Highlighted { get => highlighter.enabled; }
-    public Transform gripTransform;
+  public SimulatedHand hand = null;
+  public Rigidbody body;
+  public Outline highlighter;
+  public bool Highlighted { get => highlighter.enabled; }
 
-    Transform _oldParent;
-    Vector3 _originalPosition;
+  Transform _oldParent;
+  Vector3 _originalPosition;
 
-    void Reset () {
-        body = GetComponent<Rigidbody>();
-        highlighter = GetComponent<Outline>();
-        highlighter.enabled = false;
+  void Reset () {
+    body = GetComponent<Rigidbody>();
+    highlighter = GetComponent<Outline>();
+    highlighter.OutlineWidth = 0.6f;
+    // don't do this
+    // highlighter.enabled = false;
+  }
 
-        if (!gripTransform) {
-            gripTransform = new GameObject("grip transform").transform;
-            gripTransform.SetParent(transform);
-            gripTransform.localPosition = Vector3.zero;
-            gripTransform.rotation = Quaternion.identity;
-        }
+  void Awake () {
+    _originalPosition = transform.position;
+  }
+
+  void Start () {
+    StartCoroutine(_EventuallyUnhighlight());
+  }
+
+  void Update () {
+    if (hand) {
+      body.MovePosition(hand.pivot.position);
+      body.MoveRotation(hand.pivot.rotation);
     }
+  }
 
-    void Awake () {
-        _originalPosition = transform.position;
+  public void SetHighlight (bool value) {
+    highlighter.enabled = value;
+  }
+
+  public void GetGrabbed (SimulatedHand hand) {
+    if (this.hand) {
+      this.hand.Release();
     }
+    this.hand = hand;
+    body.isKinematic = true;
+    _oldParent = transform.parent;
+    // transform.SetParent(hand.transform, true);
 
-    public void SetHighlight (bool value) {
-        highlighter.enabled = value;
+    if (onGrab != null) {
+      onGrab();
     }
+  }
 
-    public void GetGrabbed (SimulatedHand hand) {
-        Collider[] colliders = GetComponentsInChildren<Collider>();
+  public void GetReleased () {
+    body.isKinematic = false;
+    transform.SetParent(_oldParent, true);
+    this.hand = null;
 
-        foreach (Collider c in colliders) {
-            c.enabled = false;
-        }
-
-        body.isKinematic = true;
-        _oldParent = transform.parent;
-        transform.SetParent(hand.transform, true);
-        transform.localPosition = gripTransform.localPosition;
-        transform.localRotation = gripTransform.localRotation;
-
-        if (onGrab != null) {
-            onGrab();
-        }
+    if (onRelease != null) {
+      onRelease();
     }
+  }
 
-    public void GetReleased () {
-        Collider[] colliders = GetComponentsInChildren<Collider>();
-
-        foreach (Collider c in colliders) {
-            c.enabled = true;
-        }
-
-        body.isKinematic = false;
-        transform.SetParent(_oldParent, true);
-        StartCoroutine(_DeferredCollisionRestore());
-    }
-
-    IEnumerator _DeferredCollisionRestore () {
-        int normal = gameObject.layer;
-        Util.RecursiveSetLayer(releasedLayer, transform);
-
-        yield return new WaitForSeconds(0.5f);
-
-        Util.RecursiveSetLayer(normal, transform);
-    }
+  IEnumerator _EventuallyUnhighlight () {
+    yield return new WaitForSeconds(0.5f);
+    highlighter.enabled = false;
+  }
 }
