@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace SugarPot {
 public class Spoon : MonoBehaviour {
+  public SugarSplatter sugar;
   public Grabbable grabbable;
   public SpoonDetector detector;
   public GameObject colliders;
@@ -12,11 +13,13 @@ public class Spoon : MonoBehaviour {
   void OnEnable () {
     grabbable.onGrab += HandleGrab;
     grabbable.onRelease += HandleRelease;
+    detector.onSugarContact += HandleSugarContact;
   }
 
   void OnDisable () {
     grabbable.onGrab -= HandleGrab;
     grabbable.onRelease -= HandleRelease;
+    detector.onSugarContact -= HandleSugarContact;
   }
 
   public void HandlePotEntrance () {
@@ -41,6 +44,10 @@ public class Spoon : MonoBehaviour {
 
   public void HandleGrab () {
     transform.parent = null;
+  }
+
+  public void HandleSugarContact () {
+    sugar.Fill();
   }
 }
 }

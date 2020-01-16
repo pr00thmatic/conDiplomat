@@ -15166,6 +15166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714158560}
+  - component: {fileID: 1714158561}
   m_Layer: 0
   m_Name: _DEBUG HANDS
   m_TagString: Untagged
@@ -15190,6 +15191,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1714158561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714158559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90cd3bc620113d47b73c500a373af3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1719460488
 GameObject:
   m_ObjectHideFlags: 0
@@ -27273,6 +27286,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.19676338
       objectReference: {fileID: 0}
+    - target: {fileID: 6926259497269124320, guid: 08926acd2bf37494aa9a30756c3b7daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5922679479717708217, guid: 08926acd2bf37494aa9a30756c3b7daf,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -27435,6 +27453,11 @@ PrefabInstance:
       propertyPath: m_Sources.Array.data[0].sourceTransform
       value: 
       objectReference: {fileID: 2105078117}
+    - target: {fileID: 1486474649491297001, guid: 08926acd2bf37494aa9a30756c3b7daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7992525632628759734, guid: 08926acd2bf37494aa9a30756c3b7daf,
         type: 3}
       propertyPath: maxDistance
@@ -27444,6 +27467,16 @@ PrefabInstance:
         type: 3}
       propertyPath: maxDistance
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3336814130739049332, guid: 08926acd2bf37494aa9a30756c3b7daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6552946658808692093, guid: 08926acd2bf37494aa9a30756c3b7daf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5922679478603464764, guid: 08926acd2bf37494aa9a30756c3b7daf,
         type: 3}
