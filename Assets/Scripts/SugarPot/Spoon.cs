@@ -9,6 +9,9 @@ public class Spoon : MonoBehaviour {
   public SpoonDetector detector;
   public GameObject colliders;
   public Rigidbody body;
+  public float potSpillPauseTime = 0.5f;
+
+  Coroutine _spill;
 
   void OnEnable () {
     grabbable.onGrab += HandleGrab;
@@ -22,7 +25,14 @@ public class Spoon : MonoBehaviour {
     detector.onSugarContact -= HandleSugarContact;
   }
 
+  IEnumerator _EventuallySpill () {
+    yield return new WaitForSeconds(potSpillPauseTime);
+    sugar.canSpill = true;
+  }
+
   public void HandlePotEntrance () {
+    sugar.canSpill = false;
+
     if (grabbable.IsGrabbed == false) {
       body.isKinematic = true;
       detector.pot.SetSpoon(this);
@@ -30,6 +40,7 @@ public class Spoon : MonoBehaviour {
   }
 
   public void HandlePotExit () {
+    _spill = StartCoroutine(_EventuallySpill());
     if (grabbable.IsGrabbed == false) {
       body.isKinematic = false;
     }
@@ -47,6 +58,7 @@ public class Spoon : MonoBehaviour {
   }
 
   public void HandleSugarContact () {
+    detector.pot.Drain(this);
     sugar.Fill();
   }
 }
