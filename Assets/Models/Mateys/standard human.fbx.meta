@@ -52,6 +52,7 @@ ModelImporter:
     100092: shirt
     100094: shoes
     100096: Empty
+    100098: face
     400000: arm pole.L
     400002: arm pole.L_end
     400004: arm pole.R
@@ -101,7 +102,14 @@ ModelImporter:
     400092: shirt
     400094: shoes
     400096: Empty
+    400098: face
     2100000: No Name
+    2100002: skin
+    2100004: shirt
+    2100006: pants
+    2100008: shoes
+    2100010: hair
+    2100012: eyes
     4300000: eyes
     4300002: retopology
     4300004: ears
@@ -110,6 +118,7 @@ ModelImporter:
     4300010: pants
     4300012: shoes
     4300014: hair
+    4300016: face
     7400000: Armature|Idle
     7400002: Armature|Walk
     7400004: Armature|CubeAction
@@ -124,6 +133,7 @@ ModelImporter:
     13700010: pants
     13700012: shirt
     13700014: shoes
+    13700016: face
   externalObjects: {}
   materials:
     importMaterials: 1
