@@ -6,9 +6,11 @@ public class GiftDependant : MonoBehaviour {
   public string triggerGift;
 
   void Start () {
-    int n = transform.childCount;
-    for (int i=n-1; i>=0; i--) {
-      transform.GetChild(i).parent = transform.parent;
+    if (triggerGift == LevelManager.Instance.gift.name) {
+      int n = transform.childCount;
+      for (int i=n-1; i>=0; i--) {
+        transform.GetChild(i).parent = transform.parent;
+      }
     }
 
     Destroy(this.gameObject);

@@ -8,7 +8,6 @@ public class VoiceScript : MonoBehaviour, IScriptPiece {
   public float delay = 0;
   public AudioSource voice;
   public List<AudioClip> clips;
-  public bool converted = false;
   public float Length {
     get {
       float length = 0;

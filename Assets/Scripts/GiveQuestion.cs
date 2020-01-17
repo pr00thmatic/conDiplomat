@@ -7,14 +7,20 @@ public class GiveQuestion : MonoBehaviour, IScriptPiece {
 
   public float waitForAnswer = 0;
   public Grabbable requestedThing;
-  public bool fulfilled = false;
 
   public GameObject yes;
   public GameObject no;
+  public GameObject thrownAway;
 
   public string scriptName;
+  public float throwTreshold = 4; // m/s
+  public TextMesh debug;
+
+  GameObject _choise;
+  bool _stop = false;
 
   public void Execute () {
+    _choise = no;
     StartCoroutine(_Listen());
   }
 
@@ -27,23 +33,43 @@ public class GiveQuestion : MonoBehaviour, IScriptPiece {
   void OnTriggerStay (Collider c) {
     Grabbable found = c.GetComponentInParent<Grabbable>();
     if (found == requestedThing) {
-      fulfilled = true;
+      _choise = yes;
+      _stop = true;
     }
   }
 
   void OnTriggerExit (Collider c) {
     Grabbable found = c.GetComponentInParent<Grabbable>();
     if (found == requestedThing) {
-      fulfilled = false;
+      _choise = no;
     }
   }
 
   IEnumerator _Listen () {
-    yield return new WaitForSeconds(waitForAnswer);
+    requestedThing.onRelease += HandleRelease;
+    VoiceScript voice = GetComponent<VoiceScript>();
+    float elapsed = 0;
 
-    GameObject choise = fulfilled? yes: no;
-    choise.transform.parent = transform.parent;
-    choise.name = scriptName;
+    while (elapsed < waitForAnswer || (_stop && elapsed < voice.Length)) {
+      elapsed += Time.deltaTime;
+      yield return null;
+    }
+
+    requestedThing.onRelease -= HandleRelease;
+    _choise.transform.parent = transform.parent;
+    _choise.name = scriptName;
     Triggerer.TriggerFinish(this);
+  }
+
+  void HandleThrownAway () {
+    _choise = thrownAway;
+  }
+
+  public void HandleRelease () {
+    debug.text = requestedThing.body.velocity.magnitude + "";
+    if (requestedThing.body.velocity.magnitude > throwTreshold) {
+      _stop = true;
+      _choise = thrownAway;
+    }
   }
 }
