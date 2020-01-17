@@ -2671,7 +2671,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285691957}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d8fde27cdca47f489947590bb2d1b97, type: 3}
   m_Name: 
@@ -21018,7 +21018,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: aac9f96bf84b8c645b5fb88c4189d43e, type: 2}
+      objectReference: {fileID: 2100000, guid: 5e6debb312fe4f44e94bd1bdf5ebcb12, type: 2}
     - target: {fileID: 5771670582575922768, guid: eb048fbc19a322749ba6fb113b229994,
         type: 3}
       propertyPath: m_Materials.Array.data[5]
