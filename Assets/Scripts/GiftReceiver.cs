@@ -13,7 +13,11 @@ public class GiftReceiver : MonoBehaviour {
 
   IEnumerator _EventuallyActivate () {
     yield return new WaitForSeconds(waitingTime);
-    Gift gift = LevelManager.Instance.gift.GetComponent<Gift>();
-    Util.Execute(scriptsParent.Find(gift.definition.name).gameObject);
+    Gift gift = LevelManager.Instance.Gift;
+    if (gift) {
+      Util.Execute(scriptsParent.Find(gift.definition.name).gameObject);
+    } else {
+      Util.Execute(scriptsParent.Find("no gift").gameObject);
+    }
   }
 }

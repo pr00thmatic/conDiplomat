@@ -4,6 +4,19 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class LevelManager : Singleton<LevelManager> {
+  public string GiftName {
+    get {
+      if (!gift) return "no gift";
+      return gift.name;
+    }
+  }
+
+  public Gift Gift {
+    get {
+      if (!gift) return null;
+      return gift.GetComponent<Gift>();
+    }
+  }
   public string loadingSceneName;
   public float artificialLoadingTime = 10;
   public Equipable gift;
@@ -39,11 +52,13 @@ public class LevelManager : Singleton<LevelManager> {
   }
 
   public void PrepareLevel () {
-    Transform giftHolder = GameObject.FindWithTag("gift placeholder").transform;
-    gift.transform.parent = giftHolder;
-    gift.transform.localPosition = Vector3.zero;
-    gift.transform.localRotation = Quaternion.identity;
-    gift.body.isKinematic = false;
-    gift.gameObject.SetActive(true);
+    if (gift) {
+      Transform giftHolder = GameObject.FindWithTag("gift placeholder").transform;
+      gift.transform.parent = giftHolder;
+      gift.transform.localPosition = Vector3.zero;
+      gift.transform.localRotation = Quaternion.identity;
+      gift.body.isKinematic = false;
+      gift.gameObject.SetActive(true);
+    }
   }
 }

@@ -433,7 +433,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3a7027849b3129743934dd33d0d30d15, type: 3}
       propertyPath: m_LocalPosition.x
@@ -743,7 +743,7 @@ PrefabInstance:
         type: 3}
       propertyPath: gift
       value: 
-      objectReference: {fileID: 459700929}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad3a18d94ea10b1419393d4436ac568e, type: 3}
 --- !u!4 &788067697 stripped
