@@ -13248,7 +13248,7 @@ MonoBehaviour:
   _triggerer:
     triggersNext: 1
     waitsOnFinish: 1
-    delay: 0.5
+    delay: 2
   waitForAnswer: 6.700499
   requestedThing: {fileID: 356708539}
   yes: {fileID: 368239746}
@@ -14457,7 +14457,7 @@ MonoBehaviour:
   _triggerer:
     triggersNext: 1
     waitsOnFinish: 1
-    delay: 0.5
+    delay: 2
   waitForAnswer: 6.700499
   requestedThing: {fileID: 356708539}
   yes: {fileID: 244249376}
@@ -16820,7 +16820,7 @@ MonoBehaviour:
   _triggerer:
     triggersNext: 1
     waitsOnFinish: 1
-    delay: 0.5
+    delay: 2
   waitForAnswer: 8.592925
   requestedThing: {fileID: 356708539}
   yes: {fileID: 981721761}
