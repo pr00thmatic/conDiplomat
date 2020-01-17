@@ -589,6 +589,11 @@ GameObject:
   m_Component:
   - component: {fileID: 36024778}
   - component: {fileID: 36024779}
+  - component: {fileID: 36024782}
+  - component: {fileID: 36024781}
+  - component: {fileID: 36024780}
+  - component: {fileID: 36024783}
+  - component: {fileID: 36024784}
   m_Layer: 0
   m_Name: throw it away
   m_TagString: Untagged
@@ -630,6 +635,115 @@ MonoBehaviour:
   voice: {fileID: 630149603}
   clips:
   - {fileID: 8300000, guid: 6984224dfb2f5f54d850fb06ffc803b8, type: 3}
+--- !u!114 &36024780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36024777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fd21486a516b234f99f9d16ca01f80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 1
+    waitsOnFinish: 0
+    delay: 7.5
+  waitsForFinish: 0
+  destination:
+  - {fileID: 1320346539}
+  agent: {fileID: 285691960}
+  animator: {fileID: 285691965}
+--- !u!114 &36024781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36024777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad5aa91d0a08b5e489484a88b8cf6c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
+  manager: {fileID: 285691964}
+  script:
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
+    target: {fileID: 68315623}
+    optionalPart: 1
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
+    target: {fileID: 285691959}
+    optionalPart: 4
+--- !u!114 &36024782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36024777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fa5891282b1edd4c9e7d5a42216f02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
+  manager: {fileID: 285691962}
+  script:
+  - triggerer:
+      triggersNext: 0
+      waitsOnFinish: 0
+      delay: 0
+    milestone: 0
+    emotion: 1
+    keep: 1
+--- !u!114 &36024783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36024777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &36024784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36024777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29d4967ad90ea043a8f2aff3c5297ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
+  waitToFinish: {fileID: 36024780}
 --- !u!1 &36395461
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,6 +2698,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5771670582304449988}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &285691960
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285691957}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.15
+  m_Speed: 1.5
+  m_Acceleration: 5
+  avoidancePriority: 50
+  m_AngularSpeed: 300
+  m_StoppingDistance: 0.1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.7
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!114 &285691962 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 285691962, guid: eb048fbc19a322749ba6fb113b229994,
@@ -2608,6 +2744,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbc7bb326a8a1b4fa2737131ab06043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &285691965 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5771670582580183184, guid: eb048fbc19a322749ba6fb113b229994,
+    type: 3}
+  m_PrefabInstance: {fileID: 5771670582304449988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &289938625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3547,7 @@ MonoBehaviour:
   destination:
   - {fileID: 962364646}
   agent: {fileID: 831034114}
+  animator: {fileID: 0}
 --- !u!114 &338579381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4068,27 +4211,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100044, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_IsActive
@@ -4096,7 +4239,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100024, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: f8d5ccb4175ade84a8a2f36d5729664b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6935,7 +7078,6 @@ GameObject:
   m_Component:
   - component: {fileID: 675054278}
   - component: {fileID: 675054279}
-  - component: {fileID: 675054280}
   m_Layer: 0
   m_Name: wait for drinks
   m_TagString: Untagged
@@ -6993,18 +7135,6 @@ MonoBehaviour:
   _nextOne: 0
   finishDelay: 0
   executeOnFinish: {fileID: 0}
---- !u!114 &675054280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675054277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &677286078
 GameObject:
   m_ObjectHideFlags: 0
@@ -12801,6 +12931,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 776259878}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1320346538
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1320346539}
+  m_Layer: 0
+  m_Name: rage quit destination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1320346539
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320346538}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.3, y: 0.03, z: -8.13}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1343727289
 GameObject:
   m_ObjectHideFlags: 0
@@ -19414,6 +19574,7 @@ MonoBehaviour:
   destination:
   - {fileID: 926330269}
   agent: {fileID: 831034114}
+  animator: {fileID: 0}
 --- !u!1 &2088342827
 GameObject:
   m_ObjectHideFlags: 0
