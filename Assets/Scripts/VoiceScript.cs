@@ -7,7 +7,18 @@ public class VoiceScript : MonoBehaviour, IScriptPiece {
   public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
   public float delay = 0;
   public AudioSource voice;
-  public AudioClip clip;
+  public List<AudioClip> clips;
+  public bool converted = false;
+  public float Length {
+    get {
+      float length = 0;
+      foreach (AudioClip clip in clips) {
+        length += clip.length;
+      }
+
+      return length;
+    }
+  }
 
   void Reset () {
     voice = transform.GetComponentInParent<EmotionManager>()
@@ -21,12 +32,16 @@ public class VoiceScript : MonoBehaviour, IScriptPiece {
 
   IEnumerator _Execute () {
     yield return new WaitForSeconds(delay);
-    voice.clip = clip;
-    voice.Play();
-    while (voice.isPlaying) {
-      yield return null;
+
+    for (int i=0; i<clips.Count; i++) {
+      voice.clip = clips[i];
+      voice.Play();
+      while (voice.isPlaying) {
+        yield return null;
+      }
+      voice.Stop();
     }
-    voice.Stop();
+
     _triggerer.TriggerFinish(this);
   }
 }

@@ -11,7 +11,7 @@ public class TriggerSomethingElse : MonoBehaviour, IScriptPiece {
   void Reset () {
     VoiceScript voice = GetComponent<VoiceScript>();
     if (voice) {
-      delay = voice.clip.length;
+      delay = voice.Length;
     }
   }
 
