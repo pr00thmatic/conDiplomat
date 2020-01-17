@@ -8,11 +8,13 @@ public class WalkingScript : MonoBehaviour, IScriptPiece {
   public bool waitsForFinish;
   public Transform[] destination;
   public NavMeshAgent agent;
+  public Animator animator;
 
   int _nextOne = 0;
 
   void Reset () {
     agent = GetComponentInParent<NavMeshAgent>();
+    animator = GetComponentInParent<Animator>();
   }
 
   public void Execute () {
@@ -20,10 +22,14 @@ public class WalkingScript : MonoBehaviour, IScriptPiece {
   }
 
   IEnumerator _StartWalking () {
+    yield return new WaitForSeconds(Triggerer.delay);
+    animator.SetBool("seated", false);
+
     foreach (Transform d in destination) {
       agent.updateRotation = true;
       agent.SetDestination(d.position);
       while (agent.pathPending || agent.remainingDistance > 0.2f) {
+        animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
         yield return null;
       }
       agent.updateRotation = false;

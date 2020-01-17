@@ -20,7 +20,7 @@ public class YesNoQuestion : MonoBehaviour, IScriptPiece {
   void Reset () {
     VoiceScript voice = GetComponent<VoiceScript>();
     if (voice) {
-      waitForAnswer = voice.clip.length;
+      waitForAnswer = voice.Length;
     }
   }
 

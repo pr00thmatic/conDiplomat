@@ -7,6 +7,7 @@ using System.Collections.Generic;
 public class Grabbable : MonoBehaviour {
   public event System.Action onGrab;
   public event System.Action onRelease;
+  public event System.Action onThrownAway;
   public bool IsGrabbed { get => hand != null; }
 
   public SimulatedHand hand = null;
@@ -37,6 +38,12 @@ public class Grabbable : MonoBehaviour {
     if (hand) {
       body.MovePosition(hand.pivot.position);
       body.MoveRotation(hand.pivot.rotation);
+    }
+  }
+
+  void OnTriggerEnter (Collider c) {
+    if (c.GetComponent<UnreachableWall>() && onThrownAway != null) {
+      onThrownAway();
     }
   }
 

@@ -5214,7 +5214,7 @@ MonoBehaviour:
   tracker: {fileID: 4884703918693979624}
   yes:
     target: {fileID: 5922679479717708217}
-    timesRequired: 3
+    timesRequired: 2
     alienTorqueAngleEpsilon: 20
     alienRotationAngleEpsilon: 10
     timeTolerance: 1
@@ -5407,7 +5407,7 @@ PrefabInstance:
     - target: {fileID: 828607744618407351, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5084723727150688586, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
@@ -6011,12 +6011,12 @@ PrefabInstance:
     - target: {fileID: 2870878197074573462, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 828607744618407351, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 115040953376275983, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
@@ -6076,7 +6076,7 @@ PrefabInstance:
     - target: {fileID: 467385043277191116, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5680322304576595540, guid: 5f4892a60042eaf4db78089bcb2a79aa,
         type: 3}
