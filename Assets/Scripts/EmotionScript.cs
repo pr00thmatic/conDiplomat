@@ -17,6 +17,8 @@ public class EmotionScript : MonoBehaviour, IScriptPiece, IIterable {
   }
 
   public void Execute () {
+    manager.blocker = this;
+    manager.SetEmotion(Emotion.Reset, true);
     Iterator iterator = new Iterator(this);
     iterator.Execute();
   }
@@ -30,6 +32,10 @@ public class EmotionScript : MonoBehaviour, IScriptPiece, IIterable {
   public void TriggerFinish () {
     if (script[script.Count-1].keep == false) {
       manager.SetEmotion(script[script.Count-1].emotion, false);
+    }
+
+    if (manager.blocker == this) {
+      manager.blocker = null;
     }
 
     Triggerer.TriggerFinish(this);

@@ -705,7 +705,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -2436,7 +2436,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -2671,12 +2671,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285691957}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d8fde27cdca47f489947590bb2d1b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emotions: {fileID: 285691962}
+  emotions: {fileID: 0}
   scriptsParent: {fileID: 797359944}
   waitingTime: 2
 --- !u!4 &285691959 stripped
@@ -2707,18 +2707,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &285691962 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 285691962, guid: eb048fbc19a322749ba6fb113b229994,
-    type: 3}
-  m_PrefabInstance: {fileID: 5771670582304449988}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 285691957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7075be7336e3f74f94d072417000b04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &285691964 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 285691964, guid: eb048fbc19a322749ba6fb113b229994,
@@ -3809,7 +3797,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -5941,7 +5929,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -8109,7 +8097,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -10017,7 +10005,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -10566,7 +10554,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -11401,7 +11389,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -12744,7 +12732,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -13307,7 +13295,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -14397,7 +14385,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -16040,7 +16028,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -16782,7 +16770,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -16981,7 +16969,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -19937,7 +19925,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -20354,7 +20342,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  manager: {fileID: 285691962}
+  manager: {fileID: 0}
   script:
   - triggerer:
       triggersNext: 0
@@ -20996,14 +20984,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
-      propertyPath: amplitudeFactor
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
-      propertyPath: bufferLengthFactor
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 5771670582575922768, guid: eb048fbc19a322749ba6fb113b229994,
         type: 3}
       propertyPath: m_Materials.Array.data[2]
@@ -21031,9 +21011,72 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b472e48201f034e40b3c80fc6dfba08c, type: 2}
     - target: {fileID: 5771670582575922752, guid: eb048fbc19a322749ba6fb113b229994,
         type: 3}
+      propertyPath: m_BlendShapeWeights.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771670582575922752, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9b9047061119af845b6bb78aa3c0e211, type: 2}
+    - target: {fileID: 5771670582575922752, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[10]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771670582575922752, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[4]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771670582575922752, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[9]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5771670582575922752, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: m_BlendShapeWeights.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
+      propertyPath: amplitudeFactor
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
+      propertyPath: bufferLengthFactor
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892164112793837010, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: okayness
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892164112793837010, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: debug
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892164112793837010, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892164112793837010, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: parameterSwitchTime.a
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892164112793837010, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: parameterSwitchTime.b
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2892164112793837010, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: okayProbability
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
 --- !u!4 &5771670582304449989 stripped

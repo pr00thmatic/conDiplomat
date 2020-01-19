@@ -67,4 +67,8 @@ public class Util {
 
     return triggerers.ToArray();
   }
+
+  public static float Map (float min, float max, float val) {
+    return (val - min) / (max - min);
+  }
 }

@@ -3,13 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EmotionManager : MonoBehaviour {
+  public bool IsBlockedByScript { get => blocker; }
+
   public float transitionSpeed = 500;
   public SkinnedMeshRenderer skin;
   public Dictionary<Emotion, Coroutine> timers =
     new Dictionary<Emotion, Coroutine>();
+  public EmotionScript blocker;
 
   public void SetEmotion (Emotion emotion, bool value) {
-    if (emotion == Emotion.Reset && value) {
+    SetEmotion(emotion, value? 100: 0);
+  }
+
+  public void SetEmotion (Emotion emotion, float target) {
+    if (blocker) return;
+
+    if (emotion == Emotion.Reset && target > 0) {
       foreach (Emotion type in System.Enum.GetValues(typeof(Emotion))) {
         if (type != Emotion.Reset) {
           SetEmotion(type, false);
@@ -21,17 +30,24 @@ public class EmotionManager : MonoBehaviour {
     if (timers.ContainsKey(emotion) && timers[emotion] != null) {
       StopCoroutine(timers[emotion]);
     }
-    timers[emotion] = StartCoroutine(_SetEmotion(emotion, value));
+    timers[emotion] = StartCoroutine(_SetEmotion(emotion, target));
   }
 
-  IEnumerator _SetEmotion (Emotion emotion, bool value) {
-    float target = value? 100: 0;
-    float current = skin.GetBlendShapeWeight((int) emotion);
+  public void ResetEmotions () {
+    SetEmotion(Emotion.Reset, 100);
+  }
 
-    while ((current < target && value)  || (current > target && !value)) {
-      current += Time.deltaTime * transitionSpeed * (value? +1: -1);
+  IEnumerator _SetEmotion (Emotion emotion, float target) {
+    float current = skin.GetBlendShapeWeight((int) emotion);
+    float step = Mathf.Sign(target - current);
+
+    while ((step < 0 && current > target) ||
+           (step > 0 && current < target)) {
+      current += Time.deltaTime * transitionSpeed * step;
       skin.SetBlendShapeWeight((int) emotion, current);
       yield return null;
     }
+
+    skin.SetBlendShapeWeight((int) emotion, target);
   }
 }
