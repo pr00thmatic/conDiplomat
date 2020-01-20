@@ -58,6 +58,7 @@ public class Spoon : MonoBehaviour {
   }
 
   public void HandleSugarContact () {
+    if (!detector.pot) return;
     detector.pot.Drain(this);
     sugar.Fill();
   }
