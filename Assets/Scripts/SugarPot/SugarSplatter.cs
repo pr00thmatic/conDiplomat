@@ -86,7 +86,7 @@ public class SugarSplatter : MonoBehaviour {
     if (Physics.Raycast(spillEffect.transform.position,
                         -Vector3.up, out hit, 3,
                         spillReceptorMask, QueryTriggerInteraction.Collide)) {
-      SpillReceptor receptor = GetComponentInParent<SpillReceptor>();
+      SpillReceptor receptor = hit.collider.GetComponentInParent<SpillReceptor>();
       receptor.IncreaseSpill(percentageSpilled * containedAmount);
     } else {
       outterSpill.IncreaseSpill(percentageSpilled * containedAmount);

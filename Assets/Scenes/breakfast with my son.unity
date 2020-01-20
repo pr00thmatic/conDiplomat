@@ -4906,6 +4906,7 @@ Transform:
   - {fileID: 1125172640}
   - {fileID: 774261051}
   - {fileID: 440005593}
+  - {fileID: 941634174}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11684,6 +11685,36 @@ PrefabInstance:
     - {fileID: 11427812, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
     - {fileID: 11438496, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
+--- !u!1 &941634173
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 941634174}
+  m_Layer: 0
+  m_Name: spoon ideal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &941634174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941634173}
+  m_LocalRotation: {x: -0.3227234, y: -0.22355695, z: -0.30197445, w: 0.8687252}
+  m_LocalPosition: {x: 4.083, y: -0.1537, z: -1.425}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 451463266}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -44.086002, y: -15.629001, z: -31.975002}
 --- !u!1 &945278936
 GameObject:
   m_ObjectHideFlags: 0
