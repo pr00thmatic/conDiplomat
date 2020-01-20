@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 2094178380233296785}
   - component: {fileID: 2094178380233296784}
   - component: {fileID: 2094178380233296791}
+  - component: {fileID: 8484814227407688123}
   m_Layer: 13
   m_Name: spoon
   m_TagString: Untagged
@@ -291,6 +292,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f132ec6954d51a746b362b4ef623b720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spillReceptorMask:
+    serializedVersion: 2
+    m_Bits: 32768
   skin: {fileID: 2094178380027465420}
   value: 0
   sugar:
@@ -306,6 +310,23 @@ MonoBehaviour:
   canSpill: 0
   spillEffect: {fileID: 1397159272099610328}
   maxTime: 2
+  containedAmount: 1
+  outterSpill: {fileID: 8484814227407688123}
+--- !u!114 &8484814227407688123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094178380233296782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c692fd90adf66b42a8fdb5e3e171674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitReached: 0
+  _spillReceived: 0
+  spillTolerated: 3
 --- !u!1 &2094178380881898317
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,10 +595,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 13700000, guid: d651e81d9d67a114083e740e91902458, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: c4eaeb5a44f494d46b90dafe8b7173fb, type: 2}
     - target: {fileID: 13700002, guid: d651e81d9d67a114083e740e91902458, type: 3}
       propertyPath: m_BlendShapeWeights.Array.size
       value: 1
@@ -594,6 +611,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 13700000, guid: d651e81d9d67a114083e740e91902458, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c4eaeb5a44f494d46b90dafe8b7173fb, type: 2}
     - target: {fileID: 100002, guid: d651e81d9d67a114083e740e91902458, type: 3}
       propertyPath: m_Layer
       value: 13

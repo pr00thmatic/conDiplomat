@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SugarSplatter : MonoBehaviour {
+  public event System.Action onSpillExceeded;
+
+  public LayerMask spillReceptorMask;
   public SkinnedMeshRenderer skin;
   public float value = 0;
   public AudioClip[] sugar;
@@ -16,6 +19,8 @@ public class SugarSplatter : MonoBehaviour {
   public bool canSpill = false;
   public ParticleSystem spillEffect;
   public float maxTime = 2;
+  public float containedAmount = 1;
+  public SpillReceptor outterSpill;
 
   float _spillingTime = 0;
   Coroutine _fill;
@@ -43,6 +48,7 @@ public class SugarSplatter : MonoBehaviour {
     if (angle > angleTolerance) {
       float spillValue = Mathf.Lerp(1,0, (angle-angleTolerance)/maxAngle);
       if (spillValue < value) {
+        SpillSugar(value - spillValue);
         _spillingTime += (value-spillValue) * maxTime;
         _spillingTime = Mathf.Max(0.2f, _spillingTime);
         value = spillValue;
@@ -72,5 +78,18 @@ public class SugarSplatter : MonoBehaviour {
 
     value = 1;
     _fill = null;
+  }
+
+  public void SpillSugar (float percentageSpilled) {
+    RaycastHit hit;
+    Debug.DrawRay(spillEffect.transform.position, -Vector3.up * 3, Color.red, 0.5f);
+    if (Physics.Raycast(spillEffect.transform.position,
+                        -Vector3.up, out hit, 3,
+                        spillReceptorMask, QueryTriggerInteraction.Collide)) {
+      SpillReceptor receptor = GetComponentInParent<SpillReceptor>();
+      receptor.IncreaseSpill(percentageSpilled * containedAmount);
+    } else {
+      outterSpill.IncreaseSpill(percentageSpilled * containedAmount);
+    }
   }
 }
