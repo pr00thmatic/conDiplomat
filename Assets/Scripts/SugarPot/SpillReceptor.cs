@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SpillReceptor : MonoBehaviour {
-  public event System.Action onSpillExceeded;
+  public event System.Action<SpillReceptor> onSpillExceeded;
 
   public int limitReached = 0;
   [SerializeField]
@@ -20,7 +20,7 @@ public class SpillReceptor : MonoBehaviour {
       limitReached += (int) Mathf.Floor(_spillReceived / spillTolerated);
       _spillReceived %= spillTolerated;
       if (onSpillExceeded != null) {
-        onSpillExceeded();
+        onSpillExceeded(this);
       }
     }
   }
