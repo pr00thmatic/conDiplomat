@@ -26,9 +26,10 @@ public class SpillScript : MonoBehaviour {
   public void HandleSpill (SpillReceptor target) {
     this.trigger = target;
 
-    for (int i=0; i<levels; i++) {
+    for (int i=0; i<levels.Count; i++) {
       if (levels[i].milestone >= target.limitReached) {
-        Util.Execute();
+        // TODO: execute accordingly to the spill intensity
+        // Util.Execute();
       }
     }
   }
