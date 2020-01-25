@@ -20457,7 +20457,7 @@ MonoBehaviour:
       triggersNext: 0
       waitsOnFinish: 0
       delay: 0
-    milestone: 35
+    milestone: 32
     emotion: 9
     keep: 0
   - triggerer:
