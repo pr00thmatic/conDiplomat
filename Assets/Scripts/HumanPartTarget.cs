@@ -8,5 +8,6 @@ public enum HumanPartTarget {
   Head = 1,
   RightHand = 2,
   LeftHand = 3,
-  LookFront = 4
+  LookFront = 4,
+  LookAside = 5
 }

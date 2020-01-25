@@ -19,6 +19,9 @@ public class HumanPartFinder {
       case HumanPartTarget.LookFront:
         found = target.GetComponentInChildren<LookFront>();
         break;
+      case HumanPartTarget.LookAside:
+        found = target.GetComponentInChildren<AsideHumanPart>();
+        break;
     }
 
     return found? found.transform: target;

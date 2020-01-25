@@ -12,9 +12,13 @@ public class WalkingScript : MonoBehaviour, IScriptPiece {
 
   int _nextOne = 0;
 
+  void Start () {
+    animator = agent.GetComponentInChildren<Animator>();
+  }
+
   void Reset () {
     agent = GetComponentInParent<NavMeshAgent>();
-    animator = GetComponentInParent<Animator>();
+    animator = agent.GetComponentInChildren<Animator>();
   }
 
   public void Execute () {

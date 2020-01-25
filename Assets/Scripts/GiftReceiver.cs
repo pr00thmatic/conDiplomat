@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GiftReceiver : MonoBehaviour {
-  public EmotionManager emotions;
   public Transform scriptsParent;
   public float waitingTime = 2;
 
