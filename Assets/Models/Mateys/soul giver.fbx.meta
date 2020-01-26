@@ -77,6 +77,8 @@ ModelImporter:
     100142: thumb1.L_end
     100144: thumb1.R
     100146: thumb1.R_end
+    100148: boy hair
+    100150: waitress hair
     400000: arm pole.L
     400002: arm pole.L_end
     400004: arm pole.R
@@ -151,16 +153,24 @@ ModelImporter:
     400142: thumb1.L_end
     400144: thumb1.R
     400146: thumb1.R_end
+    400148: boy hair
+    400150: waitress hair
     2100000: basic colors
+    2100002: basic colors.001
     4300000: body
     4300002: retopologized head
     4300004: retopologized head.001
+    4300006: waitress hair
+    4300008: boy hair
     7400000: Armature|me
     7400002: Armature|Walk
+    7400004: Armature|me.001
     9500000: //RootNode
     13700000: body
     13700002: retopologized head
     13700004: retopologized head.001
+    13700006: boy hair
+    13700008: waitress hair
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:

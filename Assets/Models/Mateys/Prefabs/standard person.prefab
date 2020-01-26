@@ -1185,6 +1185,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.9946332
       objectReference: {fileID: 0}
+    - target: {fileID: 100150, guid: 24c7574e68488d14282ea81fec70b18c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c7574e68488d14282ea81fec70b18c, type: 3}
 --- !u!1 &449127531631966029 stripped
