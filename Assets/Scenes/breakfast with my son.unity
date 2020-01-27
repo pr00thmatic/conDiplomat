@@ -8473,6 +8473,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 285691962, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
+      propertyPath: transitionDuration
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 5771670582589746998, guid: eb048fbc19a322749ba6fb113b229994,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -8703,10 +8707,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 16.529001
       objectReference: {fileID: 0}
-    - target: {fileID: 285691962, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
-      propertyPath: transitionDuration
-      value: 0.8
-      objectReference: {fileID: 0}
     - target: {fileID: 5771670582575922752, guid: eb048fbc19a322749ba6fb113b229994,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -8846,6 +8846,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 449127531620465237, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 5645b4ca88986614780b6b6874bf4185, type: 3}
+    - target: {fileID: 449127531631965897, guid: eb048fbc19a322749ba6fb113b229994,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
@@ -20946,14 +20956,6 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[4]
       value: 
       objectReference: {fileID: 2100000, guid: b472e48201f034e40b3c80fc6dfba08c, type: 2}
-    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
-      propertyPath: amplitudeFactor
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
-      propertyPath: bufferLengthFactor
-      value: 15
-      objectReference: {fileID: 0}
     - target: {fileID: 2892164112793837010, guid: eb048fbc19a322749ba6fb113b229994,
         type: 3}
       propertyPath: okayness
@@ -21043,6 +21045,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.9946332
+      objectReference: {fileID: 0}
+    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
+      propertyPath: amplitudeFactor
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 285691965, guid: eb048fbc19a322749ba6fb113b229994, type: 3}
+      propertyPath: bufferLengthFactor
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6479336246242170396, guid: eb048fbc19a322749ba6fb113b229994,
         type: 3}
