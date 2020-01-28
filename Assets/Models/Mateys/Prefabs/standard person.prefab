@@ -908,7 +908,7 @@ MonoBehaviour:
   time:
     a: 1
     b: 5
-  skin: {fileID: 449127531620465233}
+  skin: {fileID: 449127531620465235}
   duration: 0.2
   blendShapeIndex: 0
   _cooldown: 0
@@ -925,7 +925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionSpeed: 500
-  skin: {fileID: 449127531620465233}
+  skin: {fileID: 449127531620465235}
   blocker: {fileID: 0}
 --- !u!114 &285691964
 MonoBehaviour:
@@ -953,7 +953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a70dd5d05a72444fab30c45398332eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 449127531620465233}
+  skin: {fileID: 449127531620465235}
   voice: {fileID: 630149603}
   blendShapeIndex: 1
   bufferLengthFactor: 10
@@ -1175,10 +1175,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 13700002, guid: 24c7574e68488d14282ea81fec70b18c, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 93322d9a06cb257459728e22a580dfee, type: 2}
     - target: {fileID: 13700000, guid: 24c7574e68488d14282ea81fec70b18c, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1285,9 +1281,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 449127531631931891}
   m_PrefabAsset: {fileID: 0}
---- !u!137 &449127531620465233 stripped
+--- !u!137 &449127531620465235 stripped
 SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 13700002, guid: 24c7574e68488d14282ea81fec70b18c,
+  m_CorrespondingSourceObject: {fileID: 13700000, guid: 24c7574e68488d14282ea81fec70b18c,
     type: 3}
   m_PrefabInstance: {fileID: 449127531631931891}
   m_PrefabAsset: {fileID: 0}
