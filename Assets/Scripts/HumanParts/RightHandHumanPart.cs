@@ -2,5 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class AsideHumanPart : MonoBehaviour {
+namespace HumanParts {
+public class RightHandHumanPart : MonoBehaviour {
+}
 }

@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+using HumanParts;
+
 public class VisionScript : MonoBehaviour, IScriptPiece, IIterable {
   public float Delay { get => delay; } public float delay;
   public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;

@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
+namespace HumanParts {
 public class HumanPartFinder {
   public static Component Find (Transform target, HumanPartTarget part) {
     MonoBehaviour found = null;
@@ -22,8 +23,12 @@ public class HumanPartFinder {
       case HumanPartTarget.LookAside:
         found = target.GetComponentInChildren<AsideHumanPart>();
         break;
+      case HumanPartTarget.LookAbove:
+        found = target.GetComponentInChildren<Above>();
+        break;
     }
 
     return found? found.transform: target;
   }
+}
 }

@@ -2,5 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class LookFront : MonoBehaviour {
+namespace HumanParts {
+public class Above : MonoBehaviour {
+}
 }
