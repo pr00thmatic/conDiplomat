@@ -9,7 +9,11 @@ public class DialogueAtCommand : MonoBehaviour {
 
     foreach (DialogueAtCommand clone in commanded) {
       if (clone != this) {
-        DestroyImmediate(clone);
+        if (Application.isPlaying) {
+          Destroy(clone);
+        } else {
+          DestroyImmediate(clone);
+        }
       }
     }
   }

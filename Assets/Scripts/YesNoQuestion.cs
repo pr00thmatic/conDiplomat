@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class YesNoQuestion : MonoBehaviour, IScriptPiece {
   public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
+  public event System.Action<int> onResponse;
 
   public string scriptName;
   public float waitForAnswer;
@@ -43,6 +44,10 @@ public class YesNoQuestion : MonoBehaviour, IScriptPiece {
     target.transform.parent = transform.parent;
     target.name = scriptName;
     Triggerer.TriggerFinish(this);
+
+    if (onResponse != null) {
+      onResponse(counter);
+    }
   }
 
   IEnumerator _WaitForAnswer () {
