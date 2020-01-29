@@ -19,7 +19,7 @@ public class EmotionManager : MonoBehaviour {
     // TODO: handle blocker
     // if (blocker) return;
 
-    if (emotion == Emotion.Reset && target > 0) {
+    if (emotion == Emotion.Reset) {
       foreach (Emotion type in System.Enum.GetValues(typeof(Emotion))) {
         if (type != Emotion.Reset) {
           SetEmotion(type, false);

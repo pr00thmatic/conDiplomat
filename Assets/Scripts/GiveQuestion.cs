@@ -2,8 +2,9 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class GiveQuestion : MonoBehaviour, IScriptPiece {
+public class GiveQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
   public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
+  public GameObject Choosen { get => _choise; }
 
   public float waitForAnswer = 0;
   public Grabbable requestedThing;

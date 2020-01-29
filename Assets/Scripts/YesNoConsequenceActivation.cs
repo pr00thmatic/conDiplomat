@@ -17,13 +17,12 @@ public class YesNoConsequenceActivation : MonoBehaviour {
   }
 
   public void HandleResponse (int count) {
-    Debug.Log("handle response " + count, this);
     if (count > 0) {
       yes.SetActive(true);
     } else if (count < 0) {
       no.SetActive(true);
     } else {
-      silence.SetActive(false);
+      silence.SetActive(true);
     }
   }
 }

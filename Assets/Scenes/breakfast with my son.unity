@@ -1763,6 +1763,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
+  answer: {fileID: 0}
   scriptName: answer and for you
   waitForAnswer: 3.8
   counter: 0
@@ -2357,13 +2358,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285691957}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d8fde27cdca47f489947590bb2d1b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
   scriptsParent: {fileID: 797359944}
   waitingTime: 2
+  scriptUnleashed: {fileID: 0}
 --- !u!4 &285691959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5771670582589746982, guid: eb048fbc19a322749ba6fb113b229994,
@@ -2845,7 +2851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &324840359
 Transform:
   m_ObjectHideFlags: 0
@@ -7432,7 +7438,7 @@ MonoBehaviour:
   directory: _SCRIPTS/wait for drinks
   _nextOne: 0
   finishDelay: 0
-  executeOnFinish: {fileID: 0}
+  executeOnFinish: {fileID: 1614745898}
 --- !u!1 &677286078
 GameObject:
   m_ObjectHideFlags: 0
@@ -8323,6 +8329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802465614}
   - component: {fileID: 802465615}
+  - component: {fileID: 802465616}
   m_Layer: 0
   m_Name: ask for drinks
   m_TagString: Untagged
@@ -8405,6 +8412,18 @@ MonoBehaviour:
   _nextOne: 0
   finishDelay: 0
   executeOnFinish: {fileID: 0}
+--- !u!114 &802465616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802465613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &802739250
 GameObject:
   m_ObjectHideFlags: 0
@@ -12389,9 +12408,8 @@ GameObject:
   - component: {fileID: 1124693529}
   - component: {fileID: 1124693530}
   - component: {fileID: 1124693532}
-  - component: {fileID: 1124693531}
   m_Layer: 0
-  m_Name: bad gift, no gift, mad
+  m_Name: mad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12471,18 +12489,6 @@ MonoBehaviour:
     milestone: 4.93
     emotion: 11
     keep: 0
---- !u!114 &1124693531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124693527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd42e8f1985c134cbddb404fe0934f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1124693532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14098,7 +14104,7 @@ GameObject:
   - component: {fileID: 1316125731}
   - component: {fileID: 1316125730}
   m_Layer: 0
-  m_Name: no gift, bad gift, sad
+  m_Name: sad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14462,8 +14468,9 @@ GameObject:
   - component: {fileID: 1353198124}
   - component: {fileID: 1353198123}
   - component: {fileID: 1353198122}
+  - component: {fileID: 1353198125}
   m_Layer: 0
-  m_Name: good gift, very good mood
+  m_Name: very good mood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14576,6 +14583,25 @@ MonoBehaviour:
   voice: {fileID: 630149603}
   clips:
   - {fileID: 8300000, guid: ebe8943d022e2d74d957d72f38da2909, type: 3}
+--- !u!114 &1353198125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353198120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - expected: {fileID: 791073212}
+    question: {fileID: 285691958}
+  - expected: {fileID: 981721761}
+    question: {fileID: 1807033677}
+  script: {fileID: 1353198120}
+  canBeExecuted: 0
 --- !u!1 &1363902075
 GameObject:
   m_ObjectHideFlags: 0
@@ -17831,7 +17857,7 @@ GameObject:
   - component: {fileID: 1784168400}
   - component: {fileID: 1784168399}
   m_Layer: 0
-  m_Name: good gift, good mood
+  m_Name: good mood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20660,6 +20686,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1947611868}
+  - component: {fileID: 1947611870}
+  - component: {fileID: 1947611869}
   m_Layer: 0
   m_Name: sugary water
   m_TagString: Untagged
@@ -20685,6 +20713,36 @@ Transform:
   m_Father: {fileID: 1342110694}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1947611869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947611867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543c8bc600243834f895ac95e8275b2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 9070297790736763824}
+  consequence: {fileID: 1947611870}
+--- !u!114 &1947611870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947611867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8169370b28fe8054c9390bed33659b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _triggerer:
+    triggersNext: 0
+    waitsOnFinish: 0
+    delay: 0
 --- !u!1 &1955614737
 GameObject:
   m_ObjectHideFlags: 0
@@ -22326,8 +22384,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _triggerer:
-    triggersNext: 1
-    waitsOnFinish: 1
+    triggersNext: 0
+    waitsOnFinish: 0
     delay: 0
   delay: 0
   voice: {fileID: 630149603}
@@ -23238,3 +23296,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c47311260370844b990cc0d7d5b87fb, type: 3}
+--- !u!114 &9070297790736763824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9078257561750189286, guid: 2c47311260370844b990cc0d7d5b87fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 9070297790736763823}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c692fd90adf66b42a8fdb5e3e171674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
