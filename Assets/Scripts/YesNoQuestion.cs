@@ -2,9 +2,11 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class YesNoQuestion : MonoBehaviour, IScriptPiece {
+public class YesNoQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
   public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
   public event System.Action<int> onResponse;
+  public GameObject answer;
+  public GameObject Choosen { get => answer; }
 
   public string scriptName;
   public float waitForAnswer;
@@ -32,17 +34,16 @@ public class YesNoQuestion : MonoBehaviour, IScriptPiece {
 
   void StopListening () {
     player.onDetected -= AnswerHandler;
-    GameObject target;
     if (counter > 0) {
-      target = yes;
+      answer = yes;
     } else if (counter < 0) {
-      target = no;
+      answer = no;
     } else {
-      target = silence;
+      answer = silence;
     }
-    target.SetActive(true);
-    target.transform.parent = transform.parent;
-    target.name = scriptName;
+    answer.SetActive(true);
+    answer.transform.parent = transform.parent;
+    answer.name = scriptName;
     Triggerer.TriggerFinish(this);
 
     if (onResponse != null) {
