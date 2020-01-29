@@ -7,12 +7,18 @@ public class ConsequenceProxy : MonoBehaviour, IScriptPiece {
 
   public void Execute () {
     ChoisesConsequence[] consequences = GetComponentsInChildren<ChoisesConsequence>();
+    bool found = false;
 
     foreach (ChoisesConsequence consequence in consequences) {
       if (consequence.canBeExecuted) {
         consequence.onFinish += HandleFinish;
         Util.Execute(consequence.gameObject);
+        found = true;
       }
+    }
+
+    if (!found) {
+      Util.Execute(GetComponentInChildren<ChoisesDefaultConsequence>().gameObject);
     }
   }
 

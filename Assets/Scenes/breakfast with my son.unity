@@ -2358,7 +2358,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285691957}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d8fde27cdca47f489947590bb2d1b97, type: 3}
   m_Name: 
@@ -2851,7 +2851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &324840359
 Transform:
   m_ObjectHideFlags: 0
@@ -12408,6 +12408,8 @@ GameObject:
   - component: {fileID: 1124693529}
   - component: {fileID: 1124693530}
   - component: {fileID: 1124693532}
+  - component: {fileID: 1124693531}
+  - component: {fileID: 1124693533}
   m_Layer: 0
   m_Name: mad
   m_TagString: Untagged
@@ -12489,6 +12491,25 @@ MonoBehaviour:
     milestone: 4.93
     emotion: 11
     keep: 0
+--- !u!114 &1124693531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124693527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - expected: {fileID: 2043396766}
+    question: {fileID: 285691958}
+  - expected: {fileID: 1752986256}
+    question: {fileID: 1497526059}
+  script: {fileID: 1124693527}
+  canBeExecuted: 0
 --- !u!114 &1124693532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12536,6 +12557,18 @@ MonoBehaviour:
     milestone: 5.5
     target: {fileID: 68315623}
     optionalPart: 1
+--- !u!114 &1124693533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124693527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc4d12a9e2e7d384f9672051c30299ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1125172639
 GameObject:
   m_ObjectHideFlags: 0
@@ -14103,6 +14136,9 @@ GameObject:
   - component: {fileID: 1316125732}
   - component: {fileID: 1316125731}
   - component: {fileID: 1316125730}
+  - component: {fileID: 1316125735}
+  - component: {fileID: 1316125734}
+  - component: {fileID: 1316125733}
   m_Layer: 0
   m_Name: sad
   m_TagString: Untagged
@@ -14203,6 +14239,63 @@ MonoBehaviour:
   voice: {fileID: 630149603}
   clips:
   - {fileID: 8300000, guid: b4ed4bf86d2632c43b670fd6246e65b0, type: 3}
+--- !u!114 &1316125733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316125728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - expected: {fileID: 2043396766}
+    question: {fileID: 285691958}
+  - expected: {fileID: 244249376}
+    question: {fileID: 1497526062}
+  script: {fileID: 1316125728}
+  canBeExecuted: 0
+--- !u!114 &1316125734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316125728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - expected: {fileID: 368239746}
+    question: {fileID: 1266109578}
+  - expected: {fileID: 513378510}
+    question: {fileID: 285691958}
+  script: {fileID: 1316125728}
+  canBeExecuted: 0
+--- !u!114 &1316125735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316125728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - expected: {fileID: 791073212}
+    question: {fileID: 285691958}
+  - expected: {fileID: 887003152}
+    question: {fileID: 1807033675}
+  script: {fileID: 1316125728}
+  canBeExecuted: 0
 --- !u!4 &1317291958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4966988126749350, guid: e6ba3498ffa1e534b91a07264266e6b8,
@@ -17856,6 +17949,7 @@ GameObject:
   - component: {fileID: 1784168401}
   - component: {fileID: 1784168400}
   - component: {fileID: 1784168399}
+  - component: {fileID: 1784168402}
   m_Layer: 0
   m_Name: good mood
   m_TagString: Untagged
@@ -17970,6 +18064,25 @@ MonoBehaviour:
   voice: {fileID: 630149603}
   clips:
   - {fileID: 8300000, guid: f94454a951852fc409bec595d63a9a9a, type: 3}
+--- !u!114 &1784168402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784168397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - expected: {fileID: 791073212}
+    question: {fileID: 285691958}
+  - expected: {fileID: 1195443698}
+    question: {fileID: 1807033677}
+  script: {fileID: 1784168397}
+  canBeExecuted: 0
 --- !u!1 &1790820801
 GameObject:
   m_ObjectHideFlags: 0
