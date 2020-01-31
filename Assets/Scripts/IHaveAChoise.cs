@@ -3,5 +3,5 @@ using System.Collections;
 using System.Collections.Generic;
 
 public interface IHaveAChoise {
-  GameObject Choosen { get; }
+  DecisionMemory Memory { get; }
 }

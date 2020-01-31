@@ -394,7 +394,7 @@ GameObject:
   - component: {fileID: 36024780}
   - component: {fileID: 36024784}
   m_Layer: 0
-  m_Name: throw it away
+  m_Name: throw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,6 +878,37 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &66151452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 66151453}
+  m_Layer: 0
+  m_Name: _DECISIONS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &66151453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 66151452}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 179760638}
+  m_Father: {fileID: 831034119}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &68315623 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5922679479717708223, guid: 08926acd2bf37494aa9a30756c3b7daf,
@@ -1227,6 +1258,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117282406}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &129578848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 129578849}
+  - component: {fileID: 129578850}
+  m_Layer: 0
+  m_Name: paperwork
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &129578849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129578848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300053212}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &129578850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129578848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afde30effccc8c147a0d8608767ebec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _decision: {fileID: 0}
+  decisionName: 
 --- !u!1 &138279139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1839,7 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
-  answer: {fileID: 0}
+  _memory: {fileID: 179760639}
   scriptName: answer and for you
   waitForAnswer: 3.8
   counter: 0
@@ -1771,6 +1847,51 @@ MonoBehaviour:
   yes: {fileID: 1072383277}
   no: {fileID: 1864374356}
   silence: {fileID: 569404774}
+--- !u!1 &179760637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179760638}
+  - component: {fileID: 179760639}
+  m_Layer: 0
+  m_Name: drinks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &179760638
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179760637}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 66151453}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &179760639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179760637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afde30effccc8c147a0d8608767ebec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _decision: {fileID: 0}
+  decisionName: 
 --- !u!1 &202255568
 GameObject:
   m_ObjectHideFlags: 0
@@ -2086,7 +2207,7 @@ GameObject:
   - component: {fileID: 244249379}
   - component: {fileID: 244249378}
   m_Layer: 0
-  m_Name: hang it over
+  m_Name: give
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2367,9 +2488,9 @@ MonoBehaviour:
     triggersNext: 0
     waitsOnFinish: 0
     delay: 0
+  _memory: {fileID: 1780375944}
   scriptsParent: {fileID: 797359944}
   waitingTime: 2
-  scriptUnleashed: {fileID: 0}
 --- !u!4 &285691959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5771670582589746982, guid: eb048fbc19a322749ba6fb113b229994,
@@ -2604,6 +2725,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &300053211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 300053212}
+  m_Layer: 0
+  m_Name: _DECISIONS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &300053212
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 300053211}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1780375943}
+  - {fileID: 129578849}
+  m_Father: {fileID: 5771670582304449989}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &305808040
 GameObject:
@@ -3449,7 +3602,7 @@ GameObject:
   - component: {fileID: 368239749}
   - component: {fileID: 368239748}
   m_Layer: 0
-  m_Name: hang it over
+  m_Name: give
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8068,7 +8221,7 @@ MonoBehaviour:
       waitsOnFinish: 0
       delay: 0
     milestone: 0.827
-    emotion: 8
+    emotion: 9
     keep: 0
   - triggerer:
       triggersNext: 0
@@ -8082,7 +8235,7 @@ MonoBehaviour:
       waitsOnFinish: 0
       delay: 0
     milestone: 7
-    emotion: 7
+    emotion: 9
     keep: 0
   - triggerer:
       triggersNext: 0
@@ -8096,7 +8249,7 @@ MonoBehaviour:
       waitsOnFinish: 0
       delay: 0
     milestone: 14.06
-    emotion: 7
+    emotion: 9
     keep: 0
   - triggerer:
       triggersNext: 0
@@ -10029,7 +10182,7 @@ GameObject:
   - component: {fileID: 887003155}
   - component: {fileID: 887003154}
   m_Layer: 0
-  m_Name: throw it away
+  m_Name: throw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10541,7 +10694,7 @@ GameObject:
   - component: {fileID: 921350627}
   - component: {fileID: 921350626}
   m_Layer: 0
-  m_Name: throw it away
+  m_Name: throw
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11477,7 +11630,7 @@ GameObject:
   - component: {fileID: 981721764}
   - component: {fileID: 981721766}
   m_Layer: 0
-  m_Name: hang it over
+  m_Name: give
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12410,6 +12563,7 @@ GameObject:
   - component: {fileID: 1124693532}
   - component: {fileID: 1124693531}
   - component: {fileID: 1124693533}
+  - component: {fileID: 1124693534}
   m_Layer: 0
   m_Name: mad
   m_TagString: Untagged
@@ -12504,10 +12658,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conditions:
-  - expected: {fileID: 2043396766}
-    question: {fileID: 285691958}
-  - expected: {fileID: 1752986256}
-    question: {fileID: 1497526059}
+  - expected: car
+    memory: {fileID: 1780375944}
+  - expected: don't give
+    memory: {fileID: 129578850}
   script: {fileID: 1124693527}
   canBeExecuted: 0
 --- !u!114 &1124693532
@@ -12569,6 +12723,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc4d12a9e2e7d384f9672051c30299ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1124693534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124693527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - expected: no gift
+    memory: {fileID: 1780375944}
+  - expected: give
+    memory: {fileID: 129578850}
+  script: {fileID: 1124693527}
+  canBeExecuted: 0
 --- !u!1 &1125172639
 GameObject:
   m_ObjectHideFlags: 0
@@ -13044,7 +13217,7 @@ GameObject:
   - component: {fileID: 1195443701}
   - component: {fileID: 1195443702}
   m_Layer: 0
-  m_Name: dont hang it over
+  m_Name: don't give
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13602,6 +13775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86bf44c67603ec45a65c64f747d0a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _memory: {fileID: 129578850}
   _triggerer:
     triggersNext: 1
     waitsOnFinish: 1
@@ -14138,7 +14312,6 @@ GameObject:
   - component: {fileID: 1316125730}
   - component: {fileID: 1316125735}
   - component: {fileID: 1316125734}
-  - component: {fileID: 1316125733}
   m_Layer: 0
   m_Name: sad
   m_TagString: Untagged
@@ -14239,25 +14412,6 @@ MonoBehaviour:
   voice: {fileID: 630149603}
   clips:
   - {fileID: 8300000, guid: b4ed4bf86d2632c43b670fd6246e65b0, type: 3}
---- !u!114 &1316125733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1316125728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 071e04c1112b18f46966fe5c0693e5a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conditions:
-  - expected: {fileID: 2043396766}
-    question: {fileID: 285691958}
-  - expected: {fileID: 244249376}
-    question: {fileID: 1497526062}
-  script: {fileID: 1316125728}
-  canBeExecuted: 0
 --- !u!114 &1316125734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14271,10 +14425,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conditions:
-  - expected: {fileID: 368239746}
-    question: {fileID: 1266109578}
-  - expected: {fileID: 513378510}
-    question: {fileID: 285691958}
+  - expected: car
+    memory: {fileID: 1780375944}
+  - expected: give
+    memory: {fileID: 129578850}
   script: {fileID: 1316125728}
   canBeExecuted: 0
 --- !u!114 &1316125735
@@ -14290,10 +14444,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conditions:
-  - expected: {fileID: 791073212}
-    question: {fileID: 285691958}
-  - expected: {fileID: 887003152}
-    question: {fileID: 1807033675}
+  - expected: cologne
+    memory: {fileID: 1780375944}
+  - expected: throw
+    memory: {fileID: 129578850}
   script: {fileID: 1316125728}
   canBeExecuted: 0
 --- !u!4 &1317291958 stripped
@@ -14689,10 +14843,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conditions:
-  - expected: {fileID: 791073212}
-    question: {fileID: 285691958}
-  - expected: {fileID: 981721761}
-    question: {fileID: 1807033677}
+  - expected: cologne
+    memory: {fileID: 1780375944}
+  - expected: give
+    memory: {fileID: 129578850}
   script: {fileID: 1353198120}
   canBeExecuted: 0
 --- !u!1 &1363902075
@@ -15524,6 +15678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86bf44c67603ec45a65c64f747d0a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _memory: {fileID: 129578850}
   _triggerer:
     triggersNext: 1
     waitsOnFinish: 1
@@ -17396,7 +17551,7 @@ GameObject:
   - component: {fileID: 1752986258}
   - component: {fileID: 1752986260}
   m_Layer: 0
-  m_Name: dont hang it over
+  m_Name: don't give
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17925,6 +18080,51 @@ Transform:
   m_Father: {fileID: 1581508800}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1780375942
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780375943}
+  - component: {fileID: 1780375944}
+  m_Layer: 0
+  m_Name: gift
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1780375943
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780375942}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 300053212}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1780375944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780375942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afde30effccc8c147a0d8608767ebec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _decision: {fileID: 0}
+  decisionName: 
 --- !u!4 &1782202847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4029728377477226, guid: e6ba3498ffa1e534b91a07264266e6b8,
@@ -18077,10 +18277,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conditions:
-  - expected: {fileID: 791073212}
-    question: {fileID: 285691958}
-  - expected: {fileID: 1195443698}
-    question: {fileID: 1807033677}
+  - expected: cologne
+    memory: {fileID: 1780375944}
+  - expected: don't give
+    memory: {fileID: 129578850}
   script: {fileID: 1784168397}
   canBeExecuted: 0
 --- !u!1 &1790820801
@@ -18489,6 +18689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f86bf44c67603ec45a65c64f747d0a06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _memory: {fileID: 129578850}
   _triggerer:
     triggersNext: 1
     waitsOnFinish: 1
@@ -21952,7 +22153,7 @@ MonoBehaviour:
       waitsOnFinish: 0
       delay: 0
     milestone: 7.9
-    emotion: 1
+    emotion: 7
     keep: 0
   - triggerer:
       triggersNext: 0
@@ -21973,7 +22174,7 @@ MonoBehaviour:
       waitsOnFinish: 0
       delay: 0
     milestone: 11.021
-    emotion: 1
+    emotion: 9
     keep: 0
   - triggerer:
       triggersNext: 0
@@ -22356,7 +22557,7 @@ GameObject:
   - component: {fileID: 2084384882}
   - component: {fileID: 2084384881}
   m_Layer: 0
-  m_Name: dont hang it over
+  m_Name: don't give
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

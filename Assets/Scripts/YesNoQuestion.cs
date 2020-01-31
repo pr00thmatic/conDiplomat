@@ -4,9 +4,10 @@ using System.Collections.Generic;
 
 public class YesNoQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
   public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
+  [SerializeField] DecisionMemory _memory;
+  public DecisionMemory Memory { get => _memory? _memory: GetComponentInParent<DecisionMemory>(); }
   public event System.Action<int> onResponse;
-  public GameObject answer;
-  public GameObject Choosen { get => answer; }
+  public GameObject Choosen { get => Memory.decision; set => Memory.decision = value; }
 
   public string scriptName;
   public float waitForAnswer;
@@ -35,15 +36,15 @@ public class YesNoQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
   void StopListening () {
     player.onDetected -= AnswerHandler;
     if (counter > 0) {
-      answer = yes;
+      Choosen = yes;
     } else if (counter < 0) {
-      answer = no;
+      Choosen = no;
     } else {
-      answer = silence;
+      Choosen = silence;
     }
-    answer.SetActive(true);
-    answer.transform.parent = transform.parent;
-    answer.name = scriptName;
+    Choosen.SetActive(true);
+    Choosen.transform.parent = transform.parent;
+    Choosen.name = scriptName;
     Triggerer.TriggerFinish(this);
 
     if (onResponse != null) {

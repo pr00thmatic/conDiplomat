@@ -4,9 +4,8 @@ using System.Collections.Generic;
 
 [System.Serializable]
 public class ChoiseConditional {
-  public bool IsMet { get => Question.Choosen == expected; }
+  public bool IsMet { get => memory.decisionName == expected; }
 
-  public GameObject expected;
-  public IHaveAChoise Question { get => question as IHaveAChoise; }
-  public MonoBehaviour question;
+  public string expected;
+  public DecisionMemory memory;
 }

@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 public class GiftReceiver : MonoBehaviour, IHaveAChoise, IScriptPiece {
   [SerializeField] NextTriggerer _triggerer; public NextTriggerer Triggerer { get => _triggerer; }
+  [SerializeField] DecisionMemory _memory;
+  public DecisionMemory Memory { get => _memory? _memory: GetComponentInParent<DecisionMemory>(); }
   public Transform scriptsParent;
   public float waitingTime = 2;
 
-  public GameObject Choosen { get => scriptUnleashed; }
-  public GameObject scriptUnleashed;
+  public GameObject Choosen { get => Memory.decision; set => Memory.decision = value; }
 
   void Start () {
     Execute();
@@ -19,12 +20,12 @@ public class GiftReceiver : MonoBehaviour, IHaveAChoise, IScriptPiece {
     Gift gift = LevelManager.Instance.Gift;
 
     if (gift) {
-      scriptUnleashed = scriptsParent.Find(gift.definition.name).gameObject;
+      Choosen = scriptsParent.Find(gift.definition.name).gameObject;
     } else {
-      scriptUnleashed = scriptsParent.Find("no gift").gameObject;
+      Choosen = scriptsParent.Find("no gift").gameObject;
     }
 
-    Util.Execute(scriptUnleashed);
+    Util.Execute(Choosen);
     Triggerer.TriggerFinish(this);
   }
 

@@ -11,19 +11,17 @@ public class ChoisesConsequence : MonoBehaviour {
 
   void OnEnable () {
     foreach (ChoiseConditional condition in conditions) {
-      (condition.question as IScriptPiece).Triggerer.onFinish += HandleCondition;
+      condition.memory.onDecisionMade += HandleCondition;
     }
   }
 
   void OnDisable () {
     foreach (ChoiseConditional condition in conditions) {
-      (condition.question as IScriptPiece).Triggerer.onFinish -= HandleCondition;
+      condition.memory.onDecisionMade -= HandleCondition;
     }
   }
 
   public void HandleCondition () {
-    if (canBeExecuted) return;
-
     foreach (ChoiseConditional condition in conditions) {
       if (!condition.IsMet) {
         return;

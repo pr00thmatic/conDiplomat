@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class GiveQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
+  [SerializeField] DecisionMemory _memory;
+  public DecisionMemory Memory { get => _memory? _memory: GetComponentInParent<DecisionMemory>(); }
   public NextTriggerer Triggerer { get => _triggerer; } [SerializeField] NextTriggerer _triggerer;
-  public GameObject Choosen { get => _choise; }
+  public GameObject Choosen { get => Memory.decision; set => Memory.decision = value; }
 
   public float waitForAnswer = 0;
   public Grabbable requestedThing;
@@ -17,11 +19,10 @@ public class GiveQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
   public float throwTreshold = 4; // m/s
   public TextMesh debug;
 
-  GameObject _choise;
   bool _stop = false;
 
   public void Execute () {
-    _choise = no;
+    Memory.decision = no;
     StartCoroutine(_Listen());
   }
 
@@ -34,7 +35,7 @@ public class GiveQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
   void OnTriggerStay (Collider c) {
     Grabbable found = c.GetComponentInParent<Grabbable>();
     if (found == requestedThing) {
-      _choise = yes;
+      Choosen = yes;
       _stop = true;
     }
   }
@@ -42,7 +43,7 @@ public class GiveQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
   void OnTriggerExit (Collider c) {
     Grabbable found = c.GetComponentInParent<Grabbable>();
     if (found == requestedThing) {
-      _choise = no;
+      Choosen = no;
     }
   }
 
@@ -57,20 +58,20 @@ public class GiveQuestion : MonoBehaviour, IScriptPiece, IHaveAChoise {
     }
 
     requestedThing.onRelease -= HandleRelease;
-    _choise.transform.parent = transform.parent;
-    _choise.name = scriptName;
+    Choosen.transform.parent = transform.parent;
+    Choosen.name = scriptName;
     Triggerer.TriggerFinish(this);
   }
 
   void HandleThrownAway () {
-    _choise = thrownAway;
+    Choosen = thrownAway;
   }
 
   public void HandleRelease () {
     debug.text = requestedThing.body.velocity.magnitude + "";
     if (requestedThing.body.velocity.magnitude > throwTreshold) {
       _stop = true;
-      _choise = thrownAway;
+      Choosen = thrownAway;
     }
   }
 }
