@@ -51,27 +51,56 @@ public class Grabbable : MonoBehaviour {
     highlighter.enabled = value;
   }
 
-  public void GetGrabbed (SimulatedHand hand) {
+  public void ForceGrab (SimulatedHand hand, bool notReally = false) {
     if (this.hand) {
       this.hand.Release();
     }
+
     this.hand = hand;
-    body.isKinematic = true;
-    _oldParent = transform.parent;
-    // transform.SetParent(hand.transform, true);
+
+    if (!notReally) {
+      body.isKinematic = true;
+      _oldParent = transform.parent;
+      // transform.SetParent(hand.transform, true);
+    }
 
     if (onGrab != null) {
       onGrab();
     }
   }
 
-  public void GetReleased () {
-    body.isKinematic = false;
-    transform.SetParent(_oldParent, true);
+  public void GetGrabbed (SimulatedHand hand) {
+    IGrabMediator grabMediator = GetComponent<IGrabMediator>();
+
+    if (grabMediator != null) {
+      grabMediator.HandleGrab(hand);
+      ForceGrab(hand, true);
+    } else {
+      ForceGrab(hand);
+    }
+  }
+
+  public void ForceRelease (bool notReally = false) {
+    if (!notReally) {
+      body.isKinematic = false;
+      transform.SetParent(_oldParent, true);
+    }
+
     this.hand = null;
 
     if (onRelease != null) {
       onRelease();
+    }
+  }
+
+  public void GetReleased () {
+    IGrabMediator grabMediator = GetComponent<IGrabMediator>();
+
+    if (grabMediator != null) {
+      grabMediator.HandleRelease();
+      ForceRelease(true);
+    } else {
+      ForceRelease();
     }
   }
 
