@@ -8,8 +8,25 @@ public class Reagent : MonoBehaviour, IGrabMediator {
   public Reagent GluedTo {
     get => !glue? null:
       (glue.connectedBody? glue.connectedBody.GetComponent<Reagent>(): null);
+    set {
+      if (!glue) {
+        glue = gameObject.AddComponent<FixedJoint>();
+      } else {
+        GluedTo.onTop = null;
+      }
+      glue.connectedBody = value.GetComponent<Rigidbody>();
+    }
   }
   public FixedJoint glue;
+  public Reagent onTop;
+
+  void OnTriggerStay (Collider c) {
+    Reagent reagent = c.GetComponentInParent<Reagent>();
+
+    if (reagent && !onTop) {
+      PutOnTop(reagent);
+    }
+  }
 
   void Reset () {
     glue = gameObject.AddComponent<FixedJoint>();
@@ -31,6 +48,11 @@ public class Reagent : MonoBehaviour, IGrabMediator {
       anchor.parent = transform;
       Util.ResetTransform(anchor);
     }
+  }
+
+  public void PutOnTop (Reagent reagent) {
+    this.onTop = reagent;
+    reagent.GluedTo = this;
   }
 
   public Reagent GlueOfGlues () {
